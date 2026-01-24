@@ -69,7 +69,7 @@
             color: #a0a0a0;
             max-width: 600px;
             margin: 0 auto;
-            min-height: 43px; /* Reserve space to avoid layout shift */
+            min-height: 43px;
         }
 
         .main-content {
@@ -107,7 +107,7 @@
         }
 
         .btn-google {
-            background-color: #3DDC84; /* Android Green */
+            background-color: #3DDC84;
         }
 
         .features {
@@ -162,7 +162,7 @@
 
 <div class="main-content">
     <div class="download-buttons">
-        <a href="https://play.google.com/store/apps/details?id=com.acgames.flappy_vertical" class="btn btn-google" target="_blank" data-i18n="download"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.acgames365.flappyvertical" class="btn btn-google" target="_blank" data-i18n="download"></a>
     </div>
 
     <div class="features">
@@ -193,7 +193,6 @@
     </p>
 </footer>
 
-<!-- Translation files -->
 <script src="i18n/en.js"></script>
 <script src="i18n/fr.js"></script>
 <script src="i18n/nl.js"></script>
@@ -216,7 +215,6 @@
             }
         });
 
-        // Update active button state
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.classList.remove('active');
             if (btn.textContent.toLowerCase() === lang) {
@@ -224,12 +222,9 @@
             }
         });
 
-        // Update html lang attribute
         document.documentElement.lang = lang;
     }
 
-    // Load the default language as soon as the script runs
-    // This makes the text appear faster than waiting for DOMContentLoaded
     setLanguage('en');
 </script>
 
