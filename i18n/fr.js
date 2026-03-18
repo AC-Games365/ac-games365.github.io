@@ -1,6 +1,7 @@
-const translations_fr = {
+export const translations_fr = {
     "subtitle": "Une nouvelle façon de voler ! Grimpez plus haut, évitez les obstacles et débloquez des skins légendaires.",
     "download": "Télécharger sur Google Play",
+    "download_apple": "Bientôt sur l'App Store",
     "f1_title": "Gameplay Addictif",
     "f1_desc": "Un défi vertical infini. Jusqu'où pourrez-vous aller ?",
     "f2_title": "Pixel Art",
@@ -10,5 +11,30 @@ const translations_fr = {
     "copyright": "&copy; 2026 AC Games. Tous droits réservés.",
     "privacy": "Politique de Confidentialité",
     "contact": "Contacter le Support",
-    "delete_account": "Demande de Suppression de Compte"
+    "delete_account": "Demande de Suppression de Compte",
+
+    // Home Page
+    "home_title": "AC Games",
+    "home_subtitle": "Créer des jeux amusants et addictifs pour tous.",
+    "nav_home": "Accueil",
+    "nav_games": "Jeux",
+    "nav_contact": "Contact",
+    "games_title": "Nos Jeux",
+    "game_flappy_title": "Flappy Vertical",
+    "game_flappy_desc": "Une version verticale d'un classique !",
+    "game_new_title": "Slice and Trap",
+    "game_new_desc": "Un futur jeu de puzzle, d'adresse et de stratégie.",
+    "coming_soon": "Bientôt disponible",
+    "contact_title": "Contactez-nous",
+    "contact_name": "Nom",
+    "contact_email": "Email",
+    "contact_message": "Message",
+    "contact_send": "Envoyer le Message",
+
+    // Cookie & Captcha
+    "cookie_text": "Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site.",
+    "cookie_accept": "Compris !",
+    "captcha_label": "Question de sécurité : Que fait 3 + 4 ?",
+    "captcha_error": "Réponse incorrecte. Veuillez réessayer.",
+    "form_error": "Veuillez remplir tous les champs obligatoires."
 };

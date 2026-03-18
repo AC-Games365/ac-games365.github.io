@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles généraux qui ne dépendent pas du thème ou qui sont des composants */
+
+/* Language Switcher - sera remplacé par un select */
+.lang-switch {
+    /* Ces styles seront remplacés par des classes Tailwind sur le select */
+}
+
+/* Styles spécifiques à Flappy Vertical, à adapter avec Tailwind */
+.main-content {
+    @apply flex-1 py-10 px-4 flex flex-col items-center justify-center;
+}
+
+.download-buttons {
+    @apply flex flex-wrap gap-5 justify-center mt-8;
+}
+
+.btn {
+    @apply inline-flex items-center justify-center px-8 py-3 rounded-full text-white font-bold text-lg transition-all duration-300 shadow-lg;
+}
+
+.btn:hover {
+    @apply transform -translate-y-1;
+}
+
+.btn-google {
+    @apply bg-[#3DDC84] hover:bg-[#30b06a];
+}
+
+.btn-apple {
+    @apply bg-gray-700 hover:bg-gray-600 cursor-not-allowed; /* Pour le bouton désactivé */
+}
+
+.features {
+    @apply mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full;
+}
+
+.feature-card {
+    @apply bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-200 dark:border-gray-700 shadow-md text-center;
+}
+
+.feature-icon {
+    @apply text-4xl mb-4;
+}
+
+/* Header spécifique à Flappy Vertical */
+.flappy-header {
+    @apply text-center py-12 px-4;
+    background: linear-gradient(180deg, #0f0c29 0%, #302b63 100%); /* Garde le dégradé spécifique */
+}
+
+.flappy-header h1 {
+    @apply text-5xl font-bold text-yellow-400;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.flappy-header .subtitle {
+    @apply text-xl text-gray-400 max-w-xl mx-auto mt-4;
+}

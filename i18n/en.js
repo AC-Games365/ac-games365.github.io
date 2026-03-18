@@ -1,6 +1,7 @@
-const translations_en = {
+export const translations_en = {
     "subtitle": "A new way to fly! Climb higher, avoid obstacles, and unlock legendary skins.",
     "download": "Download on Google Play",
+    "download_apple": "Coming soon on the App Store",
     "f1_title": "Addictive Gameplay",
     "f1_desc": "An infinite vertical challenge. How high can you go?",
     "f2_title": "Pixel Art",
@@ -10,5 +11,30 @@ const translations_en = {
     "copyright": "&copy; 2026 AC Games. All rights reserved.",
     "privacy": "Privacy Policy",
     "contact": "Contact Support",
-    "delete_account": "Account Deletion Request"
+    "delete_account": "Account Deletion Request",
+    
+    // Home Page
+    "home_title": "AC Games",
+    "home_subtitle": "Creating fun and addictive games for everyone.",
+    "nav_home": "Home",
+    "nav_games": "Games",
+    "nav_contact": "Contact",
+    "games_title": "Our Games",
+    "game_flappy_title": "Flappy Vertical",
+    "game_flappy_desc": "The vertical twist on a classic!",
+    "game_new_title": "Slice and Trap",
+    "game_new_desc": "An upcoming puzzle game of skill and strategy.",
+    "coming_soon": "Coming Soon",
+    "contact_title": "Get in Touch",
+    "contact_name": "Name",
+    "contact_email": "Email",
+    "contact_message": "Message",
+    "contact_send": "Send Message",
+
+    // Cookie & Captcha
+    "cookie_text": "We use cookies to ensure you get the best experience on our website.",
+    "cookie_accept": "Got it!",
+    "captcha_label": "Security Question: What is 3 + 4?",
+    "captcha_error": "Incorrect answer. Please try again.",
+    "form_error": "Please fill out all required fields."
 };

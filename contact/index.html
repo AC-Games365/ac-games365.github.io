@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Games - Home</title>
+    <title>AC Games - Contact</title>
     <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
-    <meta name="description" content="AC Games - Indie game developer creating fun and addictive mobile games.">
+    <meta name="description" content="Contact AC Games for support or inquiries.">
 </head>
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
 
@@ -17,8 +17,8 @@
             <div class="flex items-center space-x-6">
                 <div class="hidden md:flex space-x-6 font-medium">
                     <a href="/" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_home">Home</a>
-                    <a href="#games" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_games">Games</a>
-                    <a href="/contact/" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_contact">Contact</a>
+                    <a href="/#games" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_games">Games</a>
+                    <a href="/contact/" class="hover:text-green-600 dark:hover:text-green-400 transition font-bold" data-i18n="nav_contact">Contact</a>
                 </div>
 
                 <!-- Controls -->
@@ -37,49 +37,36 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Contact Section -->
     <main class="flex-grow">
-        <!-- Hero Section -->
-        <header class="bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 py-20 text-center px-4 transition-colors duration-300">
-            <div class="container mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-green-600 dark:text-green-400 transition-colors duration-300" data-i18n="home_title">AC Games</h1>
-                <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300" data-i18n="home_subtitle">Creating fun and addictive games for everyone.</p>
-            </div>
-        </header>
-
-        <!-- Games Section -->
-        <section id="games" class="py-16 bg-white dark:bg-gray-900 px-4 transition-colors duration-300">
-            <div class="container mx-auto">
-                <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 transition-colors duration-300" data-i18n="games_title">Our Games</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-                    <!-- Flappy Vertical Card -->
-                    <a href="/flappy-vertical/" class="block bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 dark:border-gray-700 group">
-                        <div class="h-56 bg-gray-200 dark:bg-gray-700 overflow-hidden relative">
-                            <img src="/assets/images/flappy_vertical.png" alt="Flappy Vertical" class="w-full h-full object-cover transition duration-300 group-hover:opacity-90">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                            <div class="absolute bottom-4 left-6">
-                                <h3 class="text-2xl font-bold text-white shadow-sm" data-i18n="game_flappy_title">Flappy Vertical</h3>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="game_flappy_desc">The vertical twist on a classic!</p>
-                        </div>
-                    </a>
-
-                    <!-- Slice and Trap Placeholder -->
-                    <div class="block bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 group cursor-default">
-                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
-                            <span class="text-6xl">🔪</span>
-                            <span class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold uppercase px-2 py-1 rounded-full" data-i18n="coming_soon">Coming Soon</span>
-                            <h3 class="text-2xl font-bold text-white shadow-sm" data-i18n="game_new_title">Slice and Trap</h3>
-                        </div>
-                        <div class="p-6">
-                            <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="game_new_desc">An upcoming puzzle game of skill and strategy.</p>
-                        </div>
+        <section id="contact" class="py-16 px-4">
+            <div class="container mx-auto max-w-lg">
+                <h2 class="text-3xl font-bold mb-8 text-center text-green-600 dark:text-green-400" data-i18n="contact_title">Get in Touch</h2>
+                <form id="contact-form" class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1" data-i18n="contact_name">Name</label>
+                        <input type="text" id="name" name="name" class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
                     </div>
-
-                </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
+                            <span data-i18n="contact_email">Email</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" required class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
+                            <span data-i18n="contact_message">Message</span> <span class="text-red-500">*</span>
+                        </label>
+                        <textarea id="message" name="message" rows="4" required class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition"></textarea>
+                    </div>
+                    <div>
+                        <label for="captcha-answer" id="captcha-label" class="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">
+                            <span data-i18n="captcha_label">Security Question: What is 3 + 4?</span> <span class="text-red-500">*</span>
+                        </label>
+                        <input type="number" id="captcha-answer" name="captcha" required class="w-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition" data-i18n="contact_send">Send Message</button>
+                </form>
             </div>
         </section>
     </main>

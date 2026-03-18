@@ -1,6 +1,7 @@
-const translations_nl = {
+export const translations_nl = {
     "subtitle": "Een nieuwe manier om te vliegen! Klim hoger, ontwijk obstakels en ontgrendel legendarische skins.",
     "download": "Download op Google Play",
+    "download_apple": "Binnenkort in de App Store",
     "f1_title": "Verslavende Gameplay",
     "f1_desc": "Een oneindige verticale uitdaging. Hoe hoog kun je gaan?",
     "f2_title": "Pixel Art",
@@ -10,5 +11,30 @@ const translations_nl = {
     "copyright": "&copy; 2026 AC Games. Alle rechten voorbehouden.",
     "privacy": "Privacybeleid",
     "contact": "Contact Support",
-    "delete_account": "Verzoek om Accountverwijdering"
+    "delete_account": "Verzoek om Accountverwijdering",
+
+    // Home Page
+    "home_title": "AC Games",
+    "home_subtitle": "Leuke en verslavende spellen maken voor iedereen.",
+    "nav_home": "Home",
+    "nav_games": "Spellen",
+    "nav_contact": "Contact",
+    "games_title": "Onze Spellen",
+    "game_flappy_title": "Flappy Vertical",
+    "game_flappy_desc": "De verticale draai aan een klassieker!",
+    "game_new_title": "Slice and Trap",
+    "game_new_desc": "Een aankomend puzzelspel van vaardigheid en strategie.",
+    "coming_soon": "Binnenkort beschikbaar",
+    "contact_title": "Neem Contact Op",
+    "contact_name": "Naam",
+    "contact_email": "E-mail",
+    "contact_message": "Bericht",
+    "contact_send": "Verzend Bericht",
+
+    // Cookie & Captcha
+    "cookie_text": "We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt.",
+    "cookie_accept": "Begrepen!",
+    "captcha_label": "Veiligheidsvraag: Wat is 3 + 4?",
+    "captcha_error": "Onjuist antwoord. Probeer het opnieuw.",
+    "form_error": "Vul alle verplichte velden in."
 };
