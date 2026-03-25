@@ -1,34 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AC Games - Home</title>
     <link rel="icon" type="image/png" href="assets/images/icon/icon.png">
     <meta name="description" content="AC Games - Indie game developer creating fun and addictive mobile games.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
+<body class="bg-gray-100 dark:bg-dark-900 text-gray-800 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
 
     <!-- Navigation -->
-    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
+    <nav class="bg-white/70 dark:bg-dark-800/70 backdrop-blur-lg shadow-md sticky top-0 z-50 transition-colors duration-300">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="/" class="text-2xl font-bold text-green-600 dark:text-green-400">AC Games</a>
+            <a href="/" class="text-2xl font-display font-bold text-primary-500">AC Games</a>
 
-            <div class="flex items-center space-x-6">
-                <div class="hidden md:flex space-x-6 font-medium">
-                    <a href="/" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_home">Home</a>
-                    <a href="#games" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_games">Games</a>
-                    <a href="/contact/" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="nav_contact">Contact</a>
+            <!-- Desktop Menu & Controls -->
+            <div class="hidden md:flex items-center space-x-6">
+                <div class="space-x-6 font-semibold">
+                    <a href="#home" class="hover:text-primary-500 transition font-bold" data-i18n="nav_home">Home</a>
+                    <a href="#about" class="hover:text-primary-500 transition" data-i18n="nav_about">About</a>
+                    <a href="#tech" class="hover:text-primary-500 transition" data-i18n="nav_tech">Technologies</a>
+                    <a href="#games" class="hover:text-primary-500 transition" data-i18n="nav_games">Games</a>
+                    <a href="/contact/" class="hover:text-primary-500 transition" data-i18n="nav_contact">Contact</a>
                 </div>
 
                 <!-- Controls -->
                 <div class="flex items-center space-x-3">
-                    <select id="lang-selector" class="bg-gray-200 dark:bg-gray-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-green-500 cursor-pointer">
+                    <select id="lang-selector" class="bg-gray-200 dark:bg-dark-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-primary-500 cursor-pointer">
                         <option value="en">🇺🇸 EN</option>
                         <option value="fr">🇫🇷 FR</option>
                         <option value="nl">🇳🇱 NL</option>
                     </select>
-                    <button id="theme-toggler" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                    <button id="theme-toggler" class="p-2 rounded-full bg-gray-200 dark:bg-dark-700 hover:bg-gray-300 dark:hover:bg-dark-600 transition focus:outline-none" aria-label="Toggle Dark Mode">
+                        <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-5 h-5 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 dark:text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu, hidden by default -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <a href="#home" class="block py-2 px-4 text-sm font-bold text-primary-500" data-i18n="nav_home">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_about">About</a>
+            <a href="#tech" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_tech">Technologies</a>
+            <a href="#games" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_games">Games</a>
+            <a href="/contact/" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_contact">Contact</a>
+            <div class="p-4 border-t border-gray-200 dark:border-dark-700">
+                <div class="flex items-center space-x-3">
+                    <select id="lang-selector-mobile" class="bg-gray-200 dark:bg-dark-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-primary-500 cursor-pointer w-full">
+                        <option value="en">🇺🇸 EN</option>
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="nl">🇳🇱 NL</option>
+                    </select>
+                    <button id="theme-toggler-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-dark-700 hover:bg-gray-300 dark:hover:bg-dark-600 transition focus:outline-none" aria-label="Toggle Dark Mode">
                         <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
                         <svg class="w-5 h-5 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
                     </button>
@@ -40,26 +75,71 @@
     <!-- Main Content -->
     <main class="flex-grow">
         <!-- Hero Section -->
-        <header class="bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 py-20 text-center px-4 transition-colors duration-300">
+        <header id="home" class="bg-gray-100 dark:bg-dark-900 py-20 text-center px-4 transition-colors duration-300">
             <div class="container mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-green-600 dark:text-green-400 transition-colors duration-300" data-i18n="home_title">AC Games</h1>
+                <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 text-primary-500 transition-colors duration-300" data-i18n="home_title">AC Games</h1>
                 <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto transition-colors duration-300" data-i18n="home_subtitle">Creating fun and addictive games for everyone.</p>
             </div>
         </header>
 
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white dark:bg-dark-800 px-4 transition-colors duration-300">
+            <div class="container mx-auto max-w-4xl text-center" data-animate>
+                <h2 class="text-3xl font-display font-bold mb-6 text-gray-800 dark:text-primary-400" data-i18n="about_title">About Me</h2>
+                <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto" data-i18n="about_desc">
+                    Hi, I'm Clement, a passionate indie game developer. My mission is to create fun and addictive games that are easy to pick up and hard to put down. My first project, Flappy Vertical, is a fresh take on a classic, and I'm already working on new ideas to challenge and entertain players.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="tech" class="py-16 bg-gray-100 dark:bg-dark-900 px-4 transition-colors duration-300">
+            <div class="container mx-auto max-w-5xl text-center" data-animate>
+                <h2 class="text-3xl font-display font-bold mb-10 text-gray-800 dark:text-primary-400" data-i18n="tech_title">Technologies I Use</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <!-- Game Dev -->
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg" alt="Flutter" class="h-12 w-12">
+                        <span>Flutter</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/flame-engine/flame/main/doc/branding/logo-flame.svg" alt="Flame" class="h-12 w-12 object-contain">
+                        <span>Flame Engine</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="Firebase" class="h-12 w-12">
+                        <span>Firebase</span>
+                    </div>
+                    <!-- Web Dev -->
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" class="h-12 w-12">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" class="h-12 w-12">
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 text-sm font-semibold text-gray-600 dark:text-gray-400">
+                        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="Vite" class="h-12 w-12">
+                        <span>Vite</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Games Section -->
-        <section id="games" class="py-16 bg-white dark:bg-gray-900 px-4 transition-colors duration-300">
+        <section id="games" class="py-16 bg-white dark:bg-dark-800 px-4 transition-colors duration-300">
             <div class="container mx-auto">
-                <h2 class="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-green-400 transition-colors duration-300" data-i18n="games_title">Our Games</h2>
+                <h2 class="text-3xl font-display font-bold mb-12 text-center text-gray-800 dark:text-primary-400 transition-colors duration-300" data-i18n="games_title">Our Games</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
                     <!-- Flappy Vertical Card -->
-                    <a href="/flappy-vertical/" class="block bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 border border-gray-200 dark:border-gray-700 group">
-                        <div class="h-56 bg-gray-200 dark:bg-gray-700 overflow-hidden relative">
+                    <a href="/flappy-vertical/" class="block bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-lg hover:shadow-primary-500/20 transform hover:scale-105 transition duration-300 border border-gray-200 dark:border-dark-700 group" data-animate>
+                        <div class="h-56 bg-gray-200 dark:bg-dark-700 overflow-hidden relative">
                             <img src="/assets/images/flappy_vertical.png" alt="Flappy Vertical" class="w-full h-full object-cover transition duration-300 group-hover:opacity-90">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                             <div class="absolute bottom-4 left-6">
-                                <h3 class="text-2xl font-bold text-white shadow-sm" data-i18n="game_flappy_title">Flappy Vertical</h3>
+                                <h3 class="text-2xl font-display font-bold text-white shadow-sm" data-i18n="game_flappy_title">Flappy Vertical</h3>
                             </div>
                         </div>
                         <div class="p-6">
@@ -68,11 +148,11 @@
                     </a>
 
                     <!-- Slice and Trap Placeholder -->
-                    <div class="block bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 group cursor-default">
-                        <div class="h-56 bg-gray-200 dark:bg-gray-700 flex items-center justify-center relative">
+                    <div class="block bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-dark-700 group cursor-default" data-animate>
+                        <div class="h-56 bg-gray-200 dark:bg-dark-700 flex items-center justify-center relative">
                             <span class="text-6xl">🔪</span>
                             <span class="absolute top-4 right-4 bg-yellow-500 text-white text-xs font-bold uppercase px-2 py-1 rounded-full" data-i18n="coming_soon">Coming Soon</span>
-                            <h3 class="text-2xl font-bold text-white shadow-sm" data-i18n="game_new_title">Slice and Trap</h3>
+                            <h3 class="text-2xl font-display font-bold text-white shadow-sm" data-i18n="game_new_title">Slice and Trap</h3>
                         </div>
                         <div class="p-6">
                             <p class="text-gray-600 dark:text-gray-400 text-lg" data-i18n="game_new_desc">An upcoming puzzle game of skill and strategy.</p>
@@ -85,17 +165,22 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-gray-800 text-center py-8 border-t border-gray-200 dark:border-gray-700 text-gray-500 text-sm transition-colors duration-300">
+    <footer class="bg-gray-100 dark:bg-dark-800 text-center py-8 border-t border-gray-200 dark:border-dark-700 text-gray-500 text-sm transition-colors duration-300">
         <p data-i18n="copyright">&copy; 2026 AC Games. All rights reserved.</p>
         <div class="mt-4 space-x-4">
-            <a href="privacy.html" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="privacy">Privacy Policy</a>
+            <a href="privacy.html" class="hover:text-primary-500 transition" data-i18n="privacy">Privacy Policy</a>
             <span>|</span>
-            <a href="/contact/" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="contact">Contact Support</a>
+            <a href="/contact/" class="hover:text-primary-500 transition" data-i18n="contact">Contact Support</a>
             <span>|</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" class="hover:text-green-600 dark:hover:text-green-400 transition" data-i18n="delete_account">Account Deletion Request</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" class="hover:text-primary-500 transition" data-i18n="delete_account">Account Deletion Request</a>
         </div>
     </footer>
 
-    <script type="module" src="./main.js"></script>>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-primary-500 hover:bg-primary-600 text-white p-3 rounded-full shadow-lg transition-opacity opacity-0 z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+    <script type="module" src="./main.js"></script>
 </body>
 </html>

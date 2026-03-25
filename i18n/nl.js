@@ -17,8 +17,13 @@ export const translations_nl = {
     "home_title": "AC Games",
     "home_subtitle": "Leuke en verslavende spellen maken voor iedereen.",
     "nav_home": "Home",
+    "nav_about": "Over Mij",
+    "nav_tech": "Technologieën",
     "nav_games": "Spellen",
     "nav_contact": "Contact",
+    "about_title": "Over Mij",
+    "about_desc": "Hallo, ik ben Clement, een gepassioneerde indie game-ontwikkelaar. Mijn missie is om leuke en verslavende spellen te maken die makkelijk op te pakken zijn, maar moeilijk neer te leggen. Mijn eerste project, Flappy Vertical, is een frisse kijk op een klassieker, en ik werk al aan nieuwe ideeën om spelers uit te dagen en te vermaken.",
+    "tech_title": "Technologieën die ik gebruik",
     "games_title": "Onze Spellen",
     "game_flappy_title": "Flappy Vertical",
     "game_flappy_desc": "De verticale draai aan een klassieker!",
@@ -36,5 +41,10 @@ export const translations_nl = {
     "cookie_accept": "Begrepen!",
     "captcha_label": "Veiligheidsvraag: Wat is 3 + 4?",
     "captcha_error": "Onjuist antwoord. Probeer het opnieuw.",
-    "form_error": "Vul alle verplichte velden in."
+    "form_error": "Vul alle verplichte velden in.",
+
+    // 404
+    "404_title": "Pagina Niet Gevonden",
+    "404_message": "Sorry, de pagina die u zoekt kon niet worden gevonden.",
+    "404_button": "Ga naar de Homepage"
 };

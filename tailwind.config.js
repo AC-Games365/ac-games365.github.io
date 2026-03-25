@@ -7,24 +7,29 @@ export default {
     "./index.html",
     "./**/*.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./*.js"
   ],
   theme: {
     extend: {
-      // Extension des couleurs pour le thème
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],
+        display: ['Orbitron', 'sans-serif'],
+      },
       colors: {
-        light: {
-          background: '#FFFFFF',
-          text: '#1F2937', // gray-800
-          card: '#F9FAFB', // gray-50
-          header: '#F3F4F6', // gray-100
-          border: '#E5E7EB', // gray-200
+        primary: {
+          400: '#22d3ee', // Cyan éclatant
+          500: '#06b6d4',
+          600: '#0891b2',
+        },
+        accent: {
+          400: '#4ade80', // Vert fluo
+          500: '#22c55e',
+          600: '#16a34a',
         },
         dark: {
-          background: '#111827', // gray-900
-          text: '#F9FAFB', // gray-50
-          card: '#1F2937', // gray-800
-          header: '#1F2937', // gray-800
-          border: '#374151', // gray-700
+          900: '#0b0f19', // Fond très sombre
+          800: '#111827', // Cartes
+          700: '#1f2937', // Bordures
         }
       }
     },

@@ -17,8 +17,13 @@ export const translations_en = {
     "home_title": "AC Games",
     "home_subtitle": "Creating fun and addictive games for everyone.",
     "nav_home": "Home",
+    "nav_about": "About",
+    "nav_tech": "Technologies",
     "nav_games": "Games",
     "nav_contact": "Contact",
+    "about_title": "About Me",
+    "about_desc": "Hi, I'm Clement, a passionate indie game developer. My mission is to create fun and addictive games that are easy to pick up and hard to put down. My first project, Flappy Vertical, is a fresh take on a classic, and I'm already working on new ideas to challenge and entertain players.",
+    "tech_title": "Technologies I Use",
     "games_title": "Our Games",
     "game_flappy_title": "Flappy Vertical",
     "game_flappy_desc": "The vertical twist on a classic!",
@@ -36,5 +41,10 @@ export const translations_en = {
     "cookie_accept": "Got it!",
     "captcha_label": "Security Question: What is 3 + 4?",
     "captcha_error": "Incorrect answer. Please try again.",
-    "form_error": "Please fill out all required fields."
+    "form_error": "Please fill out all required fields.",
+
+    // 404
+    "404_title": "Page Not Found",
+    "404_message": "Sorry, the page you are looking for could not be found.",
+    "404_button": "Go to Homepage"
 };

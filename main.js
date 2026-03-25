@@ -22,6 +22,9 @@ function setLanguage(lang) {
 
     const langSelector = document.getElementById('lang-selector');
     if (langSelector) langSelector.value = lang;
+    
+    const langSelectorMobile = document.getElementById('lang-selector-mobile');
+    if (langSelectorMobile) langSelectorMobile.value = lang;
 
     const cookieBannerText = document.getElementById('cookie-banner-text');
     if (cookieBannerText) cookieBannerText.innerHTML = translations['cookie_text'];
@@ -101,6 +104,60 @@ function setupContactForm() {
     });
 }
 
+// --- Mobile Menu Toggle ---
+function setupMobileMenu() {
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    
+    if (btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+}
+
+// --- Animations au défilement ---
+function setupScrollAnimations() {
+    const animatedElements = document.querySelectorAll('[data-animate]');
+    if (animatedElements.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// --- Bouton "Retour en haut" ---
+function setupBackToTopButton() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (!backToTopButton) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.remove('opacity-0');
+        } else {
+            backToTopButton.classList.add('opacity-0');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
 // --- Initialisation ---
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -110,8 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
     setLanguage(savedLang);
 
     document.getElementById('lang-selector')?.addEventListener('change', (e) => setLanguage(e.target.value));
+    document.getElementById('lang-selector-mobile')?.addEventListener('change', (e) => setLanguage(e.target.value));
+    
     document.getElementById('theme-toggler')?.addEventListener('click', toggleTheme);
+    document.getElementById('theme-toggler-mobile')?.addEventListener('click', toggleTheme);
 
+    setupMobileMenu();
+    setupScrollAnimations();
+    setupBackToTopButton();
     showCookieBanner();
     setupContactForm();
 });
