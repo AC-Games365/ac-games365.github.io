@@ -28,7 +28,7 @@ export const translations_en = {
     "game_flappy_title": "Flappy Vertical",
     "game_flappy_desc": "The vertical twist on a classic!",
     "game_new_title": "Slice and Trap",
-    "game_new_desc": "An upcoming puzzle game of skill and strategy.",
+    "game_new_desc": "A modernized take on JezzBall with boosters and a shop. Releasing in 2026.",
     "coming_soon": "Coming Soon",
     "contact_title": "Get in Touch",
     "contact_name": "Name",
@@ -36,12 +36,23 @@ export const translations_en = {
     "contact_message": "Message",
     "contact_send": "Send Message",
 
+    // Slice and Trap Page
+    "s1_title": "Strategic Puzzles",
+    "s1_desc": "Trap the bouncing balls by slicing the arena. Plan your cuts carefully!",
+    "s2_title": "Boosters",
+    "s2_desc": "Use special power-ups to freeze time, extend your lines, and more.",
+    "s3_title": "In-Game Shop",
+    "s3_desc": "Unlock custom ball skins, new slice animations, and colorful arenas.",
+
+    // Form Status
+    "form_success": "Message sent successfully! We'll get back to you soon.",
+    "form_send_error": "Failed to send message. Please try again later or contact us directly.",
+    "form_error": "Please fill out all required fields.",
+
     // Cookie & Captcha
     "cookie_text": "We use cookies to ensure you get the best experience on our website.",
     "cookie_accept": "Got it!",
-    "captcha_label": "Security Question: What is 3 + 4?",
-    "captcha_error": "Incorrect answer. Please try again.",
-    "form_error": "Please fill out all required fields.",
+    "captcha_error": "Please complete the security check.",
 
     // 404
     "404_title": "Page Not Found",

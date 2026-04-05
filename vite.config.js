@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         flappyVertical: resolve(__dirname, 'flappy-vertical/index.html'),
+        sliceAndTrap: resolve(__dirname, 'slice-and-trap/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         notfound: resolve(__dirname, '404.html'),

@@ -18,12 +18,15 @@
     </nav>
 
     <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center text-center px-4">
+    <main class="flex-grow flex items-center justify-center text-center px-4 py-16">
         <div class="max-w-md">
-            <h1 class="text-9xl font-bold text-green-600 dark:text-green-400">404</h1>
+            <div class="text-9xl mb-4 relative inline-block animate-bounce">
+                👾
+            </div>
+            <h1 class="text-7xl font-bold text-green-600 dark:text-green-400">404</h1>
             <h2 class="text-3xl font-semibold mt-4 mb-2" data-i18n="404_title">Page Not Found</h2>
-            <p class="text-gray-600 dark:text-gray-400 mb-8" data-i18n="404_message">Sorry, the page you are looking for could not be found.</p>
-            <a href="/" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition" data-i18n="404_button">Go to Homepage</a>
+            <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg" data-i18n="404_message">Sorry, the page you are looking for could not be found.</p>
+            <a href="/" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:-translate-y-1 shadow-lg" data-i18n="404_button">Go to Homepage</a>
         </div>
     </main>
 
@@ -32,6 +35,6 @@
         <p data-i18n="copyright">&copy; 2026 AC Games. All rights reserved.</p>
     </footer>
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./src/main.js"></script>
 </body>
 </html>

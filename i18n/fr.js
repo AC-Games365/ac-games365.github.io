@@ -17,13 +17,18 @@ export const translations_fr = {
     "home_title": "AC Games",
     "home_subtitle": "Créer des jeux amusants et addictifs pour tous.",
     "nav_home": "Accueil",
+    "nav_about": "À Propos",
+    "nav_tech": "Technologies",
     "nav_games": "Jeux",
     "nav_contact": "Contact",
+    "about_title": "À Propos",
+    "about_desc": "Bonjour, je suis Clément, développeur de jeux indépendant passionné. Ma mission est de créer des jeux amusants et addictifs, faciles à prendre en main mais difficiles à lâcher. Mon premier projet, Flappy Vertical, est une nouvelle approche d'un classique, et je travaille déjà sur de nouvelles idées pour défier et divertir les joueurs.",
+    "tech_title": "Technologies Utilisées",
     "games_title": "Nos Jeux",
     "game_flappy_title": "Flappy Vertical",
     "game_flappy_desc": "Une version verticale d'un classique !",
     "game_new_title": "Slice and Trap",
-    "game_new_desc": "Un futur jeu de puzzle, d'adresse et de stratégie.",
+    "game_new_desc": "Une version modernisée de JezzBall avec des boosters et une boutique. Sortie en 2026.",
     "coming_soon": "Bientôt disponible",
     "contact_title": "Contactez-nous",
     "contact_name": "Nom",
@@ -31,10 +36,26 @@ export const translations_fr = {
     "contact_message": "Message",
     "contact_send": "Envoyer le Message",
 
+    // Slice and Trap Page
+    "s1_title": "Puzzles Stratégiques",
+    "s1_desc": "Piégez les balles rebondissantes en tranchant l'arène. Planifiez vos coupes avec soin !",
+    "s2_title": "Boosters",
+    "s2_desc": "Utilisez des power-ups spéciaux pour figer le temps, prolonger vos lignes, et plus encore.",
+    "s3_title": "Boutique en jeu",
+    "s3_desc": "Débloquez des skins personnalisés, de nouvelles animations de coupe et des arènes colorées.",
+
+    // Form Status
+    "form_success": "Message envoyé avec succès ! Nous vous répondrons bientôt.",
+    "form_send_error": "Échec de l'envoi du message. Veuillez réessayer plus tard.",
+    "form_error": "Veuillez remplir tous les champs obligatoires.",
+
     // Cookie & Captcha
     "cookie_text": "Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site.",
     "cookie_accept": "Compris !",
-    "captcha_label": "Question de sécurité : Que fait 3 + 4 ?",
-    "captcha_error": "Réponse incorrecte. Veuillez réessayer.",
-    "form_error": "Veuillez remplir tous les champs obligatoires."
+    "captcha_error": "Veuillez cocher la case de sécurité.",
+
+    // 404
+    "404_title": "Page Introuvable",
+    "404_message": "Désolé, la page que vous recherchez n'a pas pu être trouvée.",
+    "404_button": "Aller à l'accueil"
 };

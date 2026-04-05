@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Games - Privacy Policy</title>
+    <title>Slice and Trap - Official Site</title>
     <link rel="icon" type="image/png" href="../assets/images/icon/icon.png">
+    <meta name="description" content="A modernized take on JezzBall with boosters and a shop. Releasing in 2026.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
@@ -71,60 +72,44 @@
         </div>
     </nav>
 
-    <main class="flex-grow container mx-auto max-w-3xl py-12 px-4">
-        <h1 class="text-4xl font-display font-bold text-primary-500 text-center mb-8">Privacy Policy</h1>
-        <div class="prose prose-lg dark:prose-invert mx-auto">
-            <p><strong>Last Updated:</strong> 4th January 2026</p>
+    <main class="flex-grow">
+        <!-- Replace standard header with image banner if desired, or keep text -->
+        <header class="bg-gray-100 dark:bg-dark-900 py-20 text-center px-4 transition-colors duration-300 relative overflow-hidden h-64 sm:h-96 flex items-center justify-center">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/background/sliceAndTrap.png" alt="Slice and Trap Background" class="w-full h-full object-cover opacity-30 dark:opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-transparent dark:from-dark-900"></div>
+            </div>
+            <div class="container mx-auto relative z-10">
+                <h1 data-i18n="game_new_title" class="text-5xl md:text-7xl font-display font-bold mb-4 text-primary-500 drop-shadow-md">Slice and Trap</h1>
+                <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-semibold" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop. Releasing in 2026.</p>
+                <div class="mt-8">
+                    <span class="bg-yellow-500 text-white text-sm md:text-base font-bold uppercase px-4 py-2 rounded-full shadow-md" data-i18n="coming_soon">Coming Soon</span>
+                </div>
+            </div>
+        </header>
 
-            <p>Thank you for playing our games ("we," "us," or "our"). This Privacy Policy explains how we handle information when you use our mobile applications (the "Games").</p>
+        <div class="container mx-auto max-w-5xl py-16 px-4">
 
-            <p>Your privacy is important to us. Our Games are designed to be fun, and we aim to be transparent about the data processed.</p>
+            <!-- Features section can be populated with specifics later -->
+            <div class="features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- We can map these to new translation keys like s1_title later, or reuse -->
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700" data-animate>
+                    <div class="text-5xl mb-4">🧩</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s1_title">Strategic Puzzles</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s1_desc">Trap the bouncing balls by slicing the arena. Plan your cuts carefully!</p>
+                </div>
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700" data-animate>
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s2_title">Boosters</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s2_desc">Use special power-ups to freeze time, extend your lines, and more.</p>
+                </div>
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700 sm:col-span-2 lg:col-span-1" data-animate>
+                    <div class="text-5xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s3_title">In-Game Shop</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s3_desc">Unlock custom ball skins, new slice animations, and colorful arenas.</p>
+                </div>
+            </div>
 
-            <h2>1. Information We Collect and Why</h2>
-            <p>To provide and improve our Games, we use third-party services that may collect information.</p>
-
-            <h3>A. Firebase (Google)</h3>
-            <p>We use Firebase, a Google service, for essential game functionalities:</p>
-            <ul>
-                <li><strong>Firebase Authentication:</strong> To allow you to create an account (via Google Sign-In or email/password) and save your progress securely. This process involves handling your email address, a user ID, and authentication tokens.</li>
-                <li><strong>Cloud Firestore (Firebase):</strong> To store your game data, such as your high scores, credits, unlocked items, and friends lists. This data is linked to your anonymous or registered user ID.</li>
-                <li><strong>Firebase Crashlytics:</strong> To detect and analyze crashes in the Games. This service collects crash-related information, including device state, device type, and operating system, to help us fix bugs and improve stability. It does not collect personally identifiable information.</li>
-            </ul>
-
-            <h3>B. Google AdMob</h3>
-            <p>We use Google AdMob to show advertisements in the Games. AdMob may collect and use data to provide personalized ads. This can include:</p>
-            <ul>
-                <li>Device identifiers (like the Advertising ID).</li>
-                <li>Location data (if location services are enabled).</li>
-                <li>Information about your interactions with ads.</li>
-            </ul>
-            <p>You can manage your ad preferences in your device's settings (e.g., "Limit Ad Tracking" on iOS or "Opt out of Ads Personalization" on Android).</p>
-
-            <h2>2. How We Use Your Information</h2>
-            <ul>
-                <li>To operate and maintain the Games (e.g., saving your scores).</li>
-                <li>To fix bugs and improve the user experience (via Crashlytics).</li>
-                <li>To support the Games financially through advertising (via AdMob).</li>
-                <li>To provide social features like leaderboards and friend lists.</li>
-            </ul>
-
-            <h2>3. Data Sharing</h2>
-            <p>We do not manually share your personal data with any third parties, except for the data automatically collected by the services mentioned above (Firebase and AdMob) as part of their standard operation.</p>
-
-            <h2>4. Data Security</h2>
-            <p>We take reasonable measures to protect your information. Data stored on Firebase is secured by Google's infrastructure. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
-
-            <h2>5. Children's Privacy</h2>
-            <p>Our Games are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us so we can promptly remove it.</p>
-
-            <h2>6. Your Rights</h2>
-            <p>Depending on your location (e.g., if you are in the European Union), you may have rights regarding your personal data, such as the right to access, correct, or delete your data. Our Games provide an in-app feature to delete your account, which will erase your associated data from our primary database. You can also request account deletion via the link in the footer of this website.</p>
-
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the Game or on our website. You are advised to review this Privacy Policy periodically for any changes.</p>
-
-            <h2>8. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us via the in-game support feature or through our contact page.</p>
         </div>
     </main>
 

@@ -28,7 +28,7 @@ export const translations_nl = {
     "game_flappy_title": "Flappy Vertical",
     "game_flappy_desc": "De verticale draai aan een klassieker!",
     "game_new_title": "Slice and Trap",
-    "game_new_desc": "Een aankomend puzzelspel van vaardigheid en strategie.",
+    "game_new_desc": "Een gemoderniseerde versie van JezzBall met boosters en een winkel. Verschijnt in 2026.",
     "coming_soon": "Binnenkort beschikbaar",
     "contact_title": "Neem Contact Op",
     "contact_name": "Naam",
@@ -36,12 +36,23 @@ export const translations_nl = {
     "contact_message": "Bericht",
     "contact_send": "Verzend Bericht",
 
+    // Slice and Trap Page
+    "s1_title": "Strategische Puzzels",
+    "s1_desc": "Vang de stuiterende ballen door de arena te snijden. Plan je sneden zorgvuldig!",
+    "s2_title": "Boosters",
+    "s2_desc": "Gebruik speciale power-ups om de tijd te bevriezen, je lijnen te verlengen, en meer.",
+    "s3_title": "In-Game Winkel",
+    "s3_desc": "Ontgrendel aangepaste bal skins, nieuwe snij-animaties, en kleurrijke arena's.",
+
+    // Form Status
+    "form_success": "Bericht succesvol verzonden! We nemen spoedig contact met u op.",
+    "form_send_error": "Kon bericht niet verzenden. Probeer het later opnieuw.",
+    "form_error": "Vul alle verplichte velden in.",
+
     // Cookie & Captcha
     "cookie_text": "We gebruiken cookies om ervoor te zorgen dat u de beste ervaring op onze website krijgt.",
     "cookie_accept": "Begrepen!",
-    "captcha_label": "Veiligheidsvraag: Wat is 3 + 4?",
-    "captcha_error": "Onjuist antwoord. Probeer het opnieuw.",
-    "form_error": "Vul alle verplichte velden in.",
+    "captcha_error": "Voltooi de beveiligingscontrole.",
 
     // 404
     "404_title": "Pagina Niet Gevonden",
