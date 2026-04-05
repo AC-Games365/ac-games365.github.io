@@ -3,23 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Games - Contact</title>
-    <link rel="icon" type="image/png" href="assets/images/icon/icon.png">
-    <meta name="description" content="Contact AC Games for support or inquiries.">
+    <title>Slice and Trap - Official Site</title>
+    <link rel="icon" type="image/png" href="../assets/icon-1f58f05c.png">
+    <meta name="description" content="A modernized take on JezzBall with boosters and a shop. Releasing in 2026.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("l1LEmdWyMMnjJl5nZ"); // TODO: Replace with your EmailJS Public Key
-       })();
-    </script>
   <script type="module" crossorigin src="../assets/main-aa58c901.js"></script>
   <link rel="stylesheet" href="../assets/main-54ec61c4.css">
 </head>
@@ -37,7 +26,7 @@
                     <a href="/#about" class="hover:text-primary-500 transition" data-i18n="nav_about">About</a>
                     <a href="/#tech" class="hover:text-primary-500 transition" data-i18n="nav_tech">Technologies</a>
                     <a href="/#games" class="hover:text-primary-500 transition" data-i18n="nav_games">Games</a>
-                    <a href="/contact/" class="hover:text-primary-500 transition font-bold" data-i18n="nav_contact">Contact</a>
+                    <a href="/contact/" class="hover:text-primary-500 transition" data-i18n="nav_contact">Contact</a>
                 </div>
 
                 <!-- Controls -->
@@ -68,7 +57,7 @@
             <a href="/#about" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_about">About</a>
             <a href="/#tech" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_tech">Technologies</a>
             <a href="/#games" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_games">Games</a>
-            <a href="/contact/" class="block py-2 px-4 text-sm font-bold text-primary-500" data-i18n="nav_contact">Contact</a>
+            <a href="/contact/" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_contact">Contact</a>
             <div class="p-4 border-t border-gray-200 dark:border-dark-700">
                 <div class="flex items-center space-x-3">
                     <select id="lang-selector-mobile" class="bg-gray-200 dark:bg-dark-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-primary-500 cursor-pointer w-full">
@@ -85,50 +74,45 @@
         </div>
     </nav>
 
-    <!-- Contact Section -->
     <main class="flex-grow">
-        <section id="contact" class="py-16 px-4" data-animate>
-            <div class="container mx-auto max-w-lg">
-                <h2 class="text-3xl font-display font-bold mb-8 text-center text-primary-500" data-i18n="contact_title">Get in Touch</h2>
-
-                <!-- Success/Error Message Container -->
-                <div id="form-status" class="hidden mb-6 p-4 rounded-lg text-center"></div>
-
-                <form id="contact-form" class="space-y-6 bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-dark-700">
-                    <div>
-                        <label for="name" class="block text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1" data-i18n="contact_name">Name</label>
-                        <input type="text" id="name" name="name" class="w-full bg-gray-100 dark:bg-dark-900 border border-gray-300 dark:border-dark-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 transition">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                            <span data-i18n="contact_email">Email</span> <span class="text-red-500">*</span>
-                        </label>
-                        <input type="email" id="email" name="email" required class="w-full bg-gray-100 dark:bg-dark-900 border border-gray-300 dark:border-dark-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 transition">
-                    </div>
-                    <div>
-                        <label for="message" class="block text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
-                            <span data-i18n="contact_message">Message</span> <span class="text-red-500">*</span>
-                        </label>
-                        <textarea id="message" name="message" rows="4" required class="w-full bg-gray-100 dark:bg-dark-900 border border-gray-300 dark:border-dark-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 transition"></textarea>
-                    </div>
-
-                    <!-- Google reCAPTCHA v2 Widget -->
-                    <div class="flex justify-center">
-                        <div class="g-recaptcha" data-sitekey="6LfccKgsAAAAALgd7zGmIuDUmts3LLXM5M0f98M1"></div>
-                    </div>
-
-                    <button type="submit" id="submit-btn" class="w-full bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-4 rounded-lg transition shadow-lg hover:-translate-y-1 relative">
-                        <span id="btn-text" data-i18n="contact_send">Send Message</span>
-                        <span id="btn-spinner" class="hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                            <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                        </span>
-                    </button>
-                </form>
+        <!-- Replace standard header with image banner if desired, or keep text -->
+        <header class="bg-gray-100 dark:bg-dark-900 py-20 text-center px-4 transition-colors duration-300 relative overflow-hidden h-64 sm:h-96 flex items-center justify-center">
+            <div class="absolute inset-0 z-0">
+                <img src="../assets/sliceAndTrap-a147a838.png" alt="Slice and Trap Background" class="w-full h-full object-cover opacity-30 dark:opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-100 via-transparent to-transparent dark:from-dark-900"></div>
             </div>
-        </section>
+            <div class="container mx-auto relative z-10">
+                <h1 data-i18n="game_new_title" class="text-5xl md:text-7xl font-display font-bold mb-4 text-primary-500 drop-shadow-md">Slice and Trap</h1>
+                <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl mx-auto font-semibold" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop. Releasing in 2026.</p>
+                <div class="mt-8">
+                    <span class="bg-yellow-500 text-white text-sm md:text-base font-bold uppercase px-4 py-2 rounded-full shadow-md" data-i18n="coming_soon">Coming Soon</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="container mx-auto max-w-5xl py-16 px-4">
+
+            <!-- Features section can be populated with specifics later -->
+            <div class="features grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <!-- We can map these to new translation keys like s1_title later, or reuse -->
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700" data-animate>
+                    <div class="text-5xl mb-4">🧩</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s1_title">Strategic Puzzles</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s1_desc">Trap the bouncing balls by slicing the arena. Plan your cuts carefully!</p>
+                </div>
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700" data-animate>
+                    <div class="text-5xl mb-4">🚀</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s2_title">Boosters</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s2_desc">Use special power-ups to freeze time, extend your lines, and more.</p>
+                </div>
+                <div class="bg-white dark:bg-dark-800 p-8 rounded-xl shadow-lg text-center transform transition duration-300 hover:-translate-y-2 border border-gray-200 dark:border-dark-700 sm:col-span-2 lg:col-span-1" data-animate>
+                    <div class="text-5xl mb-4">🛍️</div>
+                    <h3 class="text-xl font-display font-bold mb-2 text-gray-800 dark:text-primary-400" data-i18n="s3_title">In-Game Shop</h3>
+                    <p class="text-gray-600 dark:text-gray-400" data-i18n="s3_desc">Unlock custom ball skins, new slice animations, and colorful arenas.</p>
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <!-- Footer -->
