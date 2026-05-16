@@ -29,6 +29,8 @@ export const translations_en = {
     "game_flappy_desc": "The vertical twist on a classic!",
     "game_new_title": "Slice and Trap",
     "game_new_desc": "A modernized take on JezzBall with boosters and a shop. Releasing in 2026.",
+    "game_block_drift_title": "Block Drift",
+    "game_block_drift_desc": "A gravity-based block puzzle challenge. Coming in 2026.",
     "coming_soon": "Coming Soon",
     "contact_title": "Get in Touch",
     "contact_name": "Name",
@@ -43,6 +45,15 @@ export const translations_en = {
     "s2_desc": "Use special power-ups to freeze time, extend your lines, and more.",
     "s3_title": "In-Game Shop",
     "s3_desc": "Unlock custom ball skins, new slice animations, and colorful arenas.",
+
+    // Block Drift Page
+    "bd_subtitle": "Master the gravity, slide the blocks, and solve the ultimate puzzle challenge.",
+    "bd1_title": "Gravity Mechanics",
+    "bd1_desc": "Experience a unique twist on block puzzles where gravity changes everything.",
+    "bd2_title": "100+ Levels",
+    "bd2_desc": "Challenge yourself with over 100 hand-crafted gravity puzzles in Adventure mode.",
+    "bd3_title": "Endless Mode",
+    "bd3_desc": "Test your survival skills in an infinite challenge. How long can you last?",
 
     // Form Status
     "form_success": "Message sent successfully! We'll get back to you soon.",

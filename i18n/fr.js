@@ -29,6 +29,8 @@ export const translations_fr = {
     "game_flappy_desc": "Une version verticale d'un classique !",
     "game_new_title": "Slice and Trap",
     "game_new_desc": "Une version modernisée de JezzBall avec des boosters et une boutique. Sortie en 2026.",
+    "game_block_drift_title": "Block Drift",
+    "game_block_drift_desc": "Un défi de puzzle de blocs basé sur la gravité. Sortie en 2026.",
     "coming_soon": "Bientôt disponible",
     "contact_title": "Contactez-nous",
     "contact_name": "Nom",
@@ -43,6 +45,15 @@ export const translations_fr = {
     "s2_desc": "Utilisez des power-ups spéciaux pour figer le temps, prolonger vos lignes, et plus encore.",
     "s3_title": "Boutique en jeu",
     "s3_desc": "Débloquez des skins personnalisés, de nouvelles animations de coupe et des arènes colorées.",
+
+    // Block Drift Page
+    "bd_subtitle": "Maîtrisez la gravité, faites glisser les blocs et résolvez le défi ultime du puzzle.",
+    "bd1_title": "Mécanique de Gravité",
+    "bd1_desc": "Découvrez une variante unique des puzzles de blocs où la gravité change tout.",
+    "bd2_title": "Plus de 100 Niveaux",
+    "bd2_desc": "Relevez le défi avec plus de 100 puzzles de gravité faits à la main en mode Aventure.",
+    "bd3_title": "Mode Infini",
+    "bd3_desc": "Testez vos compétences de survie dans un défi infini. Jusqu'où pourrez-vous tenir ?",
 
     // Form Status
     "form_success": "Message envoyé avec succès ! Nous vous répondrons bientôt.",
