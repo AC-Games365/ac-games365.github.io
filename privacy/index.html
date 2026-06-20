@@ -1,147 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Games - Privacy Policy</title>
+    <title data-i18n="privacy_title">Privacy Policy - AC Games</title>
     <link rel="icon" type="image/png" href="../assets/icon-eb8c6399.png">
+    <meta name="description" content="Privacy Policy for AC Games mobile applications.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="../assets/main-46355b34.js"></script>
-  <link rel="stylesheet" href="../assets/main-863f87f9.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --green: #3DDC84; --green-dim: #2bb86d; --green-pill-bg: rgba(61,220,132,0.12); --green-pill-text: #1a7a49;
+            --bg: #f6f7f5; --bg-card: #ffffff; --text: #111310; --text-2: #4a4e4a; --text-3: #8a8e8a;
+            --border: rgba(0,0,0,0.08); --border-hover: rgba(0,0,0,0.18);
+            --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px; --radius-pill: 999px;
+            --font-display: 'Syne', sans-serif; --font-body: 'Inter', sans-serif;
+            --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .dark { --bg: #0e100f; --bg-card: #161918; --text: #edefec; --text-2: #9a9e9a; --text-3: #5a5e5a; --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.18); --green-pill-bg: rgba(61,220,132,0.1); --green-pill-text: #3DDC84; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; transition: background var(--transition), color var(--transition); }
+
+        nav { position: sticky; top: 0; z-index: 100; background: rgba(246,247,245,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: background var(--transition); }
+        .dark nav { background: rgba(14,16,15,0.85); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .nav-logo { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--green); text-decoration: none; letter-spacing: -0.5px; }
+        .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: var(--radius-pill); transition: color var(--transition), background var(--transition); }
+        .nav-links a:hover { color: var(--text); background: var(--border); }
+        .nav-controls { display: flex; align-items: center; gap: 8px; }
+        .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 10px; font-size: 13px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
+        .nav-select:hover { background: var(--border-hover); }
+        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--transition); }
+        .icon-btn:hover { background: var(--border-hover); color: var(--text); }
+        .icon-btn svg { width: 16px; height: 16px; }
+        .mobile-menu-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 36px; height: 36px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); }
+        .mobile-menu-btn svg { width: 18px; height: 18px; }
+        #mobile-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 16px; gap: 4px; }
+        #mobile-menu.open { display: flex; }
+        #mobile-menu a { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; padding: 10px 12px; border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); }
+        #mobile-menu a:hover { background: var(--border); color: var(--text); }
+        .mobile-controls { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border); margin-top: 4px; }
+
+        /* PRIVACY LAYOUT */
+        .privacy-wrap { max-width: 740px; margin: 0 auto; padding: 80px 24px 100px; flex: 1; }
+        .privacy-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 12px; }
+        .privacy-title { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 800; letter-spacing: -2px; color: var(--text); line-height: 1; margin-bottom: 12px; }
+        .privacy-meta { font-size: 13px; color: var(--text-3); margin-bottom: 56px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+
+        /* TABLE OF CONTENTS */
+        .toc { position: static; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 48px; backdrop-filter: none; }
+        .toc-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-3); margin-bottom: 12px; }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+        .toc-list a { font-size: 14px; color: var(--text-2); text-decoration: none; transition: color var(--transition); }
+        .toc-list a:hover { color: var(--green); }
+
+        /* PROSE */
+        .prose { display: flex; flex-direction: column; gap: 36px; }
+        .prose-section { scroll-margin-top: 80px; }
+        .prose h2 { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -0.5px; color: var(--text); margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+        .prose h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; margin-top: 20px; }
+        .prose p { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 12px; }
+        .prose ul { list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+        .prose ul li { font-size: 15px; color: var(--text-2); line-height: 1.7; padding-left: 20px; position: relative; }
+        .prose ul li::before { content: '·'; position: absolute; left: 6px; color: var(--green); font-weight: 700; }
+        .prose strong { color: var(--text); font-weight: 600; }
+        .prose a { color: var(--green); text-decoration: none; }
+        .prose a:hover { text-decoration: underline; }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box { background: var(--green-pill-bg); border: 1px solid rgba(61,220,132,0.2); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 16px; }
+        .highlight-box p { color: var(--green-pill-text); margin-bottom: 0; }
+        .dark .highlight-box p { color: var(--green); }
+
+        footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; }
+        .footer-links { display: center; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+        .footer-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color var(--transition); }
+        .footer-links a:hover { color: var(--green); }
+        .footer-links span { color: var(--border-hover); }
+        .footer-copy { font-size: 12px; color: var(--text-3); }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-controls { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .privacy-wrap { padding: 48px 20px 72px; }
+        }
+    </style>
+    <script>
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+    </script>
+  <script type="module" crossorigin src="../assets/main-b1527f96.js"></script>
+  <link rel="stylesheet" href="../assets/main-aea9308a.css">
 </head>
-<body class="bg-gray-100 dark:bg-dark-900 text-gray-800 dark:text-gray-100 font-sans antialiased flex flex-col min-h-screen transition-colors duration-300">
+<body>
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AC Games</a>
+        <ul class="nav-links">
+            <li><a href="/#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="/#about" data-i18n="nav_about">About</a></li>
+            <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
+            <li><a href="/#games" data-i18n="nav_games">Games</a></li>
+            <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <select id="lang-selector" class="nav-select" aria-label="Language">
+                <option value="en">🇺🇸 EN</option>
+                <option value="fr">🇫🇷 FR</option>
+                <option value="nl">🇳🇱 NL</option>
+            </select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
+                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+            </button>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </div>
+    <div id="mobile-menu">
+        <a href="/#home" data-i18n="nav_home">Home</a>
+        <a href="/#about" data-i18n="nav_about">About</a>
+        <a href="/#tech" data-i18n="nav_tech">Technologies</a>
+        <a href="/#games" data-i18n="nav_games">Games</a>
+        <a href="/contact/" data-i18n="nav_contact">Contact</a>
+        <div class="mobile-controls">
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language">
+                <option value="en">🇺🇸 EN</option>
+                <option value="fr">🇫🇷 FR</option>
+                <option value="nl">🇳🇱 NL</option>
+            </select>
+            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode">
+                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
 
-    <!-- Navigation -->
-    <nav class="bg-white/70 dark:bg-dark-800/70 backdrop-blur-lg shadow-md sticky top-0 z-50 transition-colors duration-300">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="/" class="text-2xl font-display font-bold text-primary-500">AC Games</a>
+<main style="flex:1">
+    <div class="privacy-wrap">
+        <p class="privacy-eyebrow" data-i18n="privacy_eyebrow">Legal</p>
+        <h1 class="privacy-title" data-i18n="privacy_title">Privacy Policy</h1>
+        <p class="privacy-meta" data-i18n="privacy_meta">Last updated: 4th January 2026</p>
 
-            <!-- Desktop Menu & Controls -->
-            <div class="hidden md:flex items-center space-x-6">
-                <div class="space-x-6 font-semibold">
-                    <a href="/#home" class="hover:text-primary-500 transition" data-i18n="nav_home">Home</a>
-                    <a href="/#about" class="hover:text-primary-500 transition" data-i18n="nav_about">About</a>
-                    <a href="/#tech" class="hover:text-primary-500 transition" data-i18n="nav_tech">Technologies</a>
-                    <a href="/#games" class="hover:text-primary-500 transition" data-i18n="nav_games">Games</a>
-                    <a href="/contact/" class="hover:text-primary-500 transition" data-i18n="nav_contact">Contact</a>
-                </div>
+        <nav class="toc" aria-label="Table of contents">
+            <div class="toc-title" data-i18n="toc_title">On this page</div>
+            <ol class="toc-list">
+                <li><a href="#s1" data-i18n="toc_1">1. Information We Collect</a></li>
+                <li><a href="#s2" data-i18n="toc_2">2. How We Use Your Information</a></li>
+                <li><a href="#s3" data-i18n="toc_3">3. Data Sharing</a></li>
+                <li><a href="#s4" data-i18n="toc_4">4. Data Security</a></li>
+                <li><a href="#s5" data-i18n="toc_5">5. Children's Privacy</a></li>
+                <li><a href="#s6" data-i18n="toc_6">6. Your Rights</a></li>
+                <li><a href="#s7" data-i18n="toc_7">7. Changes to This Policy</a></li>
+                <li><a href="#s8" data-i18n="toc_8">8. Contact Us</a></li>
+            </ol>
+        </nav>
 
-                <!-- Controls -->
-                <div class="flex items-center space-x-3">
-                    <select id="lang-selector" class="bg-gray-200 dark:bg-dark-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-primary-500 cursor-pointer">
-                        <option value="en">🇺🇸 EN</option>
-                        <option value="fr">🇫🇷 FR</option>
-                        <option value="nl">🇳🇱 NL</option>
-                    </select>
-                    <button id="theme-toggler" class="p-2 rounded-full bg-gray-200 dark:bg-dark-700 hover:bg-gray-300 dark:hover:bg-dark-600 transition focus:outline-none" aria-label="Toggle Dark Mode">
-                        <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-                        <svg class="w-5 h-5 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    </button>
-                </div>
+        <div class="prose">
+            <div class="highlight-box">
+                <p data-i18n="privacy_highlight">Your privacy matters. Our games are designed to be fun, and we aim to be transparent about the data processed when you play them.</p>
             </div>
 
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="p-2 rounded-md text-gray-600 dark:text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+            <p style="font-size:15px;color:var(--text-2);line-height:1.8" data-i18n="privacy_intro">Thank you for playing our games. This Privacy Policy explains how we handle information when you use our mobile applications (the "Games").</p>
+
+            <div class="prose-section" id="s1">
+                <h2 data-i18n="privacy_s1_title">1. Information We Collect and Why</h2>
+                <p data-i18n="privacy_s1_p1">To provide and improve our Games, we use third-party services that may collect information.</p>
+                <h3 data-i18n="privacy_firebase">A. Firebase (Google)</h3>
+                <p data-i18n="privacy_firebase_p1">We use Firebase for essential game functionalities:</p>
+                <ul>
+                    <li data-i18n="privacy_firebase_li1"><strong>Firebase Authentication</strong> — to allow you to create an account (via Google Sign-In or email/password) and save your progress securely. This handles your email address, a user ID, and authentication tokens.</li>
+                    <li data-i18n="privacy_firebase_li2"><strong>Cloud Firestore</strong> — to store your game data such as high scores, credits, unlocked items, and friends lists, linked to your user ID.</li>
+                    <li data-i18n="privacy_firebase_li3"><strong>Firebase Crashlytics</strong> — to detect and analyze crashes. This collects crash-related information including device state, type, and OS to help us fix bugs. It does not collect personally identifiable information.</li>
+                </ul>
+                <h3 data-i18n="privacy_admob">B. Google AdMob</h3>
+                <p data-i18n="privacy_admob_p1">We use Google AdMob to show advertisements. AdMob may collect and use data to provide personalized ads, including:</p>
+                <ul>
+                    <li data-i18n="privacy_admob_li1">Device identifiers (like the Advertising ID).</li>
+                    <li data-i18n="privacy_admob_li2">Location data (if location services are enabled).</li>
+                    <li data-i18n="privacy_admob_li3">Information about your interactions with ads.</li>
+                </ul>
+                <p data-i18n="privacy_admob_optout">You can manage your ad preferences in your device's settings — "Limit Ad Tracking" on iOS or "Opt out of Ads Personalization" on Android.</p>
+            </div>
+
+            <div class="prose-section" id="s2">
+                <h2 data-i18n="privacy_s2_title">2. How We Use Your Information</h2>
+                <ul>
+                    <li data-i18n="privacy_s2_li1">To operate and maintain the Games (e.g., saving your scores).</li>
+                    <li data-i18n="privacy_s2_li2">To fix bugs and improve the user experience (via Crashlytics).</li>
+                    <li data-i18n="privacy_s2_li3">To support the Games financially through advertising (via AdMob).</li>
+                    <li data-i18n="privacy_s2_li4">To provide social features like leaderboards and friend lists.</li>
+                </ul>
+            </div>
+
+            <div class="prose-section" id="s3">
+                <h2 data-i18n="privacy_s3_title">3. Data Sharing</h2>
+                <p data-i18n="privacy_s3_p1">We do not manually share your personal data with any third parties, except for the data automatically collected by the services mentioned above (Firebase and AdMob) as part of their standard operation.</p>
+            </div>
+
+            <div class="prose-section" id="s4">
+                <h2 data-i18n="privacy_s4_title">4. Data Security</h2>
+                <p data-i18n="privacy_s4_p1">We take reasonable measures to protect your information. Data stored on Firebase is secured by Google's infrastructure. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
+            </div>
+
+            <div class="prose-section" id="s5">
+                <h2 data-i18n="privacy_s5_title">5. Children's Privacy</h2>
+                <p data-i18n="privacy_s5_p1">Our Games are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us so we can promptly remove it.</p>
+            </div>
+
+            <div class="prose-section" id="s6">
+                <h2 data-i18n="privacy_s6_title">6. Your Rights</h2>
+                <p data-i18n="privacy_s6_p1">Depending on your location (e.g., if you are in the European Union), you may have rights regarding your personal data, such as the right to access, correct, or delete your data. Our Games provide an in-app feature to delete your account. You can also use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank">account deletion request form</a>.</p>
+            </div>
+
+            <div class="prose-section" id="s7">
+                <h2 data-i18n="privacy_s7_title">7. Changes to This Privacy Policy</h2>
+                <p data-i18n="privacy_s7_p1">We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the Game or on our website. You are advised to review this policy periodically.</p>
+            </div>
+
+            <div class="prose-section" id="s8">
+                <h2 data-i18n="privacy_s8_title">8. Contact Us</h2>
+                <p data-i18n="privacy_s8_p1">If you have any questions about this Privacy Policy, please contact us via the in-game support feature or through our <a href="/contact/">contact page</a>.</p>
             </div>
         </div>
+    </div>
+</main>
 
-        <!-- Mobile Menu, hidden by default -->
-        <div id="mobile-menu" class="md:hidden hidden">
-            <a href="/#home" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_home">Home</a>
-            <a href="/#about" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_about">About</a>
-            <a href="/#tech" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_tech">Technologies</a>
-            <a href="/#games" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_games">Games</a>
-            <a href="/contact/" class="block py-2 px-4 text-sm hover:bg-gray-200 dark:hover:bg-dark-700" data-i18n="nav_contact">Contact</a>
-            <div class="p-4 border-t border-gray-200 dark:border-dark-700">
-                <div class="flex items-center space-x-3">
-                    <select id="lang-selector-mobile" class="bg-gray-200 dark:bg-dark-700 border-none rounded-md py-1 px-2 text-sm focus:ring-2 focus:ring-primary-500 cursor-pointer w-full">
-                        <option value="en">🇺🇸 EN</option>
-                        <option value="fr">🇫🇷 FR</option>
-                        <option value="nl">🇳🇱 NL</option>
-                    </select>
-                    <button id="theme-toggler-mobile" class="p-2 rounded-full bg-gray-200 dark:bg-dark-700 hover:bg-gray-300 dark:hover:bg-dark-600 transition focus:outline-none" aria-label="Toggle Dark Mode">
-                        <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
-                        <svg class="w-5 h-5 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                    </button>
-                </div>
-            </div>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-links">
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
+            <span>·</span>
+            <a href="/contact/" data-i18n="contact">Contact Support</a>
+            <span>·</span>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>
-    </nav>
+        <p class="footer-copy" data-i18n="copyright">© 2026 AC Games. All rights reserved.</p>
+    </div>
+</footer>
 
-    <main class="flex-grow container mx-auto max-w-3xl py-12 px-4">
-        <h1 class="text-4xl font-display font-bold text-primary-500 text-center mb-8">Privacy Policy</h1>
-        <div class="prose prose-lg dark:prose-invert mx-auto">
-            <p><strong>Last Updated:</strong> 4th January 2026</p>
 
-            <p>Thank you for playing our games ("we," "us," or "our"). This Privacy Policy explains how we handle information when you use our mobile applications (the "Games").</p>
-
-            <p>Your privacy is important to us. Our Games are designed to be fun, and we aim to be transparent about the data processed.</p>
-
-            <h2>1. Information We Collect and Why</h2>
-            <p>To provide and improve our Games, we use third-party services that may collect information.</p>
-
-            <h3>A. Firebase (Google)</h3>
-            <p>We use Firebase, a Google service, for essential game functionalities:</p>
-            <ul>
-                <li><strong>Firebase Authentication:</strong> To allow you to create an account (via Google Sign-In or email/password) and save your progress securely. This process involves handling your email address, a user ID, and authentication tokens.</li>
-                <li><strong>Cloud Firestore (Firebase):</strong> To store your game data, such as your high scores, credits, unlocked items, and friends lists. This data is linked to your anonymous or registered user ID.</li>
-                <li><strong>Firebase Crashlytics:</strong> To detect and analyze crashes in the Games. This service collects crash-related information, including device state, device type, and operating system, to help us fix bugs and improve stability. It does not collect personally identifiable information.</li>
-            </ul>
-
-            <h3>B. Google AdMob</h3>
-            <p>We use Google AdMob to show advertisements in the Games. AdMob may collect and use data to provide personalized ads. This can include:</p>
-            <ul>
-                <li>Device identifiers (like the Advertising ID).</li>
-                <li>Location data (if location services are enabled).</li>
-                <li>Information about your interactions with ads.</li>
-            </ul>
-            <p>You can manage your ad preferences in your device's settings (e.g., "Limit Ad Tracking" on iOS or "Opt out of Ads Personalization" on Android).</p>
-
-            <h2>2. How We Use Your Information</h2>
-            <ul>
-                <li>To operate and maintain the Games (e.g., saving your scores).</li>
-                <li>To fix bugs and improve the user experience (via Crashlytics).</li>
-                <li>To support the Games financially through advertising (via AdMob).</li>
-                <li>To provide social features like leaderboards and friend lists.</li>
-            </ul>
-
-            <h2>3. Data Sharing</h2>
-            <p>We do not manually share your personal data with any third parties, except for the data automatically collected by the services mentioned above (Firebase and AdMob) as part of their standard operation.</p>
-
-            <h2>4. Data Security</h2>
-            <p>We take reasonable measures to protect your information. Data stored on Firebase is secured by Google's infrastructure. However, no method of transmission over the internet or electronic storage is 100% secure.</p>
-
-            <h2>5. Children's Privacy</h2>
-            <p>Our Games are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have inadvertently collected such information, please contact us so we can promptly remove it.</p>
-
-            <h2>6. Your Rights</h2>
-            <p>Depending on your location (e.g., if you are in the European Union), you may have rights regarding your personal data, such as the right to access, correct, or delete your data. Our Games provide an in-app feature to delete your account, which will erase your associated data from our primary database. You can also request account deletion via the link in the footer of this website.</p>
-
-            <h2>7. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the Game or on our website. You are advised to review this Privacy Policy periodically for any changes.</p>
-
-            <h2>8. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us via the in-game support feature or through our contact page.</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-100 dark:bg-dark-800 text-center py-8 border-t border-gray-200 dark:border-dark-700 text-gray-500 text-sm transition-colors duration-300">
-        <p data-i18n="copyright">&copy; 2026 AC Games. All rights reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="/privacy" class="hover:text-primary-500 transition" data-i18n="privacy">Privacy Policy</a>
-            <span>|</span>
-            <a href="/contact/" class="hover:text-primary-500 transition" data-i18n="contact">Contact Support</a>
-            <span>|</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" class="hover:text-primary-500 transition" data-i18n="delete_account">Account Deletion Request</a>
-        </div>
-    </footer>
-
-    
 </body>
 </html>
