@@ -2,12 +2,13 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './',
+  base: '/',
   build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
         flappyVertical: resolve(__dirname, 'flappy-vertical/index.html'),
+        blockDrift: resolve(__dirname, 'block-drift/index.html'),
         sliceAndTrap: resolve(__dirname, 'slice-and-trap/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
