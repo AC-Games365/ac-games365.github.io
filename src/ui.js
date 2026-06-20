@@ -4,14 +4,14 @@ export function setupMobileMenu() {
     
     if (btn && menu) {
         btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            menu.classList.toggle('open');
         });
         
         // Fermer le menu mobile quand on clique sur un lien
         const links = menu.querySelectorAll('a');
         links.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('hidden');
+                menu.classList.remove('open');
             });
         });
     }
