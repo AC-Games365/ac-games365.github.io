@@ -5,6 +5,13 @@ export function applyTheme(theme) {
         document.documentElement.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
+    updateThemeIcons();
+}
+
+export function updateThemeIcons() {
+    const isDark = document.documentElement.classList.contains('dark');
+    document.querySelectorAll('.sun-icon').forEach(el => el.style.display = isDark ? 'block' : 'none');
+    document.querySelectorAll('.moon-icon').forEach(el => el.style.display = isDark ? 'none' : 'block');
 }
 
 export function toggleTheme() {

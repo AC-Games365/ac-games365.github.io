@@ -36,6 +36,13 @@ export async function setLanguage(lang) {
         }
     });
 
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+        const key = element.getAttribute('data-i18n-placeholder');
+        if (translations[key]) {
+            element.placeholder = translations[key];
+        }
+    });
+
     const langSelector = document.getElementById('lang-selector');
     if (langSelector) langSelector.value = lang;
     

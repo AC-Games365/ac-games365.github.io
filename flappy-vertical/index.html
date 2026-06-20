@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Vertical - AC Games</title>
-    <link rel="icon" type="image/png" href="../assets/images/icon/icon.png">
+    <title data-i18n="game_flappy_title">Flappy Vertical - AC Games</title>
+    <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
     <meta name="description" content="The addictive vertical arcade game! Fly up, dodge obstacles, and beat high scores. Download on Google Play.">
     <meta property="og:title" content="Flappy Vertical - AC Games">
     <meta property="og:description" content="The vertical twist on a classic! Download free on Android.">
@@ -106,6 +106,12 @@
             .game-hero-bg::after { background: linear-gradient(to bottom, rgba(14,16,15,0.8) 0%, rgba(14,16,15,0.95) 100%); }
         }
     </style>
+    <script>
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+    </script>
 </head>
 <body>
 <nav>
@@ -201,7 +207,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-links">
-            <a href="/privacy" data-i18n="privacy">Privacy Policy</a>
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
             <span>·</span>
@@ -211,26 +217,6 @@
     </div>
 </footer>
 
-<script>
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-    function updateThemeIcons() {
-        const dark = root.classList.contains('dark');
-        document.querySelectorAll('.sun-icon').forEach(el => el.style.display = dark ? 'block' : 'none');
-        document.querySelectorAll('.moon-icon').forEach(el => el.style.display = dark ? 'none' : 'block');
-    }
-    updateThemeIcons();
-    function toggleTheme() { root.classList.toggle('dark'); localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); updateThemeIcons(); }
-    document.getElementById('theme-toggler').addEventListener('click', toggleTheme);
-    document.getElementById('theme-toggler-mobile').addEventListener('click', toggleTheme);
-    const mobileMenu = document.getElementById('mobile-menu');
-    document.getElementById('mobile-menu-button').addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-</script>
-<script type="module" src="../src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@ export function setupContactForm() {
             // Using EmailJS to send the form
             // NOTE: You need to replace these IDs with your actual EmailJS credentials
             const serviceID = 'service_4q2a8zg';
-            const templateID = 'template_2t7grcv';
+            const templateID = 'template_contactus';
 
             // Send form data along with the reCAPTCHA response
             await emailjs.sendForm(serviceID, templateID, this);
@@ -52,6 +52,44 @@ export function setupContactForm() {
             btnText.classList.remove('opacity-0');
             btnSpinner.classList.add('hidden');
             statusDiv.classList.remove('hidden');
+        }
+    });
+
+    setupWaitlistForm();
+}
+
+export function setupWaitlistForm() {
+    const waitlistForm = document.getElementById('waitlist-form');
+    if (!waitlistForm) return;
+
+    waitlistForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = document.getElementById('notify-email').value;
+        const btn = document.getElementById('notify-btn');
+        const lang = localStorage.getItem('lang') || 'en';
+
+        btn.disabled = true;
+        btn.style.opacity = '0.7';
+
+        try {
+            // OPTION 1: EmailJS (si vous voulez recevoir un mail par inscription)
+            // Créez un template 'template_waitlist' sur EmailJS et décommentez :
+            await emailjs.send("service_4q2a8zg", "template_waitlist", { email: email });
+
+            // Pour l'instant, on affiche une confirmation traduite
+            const msg = {
+                fr: "Merci ! Nous vous tiendrons informé.",
+                en: "Thanks! We'll notify you.",
+                nl: "Bedankt! We houden je op de hoogte."
+            };
+
+            alert(msg[lang] || msg['en']);
+            waitlistForm.reset();
+        } catch (error) {
+            console.error("Erreur waitlist:", error);
+        } finally {
+            btn.disabled = false;
+            btn.style.opacity = '1';
         }
     });
 }

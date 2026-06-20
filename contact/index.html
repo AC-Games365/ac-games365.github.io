@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - AC Games</title>
-    <link rel="icon" type="image/png" href="../assets/images/icon/icon.png">
+    <title data-i18n="nav_contact">Contact - AC Games</title>
+    <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
     <meta name="description" content="Get in touch with AC Games for support or inquiries.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,6 +94,12 @@
             .contact-wrap { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px; }
         }
     </style>
+    <script>
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+    </script>
 </head>
 <body>
 <nav>
@@ -126,7 +132,7 @@
         <a href="/#about" data-i18n="nav_about">About</a>
         <a href="/#tech" data-i18n="nav_tech">Technologies</a>
         <a href="/#games" data-i18n="nav_games">Games</a>
-        <a href="/contact/">Contact</a>
+        <a href="/contact/" data-i18n="nav_contact">Contact</a>
         <div class="mobile-controls">
             <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language">
                 <option value="en">🇺🇸 EN</option>
@@ -146,27 +152,27 @@
         <!-- LEFT -->
         <div class="contact-left">
             <p class="section-label" data-i18n="contact_title">Contact</p>
-            <h1 class="contact-title">Get in<br>touch</h1>
-            <p class="contact-desc">Got a bug to report, a question about one of the games, or just want to say hi? I'm a solo dev — I read every message.</p>
+            <h1 class="contact-title" data-i18n="contact_title">Get in touch</h1>
+            <p class="contact-desc" data-i18n="contact_desc">Got a bug to report, a question about one of the games, or just want to say hi? I'm a solo dev — I read every message.</p>
             <div class="contact-item">
                 <div class="contact-item-icon">🎮</div>
                 <div>
-                    <div class="contact-item-title">Game Support</div>
-                    <div class="contact-item-body">Issues with Flappy Vertical or Block Drift? Describe the problem and your device.</div>
+                    <div class="contact-item-title" data-i18n="contact_game_support">Game Support</div>
+                    <div class="contact-item-body" data-i18n="contact_game_support_desc">Issues with Flappy Vertical or Block Drift? Describe the problem and your device.</div>
                 </div>
             </div>
             <div class="contact-item">
                 <div class="contact-item-icon">🔒</div>
                 <div>
-                    <div class="contact-item-title">Account Deletion</div>
-                    <div class="contact-item-body">Use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
+                    <div class="contact-item-title" data-i18n="delete_account">Account Deletion</div>
+                    <div class="contact-item-body" data-i18n="contact_deletion_desc">Use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
                 </div>
             </div>
             <div class="contact-item">
                 <div class="contact-item-icon">⚡</div>
                 <div>
-                    <div class="contact-item-title">Response time</div>
-                    <div class="contact-item-body">Usually within 24–48 hours on weekdays.</div>
+                    <div class="contact-item-title" data-i18n="contact_response_time">Response time</div>
+                    <div class="contact-item-body" data-i18n="contact_response_time_desc">Usually within 24–48 hours on weekdays.</div>
                 </div>
             </div>
         </div>
@@ -204,7 +210,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-links">
-            <a href="/privacy" data-i18n="privacy">Privacy Policy</a>
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
             <span>·</span>
@@ -214,51 +220,6 @@
     </div>
 </footer>
 
-<script>
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-    function updateThemeIcons() { const dark = root.classList.contains('dark'); document.querySelectorAll('.sun-icon').forEach(el => el.style.display = dark ? 'block' : 'none'); document.querySelectorAll('.moon-icon').forEach(el => el.style.display = dark ? 'none' : 'block'); }
-    updateThemeIcons();
-    function toggleTheme() { root.classList.toggle('dark'); localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); updateThemeIcons(); }
-    document.getElementById('theme-toggler').addEventListener('click', toggleTheme);
-    document.getElementById('theme-toggler-mobile').addEventListener('click', toggleTheme);
-    const mobileMenu = document.getElementById('mobile-menu');
-    document.getElementById('mobile-menu-button').addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-
-    // Form handling (same logic as before, compatible with your main.js)
-    document.getElementById('contact-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const status = document.getElementById('form-status');
-        const btn = document.getElementById('submit-btn');
-        const btnText = document.getElementById('btn-text');
-        const spinner = document.getElementById('btn-spinner');
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        if (!email || !message) { status.textContent = 'Please fill out all required fields.'; status.className = 'error'; status.style.display = 'block'; return; }
-        const recaptcha = grecaptcha.getResponse();
-        if (!recaptcha) { status.textContent = 'Please complete the security check.'; status.className = 'error'; status.style.display = 'block'; return; }
-        btn.disabled = true; btnText.style.visibility = 'hidden'; spinner.style.display = 'block';
-        try {
-            await emailjs.send('service_8a4o8eh', 'template_vbp3uhn', {
-                from_name: document.getElementById('name').value || 'Anonymous',
-                from_email: email,
-                message: message,
-                'g-recaptcha-response': recaptcha
-            });
-            status.textContent = "Message sent successfully! We'll get back to you soon.";
-            status.className = 'success'; status.style.display = 'block';
-            this.reset(); grecaptcha.reset();
-        } catch(err) {
-            status.textContent = 'Failed to send message. Please try again later.';
-            status.className = 'error'; status.style.display = 'block';
-        } finally {
-            btn.disabled = false; btnText.style.visibility = 'visible'; spinner.style.display = 'none';
-        }
-    });
-</script>
-<script type="module" src="../src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>

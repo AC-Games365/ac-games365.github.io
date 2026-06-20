@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slice and Trap - AC Games</title>
-    <link rel="icon" type="image/png" href="../assets/images/icon/icon.png">
+    <title data-i18n="game_new_title">Slice and Trap - AC Games</title>
+    <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
     <meta name="description" content="A modernized take on JezzBall with boosters and a shop. Releasing in 2026 on Android.">
     <meta property="og:title" content="Slice and Trap - AC Games">
     <meta property="og:description" content="Strategic puzzles, boosters, and an in-game shop. Coming 2026.">
@@ -99,6 +99,12 @@
             .notify-form { flex-direction: column; }
         }
     </style>
+    <script>
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+    </script>
 </head>
 <body>
 <nav>
@@ -152,20 +158,20 @@
             <img src="/assets/images/background/sliceAndTrap.png" alt="Slice and Trap">
         </div>
         <div class="game-hero-content">
-            <div class="badge-soon" data-i18n="coming_soon">Coming Soon — 2026</div>
+            <div class="badge-soon" data-i18n="game_new_platform">Coming Soon — 2026</div>
             <h1 class="game-title" data-i18n="game_new_title">Slice<br>and Trap</h1>
             <p class="game-subtitle" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</p>
-            <div class="notify-form">
-                <input type="email" class="notify-input" placeholder="your@email.com" id="notify-email">
-                <button class="btn-notify" onclick="handleNotify()">Notify me at launch</button>
-            </div>
-            <p class="notify-label">No spam. One email when it drops.</p>
+            <form class="notify-form" id="waitlist-form">
+                <input type="email" class="notify-input" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" id="notify-email" required>
+                <button type="submit" class="btn-notify" id="notify-btn" data-i18n="waitlist_button">Notify me at launch</button>
+            </form>
+            <p class="notify-label" data-i18n="waitlist_label">No spam. One email when it drops.</p>
         </div>
     </div>
 
     <div class="features-section">
-        <p class="section-label">What's coming</p>
-        <h2 class="section-title">Features</h2>
+        <p class="section-label" data-i18n="features_title">Features</p>
+        <h2 class="section-title" data-i18n="features_title">Features</h2>
         <div class="features-grid">
             <div class="feature-card" data-animate>
                 <div class="feature-icon">🧩</div>
@@ -189,7 +195,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-links">
-            <a href="/privacy" data-i18n="privacy">Privacy Policy</a>
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
             <span>·</span>
@@ -199,29 +205,6 @@
     </div>
 </footer>
 
-<script>
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-    function updateThemeIcons() { const dark = root.classList.contains('dark'); document.querySelectorAll('.sun-icon').forEach(el => el.style.display = dark ? 'block' : 'none'); document.querySelectorAll('.moon-icon').forEach(el => el.style.display = dark ? 'none' : 'block'); }
-    updateThemeIcons();
-    function toggleTheme() { root.classList.toggle('dark'); localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light'); updateThemeIcons(); }
-    document.getElementById('theme-toggler').addEventListener('click', toggleTheme);
-    document.getElementById('theme-toggler-mobile').addEventListener('click', toggleTheme);
-    const mobileMenu = document.getElementById('mobile-menu');
-    document.getElementById('mobile-menu-button').addEventListener('click', () => mobileMenu.classList.toggle('open'));
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
-    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-    function handleNotify() {
-        const email = document.getElementById('notify-email').value;
-        if (!email || !email.includes('@')) { document.getElementById('notify-email').focus(); return; }
-        // Wire this to your EmailJS or Firebase when ready
-        alert('Thanks! We\'ll let you know when Slice and Trap launches.');
-    }
-</script>
-<script type="module" src="../src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>

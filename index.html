@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AC Games - Fun & Addictive Mobile Games</title>
-    <link rel="icon" type="image/png" href="assets/images/icon/icon.png">
+    <title data-i18n="home_title">AC Games - Fun & Addictive Mobile Games</title>
+    <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="AC Games - Fun & Addictive Mobile Games">
@@ -784,6 +784,12 @@
             .tech-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
+    <script>
+        const root = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
+    </script>
 </head>
 <body>
 
@@ -846,12 +852,12 @@
                 <span class="eyebrow-dot"></span>
                 <span data-i18n="home_eyebrow">Indie game studio</span>
             </div>
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero_title">
                 Mobile games<br>made with <span class="accent">passion</span>
             </h1>
             <p class="hero-sub" data-i18n="home_subtitle">Mobile games built for the joy of play.</p>
             <div class="hero-ctas">
-                <a href="#games" class="btn-primary">
+                <a href="#games" class="btn-primary" data-i18n="hero_see_games">
                     See our games
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </a>
@@ -860,15 +866,15 @@
             <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="num">3</div>
-                    <div class="lbl">Games</div>
+                    <div class="lbl" data-i18n="stat_games">Games</div>
                 </div>
                 <div class="hero-stat">
                     <div class="num">2</div>
-                    <div class="lbl">Live on Android</div>
+                    <div class="lbl" data-i18n="stat_live">Live on Android</div>
                 </div>
                 <div class="hero-stat">
                     <div class="num">2026</div>
-                    <div class="lbl">New releases</div>
+                    <div class="lbl" data-i18n="stat_new">New releases</div>
                 </div>
             </div>
         </div>
@@ -879,32 +885,32 @@
         <div class="section-wrap">
             <div class="about-layout">
                 <div class="about-left" data-animate>
-                    <p class="section-label" data-i18n="about_title">About me</p>
-                    <h2 class="section-title">Hi, I'm<br><span style="color:var(--green)">Clement</span></h2>
+                    <p class="section-label" data-i18n="about_title">About</p>
+                    <h2 class="section-title" data-i18n="about_title_name">AC Games</h2>
                     <p class="about-desc" style="margin-top:24px" data-i18n="about_desc">
-                        I'm Clement — solo developer, gamer at heart. I make mobile games that are stupidly simple to start and impossible to stop. Flappy Vertical was just the beginning. Slice and Trap and Block Drift are already out or on the way, and I'm nowhere near done.
+                        AC Games is an indie game studio dedicated to creating simple, addictive, and fun mobile experiences. Each project is carefully crafted to offer a unique challenge to players worldwide.
                     </p>
                 </div>
                 <div class="about-right" data-animate>
                     <div class="about-card">
                         <div class="about-card-icon">🎮</div>
                         <div>
-                            <div class="about-card-title">Solo developer</div>
-                            <div class="about-card-body">Every line of code, every pixel, every design decision — made by one person.</div>
+                            <div class="about-card-title" data-i18n="about_card1_title">Solo developer</div>
+                            <div class="about-card-body" data-i18n="about_card1_desc">Every line of code, every pixel, every design decision — made by one person.</div>
                         </div>
                     </div>
                     <div class="about-card">
                         <div class="about-card-icon">📱</div>
                         <div>
-                            <div class="about-card-title">Mobile first</div>
-                            <div class="about-card-body">Built for Android, designed for the quick session you never want to end.</div>
+                            <div class="about-card-title" data-i18n="about_card2_title">Mobile first</div>
+                            <div class="about-card-body" data-i18n="about_card2_desc">Built for Android, designed for the quick session you never want to end.</div>
                         </div>
                     </div>
                     <div class="about-card">
                         <div class="about-card-icon">🚀</div>
                         <div>
-                            <div class="about-card-title">Always building</div>
-                            <div class="about-card-body">2 games live, 1 in the pipeline. New mechanics, new challenges, always shipping.</div>
+                            <div class="about-card-title" data-i18n="about_card3_title">Always building</div>
+                            <div class="about-card-body" data-i18n="about_card3_desc">2 games live, 1 in the pipeline. New mechanics, new challenges, always shipping.</div>
                         </div>
                     </div>
                 </div>
@@ -918,7 +924,7 @@
             <div class="games-header">
                 <div>
                     <p class="section-label" data-i18n="games_title">Games</p>
-                    <h2 class="section-title">What I'm building</h2>
+                    <h2 class="section-title" data-i18n="games_header_title">My Games</h2>
                 </div>
             </div>
             <div class="games-grid">
@@ -988,7 +994,7 @@
     <section id="tech">
         <div class="section-wrap">
             <p class="section-label" data-i18n="tech_title">Technologies</p>
-            <h2 class="section-title">Built with</h2>
+            <h2 class="section-title" data-i18n="tech_built_with">Built with</h2>
             <div class="tech-grid" data-animate>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter">
@@ -1024,7 +1030,7 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-links">
-            <a href="/privacy" data-i18n="privacy">Privacy Policy</a>
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
             <span>·</span>
@@ -1038,64 +1044,6 @@
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/></svg>
 </button>
 
-<script>
-    /* ── Dark mode ── */
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-
-    function updateThemeIcons() {
-        const dark = root.classList.contains('dark');
-        document.querySelectorAll('.sun-icon').forEach(el => el.style.display = dark ? 'block' : 'none');
-        document.querySelectorAll('.moon-icon').forEach(el => el.style.display = dark ? 'none' : 'block');
-    }
-    updateThemeIcons();
-
-    function toggleTheme() {
-        root.classList.toggle('dark');
-        localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light');
-        updateThemeIcons();
-    }
-
-    document.getElementById('theme-toggler').addEventListener('click', toggleTheme);
-    document.getElementById('theme-toggler-mobile').addEventListener('click', toggleTheme);
-
-    /* ── Mobile menu ── */
-    const mobileMenu = document.getElementById('mobile-menu');
-    document.getElementById('mobile-menu-button').addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-    });
-    mobileMenu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => mobileMenu.classList.remove('open'));
-    });
-
-    /* ── Back to top ── */
-    const btt = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        btt.classList.toggle('visible', window.scrollY > 400);
-    });
-    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    /* ── Scroll animations ── */
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-    /* ── Active nav link ── */
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const activateLink = () => {
-        let current = '';
-        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
-        navLinks.forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-        });
-    };
-    window.addEventListener('scroll', activateLink, { passive: true });
-</script>
-
-<script type="module" src="./src/main.js"></script>
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
