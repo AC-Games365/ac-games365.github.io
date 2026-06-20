@@ -30,7 +30,7 @@ export const translations_nl = {
     "game_new_title": "Slice and Trap",
     "game_new_desc": "Een gemoderniseerde versie van JezzBall met boosters en een winkel. Verschijnt in 2026.",
     "game_block_drift_title": "Block Drift",
-    "game_block_drift_desc": "Een op zwaartekracht gebaseerde blokpuzzeluitdaging. Verschijnt in 2026.",
+    "game_block_drift_desc": "De op zwaartekracht gebaseerde blokpuzzeluitdaging is hier! Speel nu op Google Play.",
     "coming_soon": "Binnenkort beschikbaar",
     "contact_title": "Neem Contact Op",
     "contact_name": "Naam",
@@ -47,13 +47,13 @@ export const translations_nl = {
     "s3_desc": "Ontgrendel aangepaste bal skins, nieuwe snij-animaties, en kleurrijke arena's.",
 
     // Block Drift Page
-    "bd_subtitle": "Beheers de zwaartekracht, schuif de blokken en los de ultieme puzzeluitdaging op.",
-    "bd1_title": "Zwaartekrachtmechanica",
-    "bd1_desc": "Ervaar een unieke draai aan blokpuzzels waarbij de zwaartekracht alles verandert.",
-    "bd2_title": "100+ Niveaus",
-    "bd2_desc": "Daag jezelf uit met meer dan 100 handgemaakte zwaartekrachtpuzzels in de avontuurmodus.",
-    "bd3_title": "Eindeloze Modus",
-    "bd3_desc": "Test je overlevingsvaardigheden in een oneindige uitdaging. Hoe lang hou jij het vol?",
+    "bd_subtitle": "Beheers de zwaartekracht en drift je een weg door uitdagende blokpuzzels!",
+    "bd1_title": "2000 Uitdagende Niveaus",
+    "bd1_desc": "Verover 1000 levels in de normale modus en 1000 in de zwaartekracht tartende modus.",
+    "bd2_title": "Dagelijkse Uitdagingen",
+    "bd2_desc": "Test je vaardigheden met frisse, unieke puzzels elke dag.",
+    "bd3_title": "Dynamische Blokfysica",
+    "bd3_desc": "Ervaar realistische blokbewegingen en strategische plaatsing in een levendige wereld.",
 
     // Form Status
     "form_success": "Bericht succesvol verzonden! We nemen spoedig contact met u op.",
