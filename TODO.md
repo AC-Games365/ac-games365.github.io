@@ -16,12 +16,12 @@
 1. Allez sur https://analytics.google.com
 2. Créez une nouvelle propriété
 3. URL : https://ac-games365.github.io
-4. Vous recevrez un ID : G-ERM1RNESY3
+4. Vous recevrez un ID : G-H1DC620LTF
 ```
 
 ### 2️⃣ Remplacez les IDs placeholders
 
-Fichiers à modifier (remplacer `G-ERM1RNESY3` par votre vrai ID) :
+Fichiers à modifier (remplacer `G-H1DC620LTF` par votre vrai ID) :
 
 ```
 □ index.html
