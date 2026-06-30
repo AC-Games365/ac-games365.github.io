@@ -32,6 +32,18 @@
     <!-- Privacy-friendly analytics by Umami -->
     <script defer src="https://cloud.umami.is/script.js" data-website-id="c9e89baa-a962-4f4b-a34b-e24884284989"></script>
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERM1RNESY3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ERM1RNESY3', {
+            'page_title': document.title,
+            'page_path': window.location.pathname
+        });
+    </script>
+
     <style>
         /* ── RESET & BASE ── */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
