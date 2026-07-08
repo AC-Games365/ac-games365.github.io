@@ -127,6 +127,9 @@ export const translations_fr = {
     "bd_cta_sub": "Gratuit à télécharger. 2000+ niveaux vous attendent.",
     "bd_cta_btn": "Télécharger gratuitement sur Google Play",
 
+    // Web version
+    "play_online": "Jouer en ligne (Web)",
+
     // ── PARTAGÉ ───────────────────────────────────────
     "copyright": "&copy; 2026 AC Games. Tous droits réservés.",
     "privacy": "Politique de Confidentialité",
@@ -160,6 +163,13 @@ export const translations_fr = {
     "contact_email": "Email",
     "contact_message": "Message",
     "contact_send": "Envoyer le Message",
+    "contact_game": "Jeu concerné",
+    "contact_game_none": "Aucun / Général",
+    "contact_subject": "Sujet",
+    "contact_subj_question": "Question générale",
+    "contact_subj_bug": "Signaler un bug",
+    "contact_subj_feedback": "Avis / Suggestion",
+    "contact_subj_other": "Autre",
     "s1_title": "Puzzles Stratégiques",
     "s1_desc": "Piégez les balles rebondissantes en tranchant l'arène. Planifiez vos coupes avec soin !",
     "s2_title": "Boosters",
@@ -197,6 +207,8 @@ export const translations_fr = {
     "stat_games": "Jeux",
     "stat_live": "Disponible sur Android",
     "stat_new": "Nouvelles sorties",
+    "share_game": "Partager ce jeu",
+    "play_itchio": "Jouer sur itch.io",
     "games_header_title": "Mes Jeux",
     "tech_built_with": "Construit avec",
 

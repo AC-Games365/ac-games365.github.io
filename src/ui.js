@@ -58,3 +58,27 @@ export function setupBackToTopButton() {
         });
     });
 }
+
+/**
+ * Native sharing or fallback to clipboard
+ */
+export function setupSharing() {
+    window.shareGame = async (title) => {
+        const shareData = {
+            title: title + ' - AC Games',
+            text: `Check out ${title}, an awesome mobile game by AC Games!`,
+            url: window.location.href
+        };
+
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(window.location.href);
+                alert('Link copied to clipboard!');
+            }
+        } catch (err) {
+            console.log('Error sharing:', err);
+        }
+    };
+}

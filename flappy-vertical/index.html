@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flappy Vertical - AC Games</title>
+    <title>Flappy Vertical - The Addictive Vertical Arcade Game | AC Games</title>
     <link rel="icon" type="image/png" href="../assets/images/icon/icon.png">
+    <link rel="apple-touch-icon" href="../assets/images/icon/icon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ac-games365.github.io/flappy-vertical/">
+    <meta property="og:title" content="Flappy Vertical - The Addictive Vertical Arcade Game">
+    <meta property="og:description" content="Fly up, dodge obstacles, and unlock skins in this addictive vertical twist on a classic. Play now on Android!">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/images/background/flappyVertical.png">
+
+    <link rel="canonical" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="nl" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="es" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="id" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="ar" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="hi" href="https://ac-games365.github.io/flappy-vertical/">
+    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/flappy-vertical/">
     <meta name="description" content="The addictive vertical arcade game! Fly up, dodge obstacles, unlock skins, use boosters and compete globally. Free on Android.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +35,27 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-H1DC620LTF');
+    </script>
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Flappy Vertical",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "GameApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "100"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
     </script>
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -42,10 +82,10 @@
         .nav-links a:hover { color: var(--text); background: var(--border); }
         .nav-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
         .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 8px; font-size: 12px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
-        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--tr); flex-shrink: 0; }
+        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--tr); flex-shrink: 0; }
         .icon-btn:hover { background: var(--border-hover); }
         .icon-btn svg { width: 15px; height: 15px; }
-        .mob-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 34px; height: 34px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); flex-shrink: 0; }
+        .mob-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); flex-shrink: 0; }
         .mob-btn svg { width: 18px; height: 18px; }
         #mob-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 10px 16px; gap: 2px; }
         #mob-menu.open { display: flex; }
@@ -67,6 +107,8 @@
         .ctas { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .btn-g { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #0a2e17; font-size: 14px; font-weight: 600; padding: 11px 20px; border-radius: var(--radius-pill); text-decoration: none; transition: background var(--tr), transform var(--tr), box-shadow var(--tr); }
         .btn-g:hover { background: var(--green-dim); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(61,220,132,.3); }
+        .btn-web { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); color: #ffffff; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,.15); text-decoration: none; transition: background var(--tr), transform var(--tr); }
+        .btn-web:hover { background: rgba(255,255,255,.18); transform: translateY(-1px); }
         .btn-dim { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.07); color: rgba(255,255,255,.38); font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,.1); cursor: not-allowed; }
 
         /* STATS STRIP */
@@ -93,8 +135,8 @@
         .dark .phone { box-shadow: 0 20px 50px rgba(0,0,0,0.45); }
         .phone img { width: 100%; display: block; }
         /* Placeholder when no screenshot yet */
-        .phone-ph { width: 200px; height: 360px; border-radius: 28px; border: 2px solid var(--border); background: var(--bg-card); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; flex-shrink: 0; }
-        .phone-ph .ph-icon { font-size: 56px; }
+        .phone-ph { width: 200px; height: 220px; border-radius: 28px; border: 2px solid var(--border); background: linear-gradient(to bottom, var(--bg-card), var(--bg)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; flex-shrink: 0; }
+        .phone-ph .ph-icon { font-size: 64px; }
         .phone-ph .ph-label { font-size: 11px; color: var(--text-3); font-weight: 500; text-align: center; padding: 0 12px; }
         .feyebrow { display: inline-flex; align-items: center; gap: 6px; background: var(--green-pill-bg); color: var(--green-pill-text); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: var(--radius-pill); margin-bottom: 12px; }
         .ftitle { font-family: var(--font-display); font-size: clamp(22px,2.8vw,32px); font-weight: 800; letter-spacing: -0.8px; color: var(--text); margin-bottom: 12px; line-height: 1.1; }
@@ -131,9 +173,11 @@
 
         /* RESPONSIVE */
         @media (max-width: 860px) {
-            .frow { grid-template-columns: 1fr; gap: 28px; }
+            .frow { grid-template-columns: 1fr; gap: 20px; padding: 32px 0; }
             .frow.rev .fv, .frow.rev .fc { order: 0; }
-            .fv { justify-content: flex-start; }
+            .fv { justify-content: center; width: 100%; }
+            .fc { display: flex; flex-direction: column; align-items: center; text-align: center; }
+            .pills { justify-content: center; }
             .strip-inner { grid-template-columns: repeat(2,1fr); }
             .strip-item:nth-child(2) { border-right: none; }
             .grid4 { grid-template-columns: repeat(2,1fr); }
@@ -145,8 +189,8 @@
             .hero-bg::after { background: linear-gradient(to bottom, rgba(8,12,10,0.65) 0%, rgba(8,12,10,0.97) 100%); }
             .sw { padding: 48px 16px; }
             .grid4 { grid-template-columns: 1fr; }
-            .phone, .phone-ph { width: 180px; }
-            .phone-ph { height: 320px; }
+            .phone, .phone-ph { width: 210px; }
+            .phone-ph { height: 230px; }
         }
     </style>
 </head>
@@ -160,11 +204,11 @@
             <li><a href="/#about" data-i18n="nav_about">About</a></li>
             <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
             <li><a href="/#games" data-i18n="nav_games">Games</a></li>
-            <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
+            <li><a href="/contact/?game=flappy" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <div class="nav-controls">
             <select id="lang-selector" class="nav-select">
-                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option>
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option><option value="es">🇪🇸 ES</option><option value="id">🇮🇩 ID</option><option value="ar">🇸🇦 AR</option><option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -178,10 +222,10 @@
         <a href="/#about" data-i18n="nav_about">About</a>
         <a href="/#tech" data-i18n="nav_tech">Technologies</a>
         <a href="/#games" data-i18n="nav_games">Games</a>
-        <a href="/contact/" data-i18n="nav_contact">Contact</a>
+        <a href="/contact/?game=flappy" data-i18n="nav_contact">Contact</a>
         <div class="mob-ctrl">
             <select id="lang-selector-mobile" class="nav-select" style="flex:1">
-                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option>
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option><option value="es">🇪🇸 ES</option><option value="id">🇮🇩 ID</option><option value="ar">🇸🇦 AR</option><option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler-mobile" class="icon-btn">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -195,7 +239,7 @@
 
     <!-- HERO -->
     <div class="hero">
-        <div class="hero-bg"><img src="/assets/images/background/flappyVertical.png" alt="Flappy Vertical"></div>
+        <div class="hero-bg"><img src="/assets/images/background/flappyVertical.png" alt="Flappy Vertical" loading="lazy"></div>
         <div class="hero-body">
             <div class="badge-live"><span class="live-dot"></span><span data-i18n="live_badge">Live on Android</span></div>
             <h1 class="hero-title" data-i18n="game_flappy_title">Flappy<br>Vertical</h1>
@@ -205,6 +249,14 @@
                     <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M3.18 23.75c.34.19.72.25 1.09.19L15.34 12 4.27.06C3.9 0 3.52.06 3.18.25 2.5.63 2.08 1.36 2.08 2.2v19.6c0 .84.42 1.57 1.1 1.95z"/></svg>
                     <span data-i18n="download">Download on Google Play</span>
                 </a>
+                <a href="https://acgames365.itch.io/flappy-vertical" target="_blank" class="btn-web">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M11.24 3.75c-1.3 0-2.45.15-3.48.45-.4.1-.8.25-1.2.45-.6.25-1.1.55-1.55.9-.35.3-.65.65-.9 1-.2.4-.3.8-.3 1.2s.1.8.3 1.2c.25.4.55.75.9 1.05.45.35.95.65 1.55.9.4.2.8.35 1.2.45 1.03.3 2.18.45 3.48.45s2.45-.15 3.48-.45c.4-.1.8-.25 1.2-.45.6-.25 1.1-.55 1.55-.9.35-.3.65-.65.9-1.05.2-.4.3-.8.3-1.2s-.1-.8-.3-1.2c-.25-.4-.55-.75-.9-1-.45-.35-.95-.65-1.55-.9-.4-.2-.8-.35-1.2-.45-1.03-.3-2.18-.45-3.48-.45zm-4.7 3.5c-.41 0-.75.34-.75.75s.34.75.75.75.75-.34.75-.75-.34-.75-.75-.75zm9.4 0c-.41 0-.75.34-.75.75s.34.75.75.75.75-.34.75-.75-.34-.75-.75-.75zm-6.2 3.5c-.28 0-.5.22-.5.5v.5c0 .28.22.5.5.5h.5c.28 0 .5-.22.5-.5v-.5c0-.28-.22-.5-.5-.5h-.5zm3 0c-.28 0-.5.22-.5.5v.5c0 .28.22.5.5.5h.5c.28 0 .5-.22.5-.5v-.5c0-.28-.22-.5-.5-.5h-.5z"/></svg>
+                    <span data-i18n="play_itchio">Play on itch.io</span>
+                </a>
+                <button onclick="shareGame('Flappy Vertical')" class="btn-web">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                    <span data-i18n="share_game">Share this game</span>
+                </button>
                 <div class="btn-dim"><span data-i18n="download_apple">Coming soon on App Store</span></div>
             </div>
         </div>
@@ -349,10 +401,13 @@
     <div class="foot-inner">
         <div class="foot-links">
             <a href="/privacy" data-i18n="privacy">Privacy Policy</a><span>·</span>
-            <a href="/contact/" data-i18n="contact">Contact Support</a><span>·</span>
+            <a href="/flappy-vertical/game/" data-i18n="play_online" style="display: none">Play Online (Web)</a><span style="display: none">·</span>
+            <a href="/contact/?game=flappy" data-i18n="contact">Contact Support</a><span>·</span>
+            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a><span>·</span>
+            <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a><span>·</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>
-        <p class="foot-copy" data-i18n="copyright">© 2026 AC Games. All rights reserved.</p>
+        <p class="foot-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.1</span></p>
     </div>
 </footer>
 

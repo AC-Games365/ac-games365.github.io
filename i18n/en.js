@@ -142,6 +142,9 @@ export const translations_en = {
     "bd_cta_sub": "Free to download. 2000+ levels waiting.",
     "bd_cta_btn": "Download free on Google Play",
 
+    // Web version
+    "play_online": "Play Online (Web)",
+
     // ── SHARED ───────────────────────────────────────
     "copyright": "&copy; 2026 AC Games. All rights reserved.",
     "privacy": "Privacy Policy",
@@ -175,6 +178,13 @@ export const translations_en = {
     "contact_email": "Email",
     "contact_message": "Message",
     "contact_send": "Send Message",
+    "contact_game": "Related Game",
+    "contact_game_none": "None / General",
+    "contact_subject": "Subject",
+    "contact_subj_question": "General Question",
+    "contact_subj_bug": "Bug Report",
+    "contact_subj_feedback": "Feedback / Suggestion",
+    "contact_subj_other": "Other",
     "s1_title": "Strategic Puzzles",
     "s1_desc": "Trap the bouncing balls by slicing the arena. Plan your cuts carefully!",
     "s2_title": "Boosters",
@@ -212,6 +222,8 @@ export const translations_en = {
     "stat_games": "Games",
     "stat_live": "Live on Android",
     "stat_new": "New releases",
+    "share_game": "Share this game",
+    "play_itchio": "Play on itch.io",
     "games_header_title": "My Games",
     "tech_built_with": "Built with",
 

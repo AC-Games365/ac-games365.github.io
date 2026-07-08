@@ -127,6 +127,9 @@ export const translations_nl = {
     "bd_cta_sub": "Gratis te downloaden. 2000+ niveaus wachten op je.",
     "bd_cta_btn": "Gratis downloaden op Google Play",
 
+    // Web version
+    "play_online": "Online spelen (Web)",
+
     // ── GEDEELD ───────────────────────────────────────
     "copyright": "&copy; 2026 AC Games. Alle rechten voorbehouden.",
     "privacy": "Privacybeleid",
@@ -160,6 +163,13 @@ export const translations_nl = {
     "contact_email": "E-mail",
     "contact_message": "Bericht",
     "contact_send": "Verzend Bericht",
+    "contact_game": "Gerelateerd spel",
+    "contact_game_none": "Geen / Algemeen",
+    "contact_subject": "Onderwerp",
+    "contact_subj_question": "Algemene vraag",
+    "contact_subj_bug": "Bug melden",
+    "contact_subj_feedback": "Feedback / Suggestie",
+    "contact_subj_other": "Overig",
     "s1_title": "Strategische Puzzels",
     "s1_desc": "Vang de stuiterende ballen door de arena te snijden. Plan je sneden zorgvuldig!",
     "s2_title": "Boosters",
@@ -197,6 +207,8 @@ export const translations_nl = {
     "stat_games": "Spellen",
     "stat_live": "Live op Android",
     "stat_new": "Nieuwe releases",
+    "share_game": "Deel dit spel",
+    "play_itchio": "Speel op itch.io",
     "games_header_title": "Mijn Spellen",
     "tech_built_with": "Gemaakt met",
 

@@ -58,6 +58,13 @@ export async function setLanguage(lang) {
     const captchaLabel = document.getElementById('captcha-label');
     if (captchaLabel) captchaLabel.innerHTML = translations['captcha_label'] || '';
 
+    // Handle RTL for Arabic
+    if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+    } else {
+        document.documentElement.dir = 'ltr';
+    }
+
     document.documentElement.lang = lang;
     localStorage.setItem('lang', lang);
 }

@@ -73,8 +73,9 @@
         .form-group { margin-bottom: 20px; }
         .form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text-2); margin-bottom: 6px; }
         .form-label .req { color: var(--green); }
-        .form-input, .form-textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 11px 16px; font-size: 14px; color: var(--text); font-family: var(--font-body); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
-        .form-input:focus, .form-textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(61,220,132,0.1); }
+        .form-input, .form-textarea, .form-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 11px 16px; font-size: 14px; color: var(--text); font-family: var(--font-body); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
+        .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(61,220,132,0.1); }
+        .form-select { appearance: auto; cursor: pointer; }
         .form-textarea { resize: vertical; min-height: 120px; }
         .recaptcha-wrap { display: flex; justify-content: center; margin: 20px 0; }
         .btn-submit { width: 100%; background: var(--green); color: #0a2e17; font-size: 15px; font-weight: 600; padding: 13px; border-radius: var(--radius-pill); border: none; cursor: pointer; font-family: var(--font-body); position: relative; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
@@ -125,6 +126,10 @@
                 <option value="en">🇺🇸 EN</option>
                 <option value="fr">🇫🇷 FR</option>
                 <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="id">🇮🇩 ID</option>
+                <option value="ar">🇸🇦 AR</option>
+                <option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -146,6 +151,10 @@
                 <option value="en">🇺🇸 EN</option>
                 <option value="fr">🇫🇷 FR</option>
                 <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="id">🇮🇩 ID</option>
+                <option value="ar">🇸🇦 AR</option>
+                <option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -198,6 +207,24 @@
                     <input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com">
                 </div>
                 <div class="form-group">
+                    <label class="form-label" for="game" data-i18n="contact_game">Game</label>
+                    <select id="game" name="game" class="form-select">
+                        <option value="none" data-i18n="contact_game_none">None / General</option>
+                        <option value="flappy" data-i18n="game_flappy_title">Flappy Vertical</option>
+                        <option value="block" data-i18n="game_block_drift_title">Block Drift</option>
+                        <option value="slice" data-i18n="game_new_title">Slice and Trap</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="subject" data-i18n="contact_subject">Subject</label>
+                    <select id="subject" name="subject" class="form-select">
+                        <option value="question" data-i18n="contact_subj_question">General Question</option>
+                        <option value="bug" data-i18n="contact_subj_bug">Bug Report</option>
+                        <option value="feedback" data-i18n="contact_subj_feedback">Feedback / Suggestion</option>
+                        <option value="other" data-i18n="contact_subj_other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label class="form-label" for="message"><span data-i18n="contact_message">Message</span> <span class="req">*</span></label>
                     <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="What's on your mind?"></textarea>
                 </div>
@@ -221,6 +248,8 @@
             <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
+            <span>·</span>
+            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
             <span>·</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>

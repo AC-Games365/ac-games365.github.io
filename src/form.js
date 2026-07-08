@@ -3,8 +3,18 @@ import { getTranslation } from './i18n.js';
 export function setupContactForm() {
     const contactForm = document.getElementById('contact-form');
     if (!contactForm) {
-        setupWaitlistForm(); // Si pas de formulaire contact, on cherche quand même la waitlist
+        setupWaitlistForm();
         return;
+    }
+
+    // Auto-select game from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameParam = urlParams.get('game');
+    if (gameParam) {
+        const gameSelect = document.getElementById('game');
+        if (gameSelect) {
+            gameSelect.value = gameParam;
+        }
     }
 
     contactForm.addEventListener('submit', async function(event) {
@@ -23,8 +33,8 @@ export function setupContactForm() {
         }
 
         btn.disabled = true;
-        btnText.classList.add('opacity-0');
-        btnSpinner.classList.remove('hidden');
+        btnText.style.opacity = '0';
+        btnSpinner.style.display = 'block';
         statusDiv.style.display = 'none';
         
         try {
@@ -34,7 +44,7 @@ export function setupContactForm() {
             await emailjs.sendForm(serviceID, templateID, this);
 
             statusDiv.textContent = await getTranslation(lang, 'form_success') || 'Message sent successfully!';
-            statusDiv.className = 'mb-6 p-4 rounded-lg text-center bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 block';
+            statusDiv.className = 'success';
             statusDiv.style.display = 'block';
 
             // Scroll to the success message so the user sees it
@@ -46,12 +56,12 @@ export function setupContactForm() {
         } catch (error) {
             console.error('FAILED...', error);
             statusDiv.textContent = await getTranslation(lang, 'form_send_error') || 'Failed to send message.';
-            statusDiv.className = 'mb-6 p-4 rounded-lg text-center bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 block';
+            statusDiv.className = 'error';
             statusDiv.style.display = 'block';
         } finally {
             btn.disabled = false;
-            btnText.classList.remove('opacity-0');
-            btnSpinner.classList.add('hidden');
+            btnText.style.opacity = '1';
+            btnSpinner.style.display = 'none';
         }
     });
 
