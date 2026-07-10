@@ -5,10 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="home_title">AC Games - Fun & Addictive Mobile Games</title>
     <link rel="icon" type="image/png" href="/assets/icon-eb8c6399.png">
+    <link rel="apple-touch-icon" href="/assets/icon-eb8c6399.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="canonical" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="nl" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="es" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="id" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="ar" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="hi" href="https://ac-games365.github.io/">
+    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/">
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="AC Games - Fun & Addictive Mobile Games">
     <meta name="description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
+    <meta name="keywords" content="AC Games, indie games, mobile games, Android games, Flappy Vertical, Block Drift, puzzle games, arcade games">
     <meta name="theme-color" content="#3DDC84">
 
     <!-- Open Graph / Facebook -->
@@ -42,6 +54,22 @@
             'page_title': document.title,
             'page_path': window.location.pathname
         });
+    </script>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AC Games",
+      "url": "https://ac-games365.github.io/",
+      "logo": "https://ac-games365.github.io/assets/images/icon/icon.png",
+      "sameAs": [
+        "https://play.google.com/store/apps/dev?id=7933611388536125740",
+        "https://www.tiktok.com/@acgames365",
+        "https://acgames365.itch.io/"
+      ]
+    }
     </script>
 
     <style>
@@ -185,8 +213,8 @@
             background: var(--border);
             border: none;
             border-radius: var(--radius-pill);
-            width: 34px;
-            height: 34px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -205,8 +233,8 @@
             background: var(--border);
             border: none;
             border-radius: var(--radius-sm);
-            width: 36px;
-            height: 36px;
+            width: 44px;
+            height: 44px;
             align-items: center;
             justify-content: center;
             cursor: pointer;
@@ -804,8 +832,8 @@
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
     </script>
-  <script type="module" crossorigin src="/assets/main-5d1d0ff2.js"></script>
-  <link rel="stylesheet" href="/assets/main-9f9fa004.css">
+  <script type="module" crossorigin src="/assets/main-e77c37dd.js"></script>
+  <link rel="stylesheet" href="/assets/main-a9f4d29c.css">
 </head>
 <body>
 
@@ -827,6 +855,10 @@
                 <option value="en">🇺🇸 EN</option>
                 <option value="fr">🇫🇷 FR</option>
                 <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="id">🇮🇩 ID</option>
+                <option value="ar">🇸🇦 AR</option>
+                <option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
@@ -850,6 +882,10 @@
                 <option value="en">🇺🇸 EN</option>
                 <option value="fr">🇫🇷 FR</option>
                 <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+                <option value="id">🇮🇩 ID</option>
+                <option value="ar">🇸🇦 AR</option>
+                <option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
@@ -948,7 +984,7 @@
                 <!-- Flappy Vertical -->
                 <a href="/flappy-vertical/" class="game-card" data-animate>
                     <div style="position:relative">
-                        <img src="/assets/flappyVertical-2865466c.png" alt="Flappy Vertical" class="game-thumb">
+                        <img src="/assets/flappyVertical-2865466c.png" alt="Flappy Vertical" class="game-thumb" loading="lazy">
                         <div class="game-overlay"></div>
                         <div class="game-badges">
                             <span class="badge badge-live" data-i18n="live_badge">Live</span>
@@ -967,7 +1003,7 @@
                 <!-- Block Drift -->
                 <a href="/block-drift/" class="game-card" data-animate>
                     <div style="position:relative">
-                        <img src="/assets/block_drift-77041a22.png" alt="Block Drift" class="game-thumb">
+                        <img src="/assets/block_drift-77041a22.png" alt="Block Drift" class="game-thumb" loading="lazy">
                         <div class="game-overlay"></div>
                         <div class="game-badges">
                             <span class="badge badge-live" data-i18n="live_badge">Live</span>
@@ -986,7 +1022,7 @@
                 <!-- Slice and Trap -->
                 <a href="/slice-and-trap/" class="game-card" data-animate>
                     <div style="position:relative">
-                        <img src="/assets/sliceAndTrap-a147a838.png" alt="Slice and Trap" class="game-thumb">
+                        <img src="/assets/sliceAndTrap-a147a838.png" alt="Slice and Trap" class="game-thumb" loading="lazy">
                         <div class="game-overlay"></div>
                         <div class="game-badges">
                             <span class="badge badge-soon" data-i18n="coming_soon">Coming Soon</span>
@@ -1050,9 +1086,13 @@
             <span>·</span>
             <a href="/contact/" data-i18n="contact">Contact Support</a>
             <span>·</span>
+            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
+            <span>·</span>
+            <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
+            <span>·</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>
-        <p class="footer-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.1</span></p>
+        <p class="footer-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.2</span></p>
     </div>
 </footer>
 

@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block Drift - AC Games</title>
+    <title>Block Drift - Gravity-Based Block Puzzle | AC Games</title>
     <link rel="icon" type="image/png" href="/assets/icon-eb8c6399.png">
+    <link rel="apple-touch-icon" href="/assets/icon-eb8c6399.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ac-games365.github.io/block-drift/">
+    <meta property="og:title" content="Block Drift - Gravity-Based Block Puzzle">
+    <meta property="og:description" content="Master gravity and solve 2000+ hand-crafted levels in this unique block puzzle. Free on Android!">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/images/block_drift.png">
+
+    <link rel="canonical" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="nl" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="es" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="id" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="ar" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="hi" href="https://ac-games365.github.io/block-drift/">
+    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/block-drift/">
     <meta name="description" content="Master gravity, slide blocks, solve 2000+ hand-crafted puzzles. Two grid types, daily challenges, visual themes. Free on Android.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +61,10 @@
         .nav-links a:hover { color: var(--text); background: var(--border); }
         .nav-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
         .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 8px; font-size: 12px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
-        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--tr); flex-shrink: 0; }
+        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--tr); flex-shrink: 0; }
         .icon-btn:hover { background: var(--border-hover); }
         .icon-btn svg { width: 15px; height: 15px; }
-        .mob-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 34px; height: 34px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); flex-shrink: 0; }
+        .mob-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); flex-shrink: 0; }
         .mob-btn svg { width: 18px; height: 18px; }
         #mob-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 10px 16px; gap: 2px; }
         #mob-menu.open { display: flex; }
@@ -152,8 +171,8 @@
             .phone-ph { height: 230px; }
         }
     </style>
-  <script type="module" crossorigin src="/assets/main-5d1d0ff2.js"></script>
-  <link rel="stylesheet" href="/assets/main-9f9fa004.css">
+  <script type="module" crossorigin src="/assets/main-e77c37dd.js"></script>
+  <link rel="stylesheet" href="/assets/main-a9f4d29c.css">
 </head>
 <body>
 
@@ -165,11 +184,11 @@
             <li><a href="/#about" data-i18n="nav_about">About</a></li>
             <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
             <li><a href="/#games" data-i18n="nav_games">Games</a></li>
-            <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
+            <li><a href="/contact/?game=block" data-i18n="nav_contact">Contact</a></li>
         </ul>
         <div class="nav-controls">
             <select id="lang-selector" class="nav-select">
-                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option>
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option><option value="es">🇪🇸 ES</option><option value="id">🇮🇩 ID</option><option value="ar">🇸🇦 AR</option><option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -183,10 +202,10 @@
         <a href="/#about" data-i18n="nav_about">About</a>
         <a href="/#tech" data-i18n="nav_tech">Technologies</a>
         <a href="/#games" data-i18n="nav_games">Games</a>
-        <a href="/contact/" data-i18n="nav_contact">Contact</a>
+        <a href="/contact/?game=block" data-i18n="nav_contact">Contact</a>
         <div class="mob-ctrl">
             <select id="lang-selector-mobile" class="nav-select" style="flex:1">
-                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option>
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option><option value="nl">🇳🇱 NL</option><option value="es">🇪🇸 ES</option><option value="id">🇮🇩 ID</option><option value="ar">🇸🇦 AR</option><option value="hi">🇮🇳 HI</option>
             </select>
             <button id="theme-toggler-mobile" class="icon-btn">
                 <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
@@ -200,7 +219,7 @@
 
     <!-- HERO -->
     <div class="hero">
-        <div class="hero-bg"><img src="/assets/block_drift-77041a22.png" alt="Block Drift"></div>
+        <div class="hero-bg"><img src="/assets/block_drift-77041a22.png" alt="Block Drift" loading="lazy"></div>
         <div class="hero-grid"></div>
         <div class="hero-body">
             <div class="badge-live"><span class="live-dot"></span><span data-i18n="live_badge">Live on Android</span></div>
@@ -211,10 +230,14 @@
                     <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M3.18 23.75c.34.19.72.25 1.09.19L15.34 12 4.27.06C3.9 0 3.52.06 3.18.25 2.5.63 2.08 1.36 2.08 2.2v19.6c0 .84.42 1.57 1.1 1.95z"/></svg>
                     <span data-i18n="download">Download on Google Play</span>
                 </a>
-                <a href="/block-drift/game/" class="btn-web" style="display: none">
-                    <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                    <span data-i18n="play_online">Play Online (Web)</span>
+                <a href="https://acgames365.itch.io/block-drift" target="_blank" class="btn-web">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M11.24 3.75c-1.3 0-2.45.15-3.48.45-.4.1-.8.25-1.2.45-.6.25-1.1.55-1.55.9-.35.3-.65.65-.9 1-.2.4-.3.8-.3 1.2s.1.8.3 1.2c.25.4.55.75.9 1.05.45.35.95.65 1.55.9.4.2.8.35 1.2.45 1.03.3 2.18.45 3.48.45s2.45-.15 3.48-.45c.4-.1.8-.25 1.2-.45.6-.25 1.1-.55 1.55-.9.35-.3.65-.65.9-1.05.2-.4.3-.8.3-1.2s-.1-.8-.3-1.2c-.25-.4-.55-.75-.9-1-.45-.35-.95-.65-1.55-.9-.4-.2-.8-.35-1.2-.45-1.03-.3-2.18-.45-3.48-.45zm-4.7 3.5c-.41 0-.75.34-.75.75s.34.75.75.75.75-.34.75-.75-.34-.75-.75-.75zm9.4 0c-.41 0-.75.34-.75.75s.34.75.75.75.75-.34.75-.75-.34-.75-.75-.75zm-6.2 3.5c-.28 0-.5.22-.5.5v.5c0 .28.22.5.5.5h.5c.28 0 .5-.22.5-.5v-.5c0-.28-.22-.5-.5-.5h-.5zm3 0c-.28 0-.5.22-.5.5v.5c0 .28.22.5.5.5h.5c.28 0 .5-.22.5-.5v-.5c0-.28-.22-.5-.5-.5h-.5z"/></svg>
+                    <span data-i18n="play_itchio">Play on itch.io</span>
                 </a>
+                <button onclick="shareGame('Block Drift')" class="btn-web">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                    <span data-i18n="share_game">Share this game</span>
+                </button>
                 <div class="btn-dim"><span data-i18n="download_apple">Coming soon on App Store</span></div>
             </div>
         </div>
@@ -359,10 +382,12 @@
         <div class="foot-links">
             <a href="/privacy" data-i18n="privacy">Privacy Policy</a><span>·</span>
             <a href="/block-drift/game/" data-i18n="play_online" style="display: none">Play Online (Web)</a><span style="display: none">·</span>
-            <a href="/contact/" data-i18n="contact">Contact Support</a><span>·</span>
+            <a href="/contact/?game=block" data-i18n="contact">Contact Support</a><span>·</span>
+            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a><span>·</span>
+            <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a><span>·</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>
-        <p class="foot-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.1</span></p>
+        <p class="foot-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.2</span></p>
     </div>
 </footer>
 

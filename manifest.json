@@ -1,0 +1,17 @@
+{
+  "name": "AC Games",
+  "short_name": "AC Games",
+  "description": "Fun & Addictive Mobile Games by Clement",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0e100f",
+  "theme_color": "#3DDC84",
+  "icons": [
+    {
+      "src": "/assets/images/icon/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
