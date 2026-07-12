@@ -19,15 +19,8 @@
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="AC Games - Fun & Addictive Mobile Games">
-    <meta name="description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
-    <meta name="keywords" content="AC Games, indie games, mobile games, Android games, Flappy Vertical, Block Drift, puzzle games, arcade games">
-    <meta name="theme-color" content="#3DDC84">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ac-games365.github.io/">
-    <meta property="og:title" content="AC Games - Fun & Addictive Mobile Games">
-    <meta property="og:description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
+    <meta name="description" data-i18n="meta_description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
+    <meta property="og:description" data-i18n="meta_description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
     <meta property="og:image" content="https://ac-games365.github.io/assets/images/background/flappyVertical.png">
 
     <!-- Twitter -->
@@ -58,18 +51,54 @@
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "AC Games",
-      "url": "https://ac-games365.github.io/",
-      "logo": "https://ac-games365.github.io/assets/images/icon/icon.png",
-      "sameAs": [
-        "https://play.google.com/store/apps/dev?id=7933611388536125740",
-        "https://www.tiktok.com/@acgames365",
-        "https://acgames365.itch.io/"
-      ]
-    }
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AC Games",
+        "url": "https://ac-games365.github.io/",
+        "logo": "https://ac-games365.github.io/assets/images/icon/icon.png",
+        "sameAs": [
+          "https://play.google.com/store/apps/dev?id=7933611388536125740",
+          "https://www.tiktok.com/@acgames365",
+          "https://acgames365.itch.io/"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Flappy Vertical",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "GameApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "150"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Block Drift",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "GameApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "85"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
     </script>
 
     <style>
@@ -689,7 +718,7 @@
         .tech-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 12px;
+            gap: 16px;
             margin-top: 40px;
         }
 
@@ -697,30 +726,50 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
-            padding: 20px 12px;
+            gap: 12px;
+            padding: 24px 12px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
-            transition: border-color var(--transition), transform var(--transition);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at top right, rgba(0, 255, 127, 0.05), transparent 70%);
+            opacity: 0;
+            transition: opacity var(--transition);
         }
 
         .tech-item:hover {
             border-color: var(--green);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.02);
+            box-shadow: 0 12px 24px -12px rgba(0, 255, 127, 0.15);
+        }
+
+        .tech-item:hover::before {
+            opacity: 1;
         }
 
         .tech-item img {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            z-index: 1;
         }
 
         .tech-item span {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text-2);
             text-align: center;
+            z-index: 1;
         }
 
         /* ── FOOTER ── */
@@ -801,6 +850,23 @@
             transform: translateY(0);
         }
 
+        /* Staggered animation for tech-items */
+        .tech-grid[data-animate].visible .tech-item {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .tech-grid[data-animate] .tech-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .tech-grid[data-animate].visible .tech-item:nth-child(1) { transition-delay: 0.1s; }
+        .tech-grid[data-animate].visible .tech-item:nth-child(2) { transition-delay: 0.2s; }
+        .tech-grid[data-animate].visible .tech-item:nth-child(3) { transition-delay: 0.3s; }
+        .tech-grid[data-animate].visible .tech-item:nth-child(4) { transition-delay: 0.4s; }
+        .tech-grid[data-animate].visible .tech-item:nth-child(5) { transition-delay: 0.5s; }
+        .tech-grid[data-animate].visible .tech-item:nth-child(6) { transition-delay: 0.6s; }
+
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
             .nav-links, .nav-controls { display: none; }
@@ -821,7 +887,11 @@
 
         @media (max-width: 480px) {
             .hero-stat { max-width: none; }
-            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .tech-item { padding: 32px 16px; }
         }
     </style>
     <script>
@@ -1045,27 +1115,27 @@
             <h2 class="section-title" data-i18n="tech_built_with">Built with</h2>
             <div class="tech-grid" data-animate>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" loading="lazy">
                     <span>Flutter</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Flame Engine" onerror="this.style.opacity='0.5'">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" alt="Flame Engine" loading="lazy" onerror="this.src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-plain.svg'">
                     <span>Flame</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="Firebase">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="Firebase" loading="lazy">
                     <span>Firebase</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
                     <span>JavaScript</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" loading="lazy">
                     <span>Tailwind</span>
                 </div>
                 <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="Vite">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" alt="Vite" loading="lazy">
                     <span>Vite</span>
                 </div>
             </div>

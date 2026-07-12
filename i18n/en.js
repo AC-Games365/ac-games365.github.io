@@ -286,5 +286,12 @@ export const translations_en = {
     "privacy_s7_title": "7. Changes to This Privacy Policy",
     "privacy_s7_p1": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy in the Game or on our website. You are advised to review this policy periodically.",
     "privacy_s8_title": "8. Contact Us",
-    "privacy_s8_p1": "If you have any questions about this Privacy Policy, please contact us via the in-game support feature or through our contact page."
+    "privacy_s8_p1": "If you have any questions about this Privacy Policy, please contact us via the in-game support feature or through our contact page.",
+    "meta_description": "AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!",
+    "fv_meta_title": "Flappy Vertical - The Addictive Vertical Arcade Game | AC Games",
+    "fv_meta_desc": "Fly up, dodge obstacles, and unlock skins in this addictive vertical twist on a classic. Play now on Android!",
+    "bd_meta_title": "Block Drift - Gravity-Based Block Puzzle | AC Games",
+    "bd_meta_desc": "Master gravity and solve 2000+ hand-crafted levels in this unique block puzzle. Free on Android!",
+    "st_meta_title": "Slice and Trap - Action & Strategy | AC Games",
+    "st_meta_desc": "Slice the arena, trap the balls, and survive in this modern arcade challenge. Coming 2026!",
 };

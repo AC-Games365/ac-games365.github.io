@@ -201,5 +201,13 @@ export const translations_hi = {
     "contact_game_support_desc": "Flappy Vertical या Block Drift के साथ समस्याएं? समस्या और अपने डिवाइस का वर्णन करें।",
     "contact_deletion_desc": "तेजी से प्रोसेसिंग के लिए हटाने के फ़ॉर्म का उपयोग करें।",
     "contact_response_time": "प्रतिक्रिया समय",
-    "contact_response_time_desc": "आमतौर पर कार्यदिवसों में 24-48 घंटों के भीतर।"
+    "contact_response_time_desc": "आमतौर पर कार्यदिवसों में 24-48 घंटों के भीतर।",
+    "meta_description": "AC Games एक इंडी गेम डेवलपर है जो Flappy Vertical और Block Drift जैसे मज़ेदार, लत लगाने वाले और आकर्षक मोबाइल गेम्स बनाता है। अभी Android पर खेलें!",
+    "fv_meta_title": "Flappy Vertical - एक रोमांचक वर्टिकल आर्केड गेम | AC Games",
+    "fv_meta_desc": "इस रोमांचक वर्टिकल ट्विस्ट में, उड़ें, बाधाओं से बचें और नए स्किन अनलॉक करें। Android पर मुफ्त उपलब्ध!",
+    "bd_meta_title": "Block Drift - ग्रैविटी वाला ब्लॉक पज़ल | AC Games",
+    "bd_meta_desc": "इस अनोखे ब्लॉक पज़ल में ग्रैविटी (गुरुत्वाकर्षण) पर महारت हासिल करें और 2000 से ज़्यादा लेवल हल करें। Android पर मुफ्त!",
+    "st_meta_title": "Slice and Trap - एक्शन और रणनीति | AC Games",
+    "st_meta_desc": "इस आधुनिक आर्केड गेम में एरीना को काटें (slice), गेंदों को फंसाएं और अंत तक जीवित रहें। 2026 में जल्द आ रहा है!",
+    "privacy_s8_p1": "यदि आपके पास इस गोपनीयता नीति (Privacy Policy) के बारे में कोई प्रश्न हैं, तो कृपया हमसे इन-गेम सहायता सुविधा (in-game support feature) या हमारे संपर्क पृष्ठ (contact page) के माध्यम से संपर्क करें।"
 };

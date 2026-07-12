@@ -205,5 +205,13 @@ export const translations_es = {
     "contact_game_support_desc": "¿Problemas con Flappy Vertical o Block Drift? Describe el problema y tu dispositivo.",
     "contact_deletion_desc": "Usa el formulario de eliminación para un proceso más rápido.",
     "contact_response_time": "Tiempo de respuesta",
-    "contact_response_time_desc": "Normalmente en 24–48 horas en días laborables."
+    "contact_response_time_desc": "Normalmente en 24–48 horas en días laborables.",
+    "meta_description": "AC Games es un desarrollador de juegos indie que crea juegos móviles divertidos, adictivos y atrapantes como Flappy Vertical y Block Drift. ¡Juega ahora en Android!",
+    "fv_meta_title": "Flappy Vertical - El adictivo juego de arcade vertical | AC Games",
+    "fv_meta_desc": "¡Vuela, evita obstáculos y desbloquea skins en este adictivo giro vertical. Disponible gratis en Android!",
+    "bd_meta_title": "Block Drift - Rompecabezas de bloques con gravedad | AC Games",
+    "bd_meta_desc": "¡Domina la gravedad y resuelve más de 2000 niveles en este rompecabezas de bloques único. Gratis en Android!",
+    "st_meta_title": "Slice and Trap - Acción y Estrategia | AC Games",
+    "st_meta_desc": "Corta la arena, atrapa las bolas y sobrevive en este moderno juego arcade. ¡Próximamente en 2026!",
+    "privacy_s8_p1": "Si tienes alguna pregunta sobre esta Política de privacidad, contáctanos a través de la función de soporte del juego o en nuestra página de contacto."
 };

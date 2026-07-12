@@ -201,5 +201,13 @@ export const translations_ar = {
     "contact_game_support_desc": "مشاكل في Flappy Vertical أو Block Drift؟ صف المشكلة وجهازك.",
     "contact_deletion_desc": "استخدم نموذج الحذف لمعالجة أسرع.",
     "contact_response_time": "وقت الرد",
-    "contact_response_time_desc": "عادة في غضon 24-48 ساعة في أيام الأسبوع."
+    "contact_response_time_desc": "عادة في غضon 24-48 ساعة في أيام الأسبوع.",
+    "meta_description": "إن AC Games هو مطور ألعاب مستقل يقدم ألعاب جوال ممتعة، ومثيرة للإدمان، ومشوقة مثل Flappy Vertical و Block Drift. العب الآن على أندرويد!",
+    "fv_meta_title": "Flappy Vertical - لعبة الأركيد العمودية الممتعة | AC Games",
+    "fv_meta_desc": "حلّق، تجنب العقبات، وافتح مظاهر (Skins) جديدة في هذا التحدي العمودي المثير. متاح مجاناً على أندرويد!",
+    "bd_meta_title": "Block Drift - ألغاز المكعبات مع الجاذبية | AC Games",
+    "bd_meta_desc": "أتقن التحكم في الجاذبية وحل أكثر من 2000 مستوى في لعبة ألغاز المكعبات الفريدة هذه. مجانية على أندرويد!",
+    "st_meta_title": "Slice and Trap - أكشن واستراتيجية | AC Games",
+    "st_meta_desc": "قطّع الساحة، احجز الكرات، وحاول البقاء على قيد الحياة في لعبة الأركيد العصرية هذه. قادمة في 2026!",
+    "privacy_s8_p1": "إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر ميزة الدعم داخل اللعبة أو من خلال صفحة اتصل بنا."
 };

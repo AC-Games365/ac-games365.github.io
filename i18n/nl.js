@@ -271,5 +271,12 @@ export const translations_nl = {
     "privacy_s7_title": "7. Wijzigingen in dit privacybeleid",
     "privacy_s7_p1": "We kunnen dit Privacybeleid van tijd tot tijd bijwerken. We zullen je op de hoogte stellen van wijzigingen door het nieuwe Privacybeleid in het Spel of op onze website te plaatsen. We raden je aan dit beleid regelmatig door te nemen.",
     "privacy_s8_title": "8. Neem contact met ons op",
-    "privacy_s8_p1": "Als je vragen hebt over dit Privacybeleid, neem dan contact met ons op via de ondersteuningsfunctie in het spel of via onze contactpagina."
+    "privacy_s8_p1": "Als je vragen hebt over dit Privacybeleid, neem dan contact met ons op via de ondersteuningsfunctie in het spel of via onze contactpagina.",
+    "meta_description": "AC Games is een indie game-ontwikkelaar die leuke, verslavende en boeiende mobiele games maakt zoals Flappy Vertical en Block Drift. Speel nu op Android!",
+    "fv_meta_title": "Flappy Vertical - Het verslavende verticale arcadespel | AC Games",
+    "fv_meta_desc": "Vlieg, ontwijk obstakels en ontgrendel skins in deze verslavende verticale twist. Gratis beschikbaar op Android!",
+    "bd_meta_title": "Block Drift - Blokkenpuzzel met zwaartekracht | AC Games",
+    "bd_meta_desc": "Beheers de zwaartekracht en voltooi meer dan 2000 levels in deze unieke blokkenpuzzel. Gratis op Android!",
+    "st_meta_title": "Slice and Trap - Actie & Strategie | AC Games",
+    "st_meta_desc": "Snijd door de arena, vang de ballen en overleef in dit moderne arcadespel. Binnenkort in 2026!",
 };

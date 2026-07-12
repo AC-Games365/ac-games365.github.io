@@ -201,5 +201,13 @@ export const translations_id = {
     "contact_game_support_desc": "Masalah dengan Flappy Vertical atau Block Drift? Jelaskan masalah dan perangkat Anda.",
     "contact_deletion_desc": "Gunakan formulir penghapusan untuk pemrosesan lebih cepat.",
     "contact_response_time": "Waktu respon",
-    "contact_response_time_desc": "Biasanya dalam 24–48 jam pada hari kerja."
+    "contact_response_time_desc": "Biasanya dalam 24–48 jam pada hari kerja.",
+    "meta_description": "AC Games adalah pengembang game indie yang menciptakan game mobile seru, bikin ketagihan, dan menarik seperti Flappy Vertical dan Block Drift. Mainkan sekarang di Android!",
+    "fv_meta_title": "Flappy Vertical - Game arkade vertikal yang adiktif | AC Games",
+    "fv_meta_desc": "Terbanglah, hindari rintangan, dan buka berbagai skin dalam variasi vertikal yang adiktif ini. Tersedia gratis di Android!",
+    "bd_meta_title": "Block Drift - Teka-teki balok dengan gravitasi | AC Games",
+    "bd_meta_desc": "Kuasai gravitasi dan selesaikan lebih dari 2000 level dalam teka-teki balok yang unik ini. Gratis di Android!",
+    "st_meta_title": "Slice and Trap - Aksi & Strategi | AC Games",
+    "st_meta_desc": "Iris arenanya, jebak bolanya, dan bertahanlah dalam game arkade modern ini. Segera hadir pada tahun 2026!",
+    "privacy_s8_p1": "Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami melalui fitur dukungan dalam game atau melalui halaman kontak kami."
 };
