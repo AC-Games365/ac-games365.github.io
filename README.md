@@ -7,6 +7,7 @@ This is the official website for AC Games, an indie game development studio. It 
 - `index.html`: The main landing page.
 - `contact/index.html`: The contact page with a form.
 - `privacy/index.html`: The privacy policy page.
+- `terms/index.html`: The terms of service page.
 - `flappy-vertical/index.html`: Dedicated page for the "Flappy Vertical" game.
 - `slice-and-trap/index.html`: Dedicated page for the "Slice and Trap" game.
 - `404.html`: Custom 404 error page.

@@ -11,6 +11,7 @@ export default defineConfig({
         blockDrift: resolve(__dirname, 'block-drift/index.html'),
         sliceAndTrap: resolve(__dirname, 'slice-and-trap/index.html'),
         privacy: resolve(__dirname, 'privacy/index.html'),
+        terms: resolve(__dirname, 'terms/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
