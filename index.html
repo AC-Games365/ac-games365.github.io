@@ -97,6 +97,18 @@
           "price": "0",
           "priceCurrency": "USD"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DriveWise",
+        "operatingSystem": "ANDROID, IOS",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
       }
     ]
     </script>
@@ -902,7 +914,7 @@
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
     </script>
-  <script type="module" crossorigin src="/assets/main-233ce94d.js"></script>
+  <script type="module" crossorigin src="/assets/main-d01b3f3c.js"></script>
   <link rel="stylesheet" href="/assets/main-f3edc64e.css">
 </head>
 <body>
@@ -916,6 +928,7 @@
             <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
             <li><a href="#about" data-i18n="nav_about">About</a></li>
             <li><a href="#games" data-i18n="nav_games">Games</a></li>
+            <li><a href="#apps" data-i18n="nav_apps">Apps</a></li>
             <li><a href="#tech" data-i18n="nav_tech">Technologies</a></li>
             <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
         </ul>
@@ -945,6 +958,7 @@
         <a href="#home" data-i18n="nav_home">Home</a>
         <a href="#about" data-i18n="nav_about">About</a>
         <a href="#games" data-i18n="nav_games">Games</a>
+        <a href="#apps" data-i18n="nav_apps">Apps</a>
         <a href="#tech" data-i18n="nav_tech">Technologies</a>
         <a href="/contact/" data-i18n="nav_contact">Contact</a>
         <div class="mobile-controls">
@@ -987,8 +1001,8 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="num">3</div>
-                    <div class="lbl" data-i18n="stat_games">Games</div>
+                    <div class="num">4</div>
+                    <div class="lbl" data-i18n="stat_games">Games & Apps</div>
                 </div>
                 <div class="hero-stat">
                     <div class="num">2</div>
@@ -1108,6 +1122,38 @@
                     </div>
                 </a>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- ── APPS ── -->
+    <section id="apps" style="border-top: 1px solid var(--border);">
+        <div class="section-wrap">
+            <div class="games-header">
+                <div>
+                    <p class="section-label" data-i18n="apps_title">Apps</p>
+                    <h2 class="section-title" data-i18n="apps_header_title">My Apps</h2>
+                </div>
+            </div>
+            <div class="games-grid">
+                <!-- DriveWise -->
+                <a href="/drivewise/" class="game-card" data-animate>
+                    <div style="position:relative; background: #060910;">
+                        <img src="/assets/drive_wise-6c324520.png" alt="DriveWise" class="game-thumb" style="object-fit: contain;" loading="lazy">
+                        <div class="game-overlay"></div>
+                        <div class="game-badges">
+                            <span class="badge badge-soon" data-i18n="coming_soon">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="game-body">
+                        <div class="game-platform" data-i18n="game_dw_platform">Android & iOS</div>
+                        <div class="game-title" data-i18n="game_dw_title">DriveWise</div>
+                        <div class="game-desc" data-i18n="game_dw_desc">Your intelligent AI road companion for fuel savings.</div>
+                    </div>
+                    <div class="game-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
