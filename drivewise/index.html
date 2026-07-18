@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="dw_meta_title">DriveWise - AI-Powered Fuel & Energy Companion | AC Games</title>
+    <link rel="icon" type="image/png" href="/assets/icon-eb8c6399.png">
+    <link rel="apple-touch-icon" href="/assets/icon-eb8c6399.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ac-games365.github.io/drivewise/">
+    <meta property="og:title" data-i18n="dw_meta_title" content="DriveWise - AI-Powered Fuel & Energy Companion">
+    <meta property="og:description" data-i18n="dw_meta_desc" content="Save money on fuel and EV charging with AI predictions, real-time prices, and route optimization. The ultimate app for European drivers.">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/images/background/driveWise.png">
+
+    <link rel="canonical" href="https://ac-games365.github.io/drivewise/">
+    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/drivewise/">
+    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/drivewise/">
+    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/drivewise/">
+    <meta name="description" data-i18n="dw_meta_desc" content="Your all-in-one intelligent road companion. Save time and money with AI-powered insights, real-time fuel prices, and route optimization.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "DriveWise",
+      "operatingSystem": "ANDROID, IOS",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --green: #3DDC84; --green-dim: #2bb86d;
+            --green-pill-bg: rgba(61,220,132,0.12); --green-pill-text: #1a7a49;
+            --bg: #f6f7f5; --bg-card: #ffffff; --text: #111310; --text-2: #4a4e4a; --text-3: #8a8e8a;
+            --border: rgba(0,0,0,0.08); --border-hover: rgba(0,0,0,0.16);
+            --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px; --radius-pill: 999px;
+            --font-display: 'Syne', sans-serif; --font-body: 'Inter', sans-serif;
+            --tr: 220ms cubic-bezier(0.4,0,0.2,1);
+        }
+        .dark { --bg:#0e100f; --bg-card:#161918; --text:#edefec; --text-2:#9a9e9a; --text-3:#5a5e5a; --border:rgba(255,255,255,0.08); --border-hover:rgba(255,255,255,0.16); --green-pill-bg:rgba(61,220,132,0.1); --green-pill-text:#3DDC84; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; transition: background var(--tr), color var(--tr); }
+
+        /* NAV */
+        nav { position: sticky; top: 0; z-index: 100; background: rgba(246,247,245,0.88); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: background var(--tr); }
+        .dark nav { background: rgba(14,16,15,0.88); }
+        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 56px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .nav-logo { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--green); text-decoration: none; letter-spacing: -0.5px; flex-shrink: 0; }
+        .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; padding: 6px 10px; border-radius: var(--radius-pill); transition: color var(--tr), background var(--tr); white-space: nowrap; }
+        .nav-links a:hover { color: var(--text); background: var(--border); }
+        .nav-controls { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+        .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 8px; font-size: 12px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
+        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--tr); flex-shrink: 0; }
+        .icon-btn:hover { background: var(--border-hover); }
+        .icon-btn svg { width: 15px; height: 15px; }
+        .mob-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); flex-shrink: 0; }
+        .mob-btn svg { width: 18px; height: 18px; }
+        #mob-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 10px 16px; gap: 2px; }
+        #mob-menu.open { display: flex; }
+        #mob-menu a { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; padding: 10px 12px; border-radius: var(--radius-sm); transition: background var(--tr), color var(--tr); }
+        #mob-menu a:hover { background: var(--border); color: var(--text); }
+        .mob-ctrl { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border); margin-top: 4px; }
+
+        /* HERO */
+        .hero { position: relative; overflow: hidden; min-height: 520px; display: flex; align-items: center; }
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-bg img { width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: center top; object-position: center top; }
+        .hero-bg::after { content:''; position: absolute; inset: 0; background: linear-gradient(105deg, rgba(8,12,10,0.95) 35%, rgba(8,12,10,0.4) 100%); }
+        .hero-body { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 72px 20px; width: 100%; }
+        .badge-soon { display: inline-flex; align-items: center; gap: 6px; background: #fac775; color: #633806; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 12px; border-radius: var(--radius-pill); margin-bottom: 18px; }
+        .hero-title { font-family: var(--font-display); font-size: clamp(48px,8vw,86px); font-weight: 800; letter-spacing: -3px; color: #fff; line-height: 0.92; margin-bottom: 18px; }
+        .hero-sub { font-size: clamp(15px,2vw,18px); color: rgba(255,255,255,0.62); line-height: 1.65; margin-bottom: 32px; max-width: 420px; }
+        .ctas { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .btn-g { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #0a2e17; font-size: 14px; font-weight: 600; padding: 11px 20px; border-radius: var(--radius-pill); text-decoration: none; transition: background var(--tr), transform var(--tr), box-shadow var(--tr); }
+        .btn-g:hover { background: var(--green-dim); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(61,220,132,.3); }
+        .btn-web { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); color: #ffffff; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: var(--radius-pill); border: 1px solid rgba(255,255,255,.15); text-decoration: none; transition: background var(--tr), transform var(--tr); }
+        .btn-web:hover { background: rgba(255,255,255,.18); transform: translateY(-1px); }
+
+        /* STATS STRIP */
+        .strip { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .strip-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(4,1fr); }
+        .strip-item { padding: 22px 16px; border-right: 1px solid var(--border); text-align: center; }
+        .strip-item:last-child { border-right: none; }
+        .strip-num { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); letter-spacing: -1px; line-height: 1; }
+        .strip-lbl { font-size: 11px; font-weight: 500; color: var(--text-3); margin-top: 3px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+        /* SECTION WRAP */
+        .sw { max-width: 1100px; margin: 0 auto; padding: 72px 20px; }
+        .sec-lbl { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 6px; }
+        .sec-title { font-family: var(--font-display); font-size: clamp(26px,3.5vw,40px); font-weight: 800; letter-spacing: -1.2px; color: var(--text); line-height: 1.05; margin-bottom: 40px; }
+
+        /* FEATURE ROW */
+        .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; padding: 56px 0; border-top: 1px solid var(--border); }
+        .frow.rev .fv { order: 2; }
+        .frow.rev .fc { order: 1; }
+        .fv { display: flex; justify-content: center; }
+        .phone-ph { width: 200px; height: 400px; border-radius: 28px; border: 2px solid var(--border); background: linear-gradient(to bottom, var(--bg-card), var(--bg)); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; flex-shrink: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
+        .dark .phone-ph { box-shadow: 0 20px 50px rgba(0,0,0,0.45); }
+        .phone-ph .ph-icon { font-size: 64px; }
+        .feyebrow { display: inline-flex; align-items: center; gap: 6px; background: var(--green-pill-bg); color: var(--green-pill-text); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: var(--radius-pill); margin-bottom: 12px; }
+        .ftitle { font-family: var(--font-display); font-size: clamp(22px,2.8vw,32px); font-weight: 800; letter-spacing: -0.8px; color: var(--text); margin-bottom: 12px; line-height: 1.1; }
+        .fdesc { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 20px; }
+        .pills { display: flex; flex-wrap: wrap; gap: 7px; }
+        .pill { display: inline-flex; align-items: center; gap: 5px; background: var(--bg-card); color: var(--text-2); font-size: 12px; font-weight: 500; padding: 5px 11px; border-radius: var(--radius-pill); border: 1px solid var(--border); }
+        .dark .pill { background: rgba(255,255,255,0.04); }
+
+        /* SMALL CARDS */
+        .alt { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .grid4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+        .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 18px; transition: border-color var(--tr), transform var(--tr); }
+        .dark .card { background: rgba(255,255,255,0.03); }
+        .card:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+        .card-icon { font-size: 26px; margin-bottom: 12px; }
+        .card-title { font-family: var(--font-display); font-size: 15px; font-weight: 800; color: var(--text); margin-bottom: 5px; }
+        .card-desc { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+
+        /* CTA */
+        .cta-sec { text-align: center; padding: 80px 20px; }
+        .cta-sec .sec-title { margin: 0 auto 12px; max-width: 460px; }
+
+        /* FOOTER */
+        footer { border-top: 1px solid var(--border); padding: 28px 20px; text-align: center; margin-top: auto; }
+        .foot-inner { max-width: 1100px; margin: 0 auto; }
+        .foot-links { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+        .foot-links a { font-size: 12px; color: var(--text-3); text-decoration: none; transition: color var(--tr); }
+        .foot-links a:hover { color: var(--green); }
+        .foot-links span { color: var(--border-hover); font-size: 11px; }
+        .foot-copy { font-size: 11px; color: var(--text-3); }
+
+        [data-a] { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+        [data-a].vis { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 860px) {
+            .frow { grid-template-columns: 1fr; gap: 20px; padding: 32px 0; }
+            .frow.rev .fv, .frow.rev .fc { order: 0; }
+            .fv { justify-content: center; width: 100%; }
+            .fc { display: flex; flex-direction: column; align-items: center; text-align: center; }
+            .pills { justify-content: center; }
+            .strip-inner { grid-template-columns: repeat(2,1fr); }
+            .strip-item:nth-child(2) { border-right: none; }
+            .grid4 { grid-template-columns: repeat(2,1fr); }
+        }
+        @media (max-width: 640px) {
+            .nav-links, .nav-controls { display: none; }
+            .mob-btn { display: flex; }
+            .hero { min-height: 420px; }
+            .sw { padding: 48px 16px; }
+            .grid4 { grid-template-columns: 1fr; }
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/main-d01b3f3c.js"></script>
+  <link rel="stylesheet" href="/assets/main-f3edc64e.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">AC Games</a>
+        <ul class="nav-links">
+            <li><a href="/#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="/#about" data-i18n="nav_about">About</a></li>
+            <li><a href="/#games" data-i18n="nav_games">Games</a></li>
+            <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
+            <li><a href="/contact/?game=drivewise" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <select id="lang-selector" class="nav-select">
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option>
+            </select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
+                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+            </button>
+        </div>
+        <button id="mob-btn" class="mob-btn" aria-label="Menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mob-menu">
+        <a href="/#home" data-i18n="nav_home">Home</a>
+        <a href="/#about" data-i18n="nav_about">About</a>
+        <a href="/#games" data-i18n="nav_games">Games</a>
+        <a href="/#tech" data-i18n="nav_tech">Technologies</a>
+        <a href="/contact/?game=drivewise" data-i18n="nav_contact">Contact</a>
+        <div class="mob-ctrl">
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1">
+                <option value="en">🇺🇸 EN</option><option value="fr">🇫🇷 FR</option>
+            </select>
+            <button id="theme-toggler-mobile" class="icon-btn">
+                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<main style="flex:1">
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-bg"><img src="/assets/driveWise-ee9d069c.png" alt="DriveWise" loading="lazy"></div>
+        <div class="hero-body">
+            <div class="badge-soon" data-i18n="coming_soon">Coming Soon</div>
+            <h1 class="hero-title">DriveWise</h1>
+            <p class="hero-sub" data-i18n="dw_subtitle">Your all-in-one intelligent road companion. Save time and money with AI-powered insights.</p>
+            <div class="ctas">
+                <a href="#waitlist" class="btn-g">
+                    <span data-i18n="dw_cta_btn">Join the waitlist</span>
+                </a>
+                <button onclick="shareGame('DriveWise')" class="btn-web">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                    <span data-i18n="share_game">Share this app</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="strip">
+        <div class="strip-inner">
+            <div class="strip-item"><div class="strip-num" data-i18n="dw_stat1_num">13+</div><div class="strip-lbl" data-i18n="dw_stat1_lbl">Countries</div></div>
+            <div class="strip-item"><div class="strip-num" data-i18n="dw_stat2_num">AI</div><div class="strip-lbl" data-i18n="dw_stat2_lbl">Powered</div></div>
+            <div class="strip-item"><div class="strip-num" data-i18n="dw_stat3_num">EV</div><div class="strip-lbl" data-i18n="dw_stat3_lbl">Support</div></div>
+            <div class="strip-item"><div class="strip-num">📉</div><div class="strip-lbl" data-i18n="dw_stat4_lbl">Real-time prices</div></div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="sw">
+
+        <!-- AI Intelligence -->
+        <div class="frow" data-a>
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">🧠</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="dw_ai_eyebrow">AI Intelligence</div>
+                <h2 class="ftitle" data-i18n="dw_ai_title">Powered by Gemini 1.5 Flash</h2>
+                <p class="fdesc" data-i18n="dw_ai_desc">DriveWise uses cutting-edge AI to analyze global energy trends and predict price changes. Take the guesswork out of refueling with a 7-day buying advice updated daily.</p>
+                <div class="pills">
+                    <span class="pill">📈 <span data-i18n="dw_ai_pill1">Price predictions</span></span>
+                    <span class="pill">🗓️ <span data-i18n="dw_ai_pill2">7-day outlook</span></span>
+                    <span class="pill">📊 <span data-i18n="dw_ai_pill3">Trend analysis</span></span>
+                    <span class="pill">💡 <span data-i18n="dw_ai_pill4">Smart advice</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fuel & Energy -->
+        <div class="frow rev" data-a>
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">⛽</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="dw_fuel_eyebrow">Fuel &amp; Energy</div>
+                <h2 class="ftitle" data-i18n="dw_fuel_title">Real-time prices everywhere</h2>
+                <p class="fdesc" data-i18n="dw_fuel_desc">Access live fuel prices across 13+ European countries. Whether you drive gas, diesel, or electric, we've got you covered with official APIs and community-driven data.</p>
+                <div class="pills">
+                    <span class="pill">🇪🇺 <span data-i18n="dw_fuel_pill1">13+ countries</span></span>
+                    <span class="pill">⛽ <span data-i18n="dw_fuel_pill2">Gas &amp; Diesel</span></span>
+                    <span class="pill">⚡ <span data-i18n="dw_fuel_pill3">EV Charging</span></span>
+                    <span class="pill">✅ <span data-i18n="dw_fuel_pill4">Official data</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Vision -->
+        <div class="frow" data-a>
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">📷</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="dw_scan_eyebrow">AI Vision</div>
+                <h2 class="ftitle" data-i18n="dw_scan_title">Scan &amp; Contribute</h2>
+                <p class="fdesc" data-i18n="dw_scan_desc">See a price that isn't updated? Just take a photo of the station's totem. Our AI Vision instantly extracts the prices and updates the community database.</p>
+                <div class="pills">
+                    <span class="pill">🖼️ <span data-i18n="dw_scan_pill1">Totem scan</span></span>
+                    <span class="pill">⚡ <span data-i18n="dw_scan_pill2">Instant extraction</span></span>
+                    <span class="pill">👥 <span data-i18n="dw_scan_pill3">Community driven</span></span>
+                    <span class="pill">🚀 <span data-i18n="dw_scan_pill4">Fast updates</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Route Optimizer -->
+        <div class="frow rev" data-a>
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">🛣️</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="dw_route_eyebrow">Route Optimizer</div>
+                <h2 class="ftitle" data-i18n="dw_route_title">Never overpay on a trip</h2>
+                <p class="fdesc" data-i18n="dw_route_desc">Planning a long drive? DriveWise finds the cheapest stations or charging points directly on your route, so you never have to make a long detour for a better price.</p>
+                <div class="pills">
+                    <span class="pill">📍 <span data-i18n="dw_route_pill1">Route planning</span></span>
+                    <span class="pill">💰 <span data-i18n="dw_route_pill2">Cheapest stops</span></span>
+                    <span class="pill">⚠️ <span data-i18n="dw_route_pill3">LEZ alerts</span></span>
+                    <span class="pill">📉 <span data-i18n="dw_route_pill4">Travel savings</span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SMALL CARDS -->
+    <div class="alt">
+        <div class="sw">
+            <div class="sec-lbl" data-i18n="dw_extra_label">And more</div>
+            <div class="sec-title" data-i18n="dw_extra_title">A complete tool for drivers</div>
+            <div class="grid4">
+                <div class="card" data-a>
+                    <div class="card-icon">🚗</div>
+                    <div class="card-title" data-i18n="dw_extra1_title">Smart Garage</div>
+                    <p class="card-desc" data-i18n="dw_extra1_desc">Search for your car model and we'll automatically fill in its consumption and tank size for precise cost estimations.</p>
+                </div>
+                <div class="card" data-a>
+                    <div class="card-icon">🏙️</div>
+                    <div class="card-title" data-i18n="dw_extra2_title">LEZ Alerts</div>
+                    <p class="card-desc" data-i18n="dw_extra2_desc">Stay informed about Low Emission Zones. Get automatic alerts if your vehicle is restricted in certain urban areas.</p>
+                </div>
+                <div class="card" data-a>
+                    <div class="card-icon">📊</div>
+                    <div class="card-title" data-i18n="dw_extra3_title">Budget Tracking</div>
+                    <p class="card-desc" data-i18n="dw_extra3_desc">Visualize your savings over time. See how much you've saved by choosing the right stations and export reports.</p>
+                </div>
+                <div class="card" data-a>
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title" data-i18n="dw_extra4_title">Privacy First</div>
+                    <p class="card-desc" data-i18n="dw_extra4_desc">No unnecessary tracking. LEZ data is processed locally, and we only use essential data to provide the best service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div id="waitlist" class="cta-sec" data-a>
+        <div class="sec-lbl" data-i18n="dw_cta_label">Coming soon</div>
+        <div class="sec-title" data-i18n="dw_cta_title">Ready to drive smarter?</div>
+        <p style="font-size:15px;color:var(--text-2);margin:10px auto 28px;max-width:380px;line-height:1.6" data-i18n="dw_cta_sub">DriveWise is currently in final development. Be the first to know when we launch.</p>
+
+        <form id="waitlist-form" style="max-width:400px;margin:0 auto;display:flex;gap:10px;flex-direction:column">
+            <input type="email" id="notify-email" name="email" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" required style="padding:12px 20px;border-radius:var(--radius-pill);border:1px solid var(--border);background:var(--bg-card);color:var(--text);outline:none">
+            <button type="submit" id="notify-btn" class="btn-g" style="justify-content:center;font-size:15px;padding:13px 28px">
+                <span data-i18n="waitlist_button">Notify me at launch</span>
+            </button>
+            <p style="font-size:12px;color:var(--text-3);margin-top:8px" data-i18n="waitlist_label">No spam. One email when it drops.</p>
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <div class="foot-inner">
+        <div class="foot-links">
+            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a><span>·</span>
+            <a href="/terms/" data-i18n="terms">Terms of Service</a><span>·</span>
+            <a href="/contact/?game=drivewise" data-i18n="contact">Contact Support</a>
+        </div>
+        <p class="foot-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.2</span></p>
+    </div>
+</footer>
+
+<script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+    function updateIcons() { const d = root.classList.contains('dark'); document.querySelectorAll('.sun-icon').forEach(e=>e.style.display=d?'block':'none'); document.querySelectorAll('.moon-icon').forEach(e=>e.style.display=d?'none':'block'); }
+    updateIcons();
+    function toggleTheme() { root.classList.toggle('dark'); localStorage.setItem('theme', root.classList.contains('dark')?'dark':'light'); updateIcons(); }
+    document.getElementById('theme-toggler').addEventListener('click', toggleTheme);
+    document.getElementById('theme-toggler-mobile').addEventListener('click', toggleTheme);
+    const mm = document.getElementById('mob-menu');
+    document.getElementById('mob-btn').addEventListener('click', () => mm.classList.toggle('open'));
+    mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+    const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);} }), {threshold:0.08});
+    document.querySelectorAll('[data-a]').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
