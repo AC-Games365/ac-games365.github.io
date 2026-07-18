@@ -143,6 +143,7 @@ export const translations_fr = {
     "nav_about": "À Propos",
     "nav_tech": "Technologies",
     "nav_games": "Jeux",
+    "nav_apps": "Apps",
     "nav_contact": "Contact",
     "about_title": "À Propos",
     "about_desc": "Je suis Clément — développeur solo, joueur dans l'âme. Je crée des jeux mobiles ridiculement simples à démarrer et impossibles à lâcher. Flappy Vertical n'était que le début. Block Drift est déjà là, et je suis loin d'avoir fini.",
@@ -205,12 +206,14 @@ export const translations_fr = {
     "about_card3_desc": "2 jeux en direct, 1 en préparation. Nouvelles mécaniques, nouveaux défis, toujours en développement.",
 
     // Jeux & Tech
-    "stat_games": "Jeux",
+    "stat_games": "Projets",
     "stat_live": "Disponible sur Android",
     "stat_new": "Nouvelles sorties",
     "share_game": "Partager ce jeu",
     "play_itchio": "Jouer sur itch.io",
     "games_header_title": "Mes Jeux",
+    "apps_title": "Apps",
+    "apps_header_title": "Mes Apps",
     "tech_built_with": "Construit avec",
 
     // Waitlist (Slice and Trap)
@@ -317,4 +320,69 @@ export const translations_fr = {
     "bd_meta_desc": "Maîtrisez la gravité et résolvez plus de 2000 niveaux dans ce puzzle de blocs unique. Gratuit sur Android !",
     "st_meta_title": "Slice and Trap - Action & Stratégie | AC Games",
     "st_meta_desc": "Tranchez l'arène, piégez les balles et survivez dans ce jeu d'arcade moderne. Bientôt en 2026 !",
+
+    // ── DRIVEWISE ────────────────────────────────────
+    "dw_subtitle": "Votre compagnon de route intelligent tout-en-un. Économisez temps et argent grâce à l'IA.",
+    "dw_stat1_num": "13+",
+    "dw_stat1_lbl": "Pays",
+    "dw_stat2_num": "IA",
+    "dw_stat2_lbl": "Propulsé",
+    "dw_stat3_num": "Élec",
+    "dw_stat3_lbl": "Supporté",
+    "dw_stat4_lbl": "Prix en temps réel",
+
+    "dw_ai_eyebrow": "Intelligence Artificielle",
+    "dw_ai_title": "Propulsé par une IA de pointe",
+    "dw_ai_desc": "DriveWise utilise l'IA de pointe pour analyser les tendances énergétiques mondiales et prédire l'évolution des prix. Ne devinez plus : profitez d'un conseil d'achat sur 7 jours mis à jour quotidiennement.",
+    "dw_ai_pill1": "Prédictions de prix",
+    "dw_ai_pill2": "Vue sur 7 jours",
+    "dw_ai_pill3": "Analyse de tendances",
+    "dw_ai_pill4": "Conseils intelligents",
+
+    "dw_fuel_eyebrow": "Énergie & Carburant",
+    "dw_fuel_title": "Prix en temps réel partout",
+    "dw_fuel_desc": "Accédez aux prix du carburant en direct dans plus de 13 pays européens. Que vous rouliez à l'essence, au diesel ou à l'électrique, nous vous couvrons avec des APIs officielles et des données communautaires.",
+    "dw_fuel_pill1": "13+ pays",
+    "dw_fuel_pill2": "Essence & Diesel",
+    "dw_fuel_pill3": "Bornes Électriques",
+    "dw_fuel_pill4": "Données officielles",
+
+    "dw_scan_eyebrow": "Vision par IA",
+    "dw_scan_title": "Scannez & Contribuez",
+    "dw_scan_desc": "Vous voyez un prix non mis à jour ? Prenez simplement une photo du totem de la station. Notre IA Vision extrait instantanément les prix et met à jour la base de données communautaire.",
+    "dw_scan_pill1": "Scan de totem",
+    "dw_scan_pill2": "Extraction instantanée",
+    "dw_scan_pill3": "Communautaire",
+    "dw_scan_pill4": "Mises à jour rapides",
+
+    "dw_route_eyebrow": "Optimisateur de Trajet",
+    "dw_route_title": "Ne payez jamais trop cher",
+    "dw_route_desc": "Vous préparez un long trajet ? DriveWise trouve les stations ou bornes les moins chères directement sur votre itinéraire, vous évitant ainsi de longs détours inutiles.",
+    "dw_route_pill1": "Planification de trajet",
+    "dw_route_pill2": "Arrêts économiques",
+    "dw_route_pill3": "Alertes LEZ",
+    "dw_route_pill4": "Économies réelles",
+
+    "dw_extra_label": "Et plus encore",
+    "dw_extra_title": "Un outil complet pour les conducteurs",
+    "dw_extra1_title": "Garage Intelligent",
+    "dw_extra1_desc": "Recherchez votre modèle de véhicule et nous remplirons automatiquement sa consommation et sa capacité de réservoir pour des estimations précises.",
+    "dw_extra2_title": "Alertes LEZ",
+    "dw_extra2_desc": "Restez informé des Zones à Faibles Émissions. Recevez des alertes automatiques si votre véhicule est restreint dans certaines zones urbaines.",
+    "dw_extra3_title": "Suivi de Budget",
+    "dw_extra3_desc": "Visualisez vos économies au fil du temps. Découvrez combien vous avez économisé en choisissant les bonnes stations et exportez vos rapports.",
+    "dw_extra4_title": "Confidentialité",
+    "dw_extra4_desc": "Pas de suivi inutile. Les données LEZ sont traitées localement et nous n'utilisons que les données essentielles pour vous servir.",
+
+    "dw_cta_label": "Bientôt disponible",
+    "dw_cta_title": "Prêt à conduire plus intelligemment ?",
+    "dw_cta_sub": "DriveWise est en phase finale de développement. Soyez le premier informé du lancement.",
+    "dw_cta_btn": "Rejoindre la liste d'attente",
+
+    "dw_meta_title": "DriveWise - Compagnon Énergie & Carburant par IA | AC Games",
+    "dw_meta_desc": "Économisez sur le carburant et la recharge électrique avec des prédictions IA, des prix en temps réel et l'optimisation de trajet.",
+
+    "game_dw_title": "DriveWise",
+    "game_dw_desc": "Votre compagnon de route intelligent propulsé par l'IA.",
+    "game_dw_platform": "Android",
 };

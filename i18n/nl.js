@@ -143,6 +143,7 @@ export const translations_nl = {
     "nav_about": "Over Mij",
     "nav_tech": "Technologieën",
     "nav_games": "Spellen",
+    "nav_apps": "Apps",
     "nav_contact": "Contact",
     "about_title": "Over Mij",
     "about_desc": "Ik ben Clement — solo-ontwikkelaar, gamer in hart en nieren. Ik maak mobiele spellen die belachelijk eenvoudig zijn om te starten en onmogelijk om te stoppen. Flappy Vertical was nog maar het begin. Block Drift is er al, en ik ben nog lang niet klaar.",
@@ -205,12 +206,14 @@ export const translations_nl = {
     "about_card3_desc": "2 spellen live, 1 in voorbereiding. Nieuwe mechanica, nieuwe uitdagingen, altijd leveren.",
 
     // Spellen & Tech
-    "stat_games": "Spellen",
+    "stat_games": "Projecten",
     "stat_live": "Live op Android",
     "stat_new": "Nieuwe releases",
     "share_game": "Deel dit spel",
     "play_itchio": "Speel op itch.io",
     "games_header_title": "Mijn Spellen",
+    "apps_title": "Apps",
+    "apps_header_title": "Mijn Apps",
     "tech_built_with": "Gemaakt met",
 
     // Wachtlijst (Slice and Trap)
@@ -317,4 +320,69 @@ export const translations_nl = {
     "bd_meta_desc": "Beheers de zwaartekracht en voltooi meer dan 2000 levels in deze unieke blokkenpuzzel. Gratis op Android!",
     "st_meta_title": "Slice and Trap - Actie & Strategie | AC Games",
     "st_meta_desc": "Snijd door de arena, vang de ballen en overleef in dit moderne arcadespel. Binnenkort in 2026!",
+
+    // ── DRIVEWISE ────────────────────────────────────
+    "dw_subtitle": "Uw alles-in-één intelligente wegbegeleider. Bespaar tijd en geld met AI.",
+    "dw_stat1_num": "13+",
+    "dw_stat1_lbl": "Landen",
+    "dw_stat2_num": "AI",
+    "dw_stat2_lbl": "Powered",
+    "dw_stat3_num": "EV",
+    "dw_stat3_lbl": "Support",
+    "dw_stat4_lbl": "Real-time prijzen",
+
+    "dw_ai_eyebrow": "AI Intelligentie",
+    "dw_ai_title": "Aangedreven door geavanceerde AI",
+    "dw_ai_desc": "DriveWise gebruikt geavanceerde AI om wereldwijde energietrends te analyseren en prijsveranderingen te voorspellen. Krijg dagelijks aankoopadvies voor 7 dagen.",
+    "dw_ai_pill1": "Prijsvoorspellingen",
+    "dw_ai_pill2": "7-daagse vooruitblik",
+    "dw_ai_pill3": "Trendanalyse",
+    "dw_ai_pill4": "Slim advies",
+
+    "dw_fuel_eyebrow": "Brandstof & Energie",
+    "dw_fuel_title": "Overal real-time prijzen",
+    "dw_fuel_desc": "Toegang tot live brandstofprijzen in meer dan 13 Europese landen. Of u nu benzine, diesel of elektrisch rijdt, wij dekken u met officiële data.",
+    "dw_fuel_pill1": "13+ landen",
+    "dw_fuel_pill2": "Benzine & Diesel",
+    "dw_fuel_pill3": "EV Opladen",
+    "dw_fuel_pill4": "Officiële data",
+
+    "dw_scan_eyebrow": "AI Visie",
+    "dw_scan_title": "Scan & Draag bij",
+    "dw_scan_desc": "Ziet u een prijs die niet up-to-date is? Maak een foto van de totem van het station. Onze AI extraheert direct de prijzen en werkt de database bij.",
+    "dw_scan_pill1": "Totem scan",
+    "dw_scan_pill2": "Directe extractie",
+    "dw_scan_pill3": "Community gedreven",
+    "dw_scan_pill4": "Snelle updates",
+
+    "dw_route_eyebrow": "Route Optimalisatie",
+    "dw_route_title": "Betaal nooit teveel tijdens een reis",
+    "dw_route_desc": "Plant u een lange rit? DriveWise vindt de goedkoopste stations of oplaadpunten direct op uw route, zodat u nooit ver hoeft om te rijden.",
+    "dw_route_pill1": "Routeplanning",
+    "dw_route_pill2": "Goedkoopste stops",
+    "dw_route_pill3": "LEZ alerts",
+    "dw_route_pill4": "Reisbesparingen",
+
+    "dw_extra_label": "En meer",
+    "dw_extra_title": "Een complete tool voor chauffeurs",
+    "dw_extra1_title": "Slimme Garage",
+    "dw_extra1_desc": "Zoek uw automodel en we vullen automatisch het verbruik en de tankinhoud in voor nauwkeurige kostenramingen.",
+    "dw_extra2_title": "LEZ Alerts",
+    "dw_extra2_desc": "Blijf op de hoogte van Lage-Emissiezones. Ontvang alerts als uw voertuig beperkt is in bepaalde stedelijke gebieden.",
+    "dw_extra3_title": "Budget Tracking",
+    "dw_extra3_desc": "Visualiseer uw besparingen. Zie hoeveel u heeft bespaard door de juiste stations te kiezen en exporteer rapporten.",
+    "dw_extra4_title": "Privacy Eerst",
+    "dw_extra4_desc": "Geen onnodige tracking. LEZ-data wordt lokaal verwerkt en we gebruiken alleen essentiële gegevens.",
+
+    "dw_cta_label": "Binnenkort",
+    "dw_cta_title": "Klaar om slimmer te rijden?",
+    "dw_cta_sub": "DriveWise is in de laatste fase van ontwikkeling. Wees de eerste die weet wanneer we lanceren.",
+    "dw_cta_btn": "Word lid van de wachtlijst",
+
+    "dw_meta_title": "DriveWise - AI Brandstof & Energie Partner | AC Games",
+    "dw_meta_desc": "Bespaar op brandstof en EV laden met AI voorspellingen, real-time prijzen en route optimalisatie. De app voor Europese chauffeurs.",
+
+    "game_dw_title": "DriveWise",
+    "game_dw_desc": "Uw intelligente AI-wegbegeleider voor brandstofbesparing.",
+    "game_dw_platform": "Android",
 };

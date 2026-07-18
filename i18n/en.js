@@ -158,6 +158,7 @@ export const translations_en = {
     "nav_about": "About",
     "nav_tech": "Technologies",
     "nav_games": "Games",
+    "nav_apps": "Apps",
     "nav_contact": "Contact",
     "about_title": "About Me",
     "about_desc": "I'm Clement — solo developer, gamer at heart. I make mobile games that are stupidly simple to start and impossible to stop. Flappy Vertical was just the beginning. Block Drift is already live, and I'm nowhere near done.",
@@ -220,12 +221,14 @@ export const translations_en = {
     "about_card3_desc": "2 games live, 1 in the pipeline. New mechanics, new challenges, always shipping.",
 
     // Games & Tech
-    "stat_games": "Games",
+    "stat_games": "Projects",
     "stat_live": "Live on Android",
     "stat_new": "New releases",
     "share_game": "Share this game",
     "play_itchio": "Play on itch.io",
     "games_header_title": "My Games",
+    "apps_title": "Apps",
+    "apps_header_title": "My Apps",
     "tech_built_with": "Built with",
 
     // Waitlist (Slice and Trap)
@@ -332,4 +335,69 @@ export const translations_en = {
     "bd_meta_desc": "Master gravity and solve 2000+ hand-crafted levels in this unique block puzzle. Free on Android!",
     "st_meta_title": "Slice and Trap - Action & Strategy | AC Games",
     "st_meta_desc": "Slice the arena, trap the balls, and survive in this modern arcade challenge. Coming 2026!",
+
+    // ── DRIVEWISE ────────────────────────────────────
+    "dw_subtitle": "Your all-in-one intelligent road companion. Save time and money with AI-powered insights.",
+    "dw_stat1_num": "13+",
+    "dw_stat1_lbl": "Countries",
+    "dw_stat2_num": "AI",
+    "dw_stat2_lbl": "Powered",
+    "dw_stat3_num": "EV",
+    "dw_stat3_lbl": "Support",
+    "dw_stat4_lbl": "Real-time prices",
+
+    "dw_ai_eyebrow": "AI Intelligence",
+    "dw_ai_title": "Powered by Advanced AI",
+    "dw_ai_desc": "DriveWise uses cutting-edge AI to analyze global energy trends and predict price changes. Take the guesswork out of refueling with a 7-day buying advice updated daily.",
+    "dw_ai_pill1": "Price predictions",
+    "dw_ai_pill2": "7-day outlook",
+    "dw_ai_pill3": "Trend analysis",
+    "dw_ai_pill4": "Smart advice",
+
+    "dw_fuel_eyebrow": "Fuel & Energy",
+    "dw_fuel_title": "Real-time prices everywhere",
+    "dw_fuel_desc": "Access live fuel prices across 13+ European countries. Whether you drive gas, diesel, or electric, we've got you covered with official APIs and community-driven data.",
+    "dw_fuel_pill1": "13+ countries",
+    "dw_fuel_pill2": "Gas & Diesel",
+    "dw_fuel_pill3": "EV Charging",
+    "dw_fuel_pill4": "Official data",
+
+    "dw_scan_eyebrow": "AI Vision",
+    "dw_scan_title": "Scan & Contribute",
+    "dw_scan_desc": "See a price that isn't updated? Just take a photo of the station's totem. Our AI Vision instantly extracts the prices and updates the community database.",
+    "dw_scan_pill1": "Totem scan",
+    "dw_scan_pill2": "Instant extraction",
+    "dw_scan_pill3": "Community driven",
+    "dw_scan_pill4": "Fast updates",
+
+    "dw_route_eyebrow": "Route Optimizer",
+    "dw_route_title": "Never overpay on a trip",
+    "dw_route_desc": "Planning a long drive? DriveWise finds the cheapest stations or charging points directly on your route, so you never have to make a long detour for a better price.",
+    "dw_route_pill1": "Route planning",
+    "dw_route_pill2": "Cheapest stops",
+    "dw_route_pill3": "LEZ alerts",
+    "dw_route_pill4": "Travel savings",
+
+    "dw_extra_label": "And more",
+    "dw_extra_title": "A complete tool for drivers",
+    "dw_extra1_title": "Smart Garage",
+    "dw_extra1_desc": "Search for your car model and we'll automatically fill in its consumption and tank size for precise cost estimations.",
+    "dw_extra2_title": "LEZ Alerts",
+    "dw_extra2_desc": "Stay informed about Low Emission Zones. Get automatic alerts if your vehicle is restricted in certain urban areas.",
+    "dw_extra3_title": "Budget Tracking",
+    "dw_extra3_desc": "Visualize your savings over time. See how much you've saved by choosing the right stations and export reports.",
+    "dw_extra4_title": "Privacy First",
+    "dw_extra4_desc": "No unnecessary tracking. LEZ data is processed locally, and we only use essential data to provide the best service.",
+
+    "dw_cta_label": "Coming soon",
+    "dw_cta_title": "Ready to drive smarter?",
+    "dw_cta_sub": "DriveWise is currently in final development. Be the first to know when we launch.",
+    "dw_cta_btn": "Join the waitlist",
+
+    "dw_meta_title": "DriveWise - AI-Powered Fuel & Energy Companion | AC Games",
+    "dw_meta_desc": "Save money on fuel and EV charging with AI predictions, real-time prices, and route optimization. The ultimate app for European drivers.",
+
+    "game_dw_title": "DriveWise",
+    "game_dw_desc": "Your intelligent AI road companion for fuel savings.",
+    "game_dw_platform": "Android",
 };
