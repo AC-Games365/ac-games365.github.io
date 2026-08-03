@@ -1,3 +1,5 @@
+import { CONFIG } from './config.js';
+
 // Cache for loaded translations
 const loadedTranslations = {};
 
@@ -30,7 +32,15 @@ export async function setLanguage(lang) {
     const translations = await loadTranslations(lang);
 
     document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
+        let key = element.getAttribute('data-i18n');
+
+        // Auto-toggle keys if both _integrated and _goal versions exist
+        const integratedKey = `${key}_integrated`;
+        const goalKey = `${key}_goal`;
+        if (translations[integratedKey] && translations[goalKey]) {
+            key = CONFIG.DRIVEWISE_AI_INTEGRATED ? integratedKey : goalKey;
+        }
+
         if (translations[key]) {
             if (element.tagName === 'META') {
                 element.setAttribute('content', translations[key]);

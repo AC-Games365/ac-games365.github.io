@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="home_title">AC Games - Fun & Addictive Mobile Games</title>
+    <title data-i18n="home_title">AC World - Fun & Addictive Mobile Games</title>
     <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
     <link rel="apple-touch-icon" href="/assets/images/icon/icon.png">
     <link rel="manifest" href="/manifest.json">
@@ -18,16 +18,16 @@
     <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/">
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="AC Games - Fun & Addictive Mobile Games">
-    <meta name="description" data-i18n="meta_description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
-    <meta property="og:description" data-i18n="meta_description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
+    <meta name="title" content="AC World - Fun & Addictive Mobile Games">
+    <meta name="description" data-i18n="meta_description" content="AC World is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
+    <meta property="og:description" data-i18n="meta_description" content="AC World is an indie game developer creating fun, addictive, and engaging mobile games like Flappy Vertical and Block Drift. Play now on Android!">
     <meta property="og:image" content="https://ac-games365.github.io/assets/images/background/flappyVertical.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://ac-games365.github.io/">
-    <meta property="twitter:title" content="AC Games - Fun & Addictive Mobile Games">
-    <meta property="twitter:description" content="AC Games is an indie game developer creating fun, addictive, and engaging mobile games. Play now on Android!">
+    <meta property="twitter:title" content="AC World - Fun & Addictive Mobile Games">
+    <meta property="twitter:description" content="AC World is an indie game developer creating fun, addictive, and engaging mobile games. Play now on Android!">
     <meta property="twitter:image" content="https://ac-games365.github.io/assets/images/background/flappyVertical.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,7 +55,7 @@
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "AC Games",
+        "name": "AC World",
         "url": "https://ac-games365.github.io/",
         "logo": "https://ac-games365.github.io/assets/images/icon/icon.png",
         "sameAs": [
@@ -374,12 +374,13 @@
 
         .hero-title {
             font-family: var(--font-display);
-            font-size: clamp(52px, 8vw, 88px);
+            font-size: clamp(48px, 8vw, 82px);
             font-weight: 800;
             line-height: 0.95;
-            letter-spacing: -3px;
+            letter-spacing: -0.03em;
             color: var(--text);
             margin-bottom: 24px;
+            overflow-wrap: break-word;
         }
 
         .hero-title .accent { color: var(--green); }
@@ -672,7 +673,7 @@
         }
 
         .game-body {
-            padding: 18px 20px 20px;
+            padding: 18px 50px 20px 20px;
         }
 
         .game-platform {
@@ -918,7 +919,7 @@
 <!-- Navigation -->
 <nav>
     <div class="nav-inner">
-        <a href="/" class="nav-logo">AC Games</a>
+        <a href="/" class="nav-logo">AC World</a>
 
         <ul class="nav-links">
             <li><a href="#home" class="active" data-i18n="nav_home">Home</a></li>
@@ -982,7 +983,7 @@
         <div class="hero-inner">
             <div class="eyebrow">
                 <span class="eyebrow-dot"></span>
-                <span data-i18n="home_eyebrow">Indie game studio</span>
+                <span data-i18n="home_eyebrow">Indie studio</span>
             </div>
             <h1 class="hero-title" data-i18n="hero_title">
                 Mobile games<br>made with <span class="accent">passion</span>
@@ -997,7 +998,7 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="num">4</div>
+                    <div class="num">5</div>
                     <div class="lbl" data-i18n="stat_games">Games & Apps</div>
                 </div>
                 <div class="hero-stat">
@@ -1018,9 +1019,9 @@
             <div class="about-layout">
                 <div class="about-left" data-animate>
                     <p class="section-label" data-i18n="about_title">About</p>
-                    <h2 class="section-title" data-i18n="about_title_name">AC Games</h2>
+                    <h2 class="section-title" data-i18n="about_title_name">AC World</h2>
                     <p class="about-desc" style="margin-top:24px" data-i18n="about_desc">
-                        AC Games is an indie game studio dedicated to creating simple, addictive, and fun mobile experiences. Each project is carefully crafted to offer a unique challenge to players worldwide.
+                        AC World is an indie studio dedicated to creating simple, addictive, and fun mobile experiences. Each project is carefully crafted to offer a unique challenge to players worldwide.
                     </p>
                 </div>
                 <div class="about-right" data-animate>
@@ -1132,6 +1133,25 @@
                 </div>
             </div>
             <div class="games-grid">
+                <!-- Gifty -->
+                <a href="/gifty/" class="game-card" data-animate>
+                    <div style="position:relative; background: #121418; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 64px;">🎁</span>
+                        <div class="game-overlay"></div>
+                        <div class="game-badges">
+                            <span class="badge badge-soon" data-i18n="coming_soon">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="game-body">
+                        <div class="game-platform" data-i18n="game_gifty_platform">Web & Mobile</div>
+                        <div class="game-title" data-i18n="game_gifty_title">Gifty</div>
+                        <div class="game-desc" data-i18n="game_gifty_desc">Organize your Secret Santa easily with friends and family.</div>
+                    </div>
+                    <div class="game-arrow">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </div>
+                </a>
+
                 <!-- DriveWise -->
                 <a href="/drivewise/" class="game-card" data-animate>
                     <div style="position:relative; background: #060910;">
@@ -1206,7 +1226,7 @@
             <span>·</span>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
         </div>
-        <p class="footer-copy"><span data-i18n="copyright">© 2026 AC Games. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.2</span></p>
+        <p class="footer-copy"><span data-i18n="copyright">© 2026 AC World. All rights reserved.</span> <span style="opacity:0.3;font-size:10px;margin-left:6px">v1.0.2</span></p>
     </div>
 </footer>
 

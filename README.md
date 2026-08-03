@@ -1,6 +1,6 @@
-# AC Games Website
+# AC World Website
 
-This is the official website for AC Games, an indie game development studio. It showcases our games, technologies used, and provides contact information.
+This is the official website for AC World, an indie game development studio. It showcases our games, technologies used, and provides contact information.
 
 ## Project Structure
 
@@ -80,7 +80,7 @@ The contact form uses EmailJS for sending emails and Google reCAPTCHA v2 for spa
     *   Create a new **Email Template** (e.g., named `template_contact_us`). Use the following HTML structure for your template:
         ```html
         <div style="font-family: system-ui, sans-serif, Arial; font-size: 12px">
-          <div>A new message from the AC Games Contact Form has been received.</div>
+          <div>A new message from the AC World Contact Form has been received.</div>
           <div
             style="
               margin-top: 20px;

@@ -65,8 +65,8 @@ export function setupBackToTopButton() {
 export function setupSharing() {
     window.shareGame = async (title) => {
         const shareData = {
-            title: title + ' - AC Games',
-            text: `Check out ${title}, an awesome mobile game by AC Games!`,
+            title: title + ' - AC World',
+            text: `Check out ${title}, an awesome mobile game by AC World!`,
             url: window.location.href
         };
 

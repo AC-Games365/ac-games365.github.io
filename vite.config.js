@@ -14,6 +14,7 @@ export default defineConfig({
         terms: resolve(__dirname, 'terms/index.html'),
         contact: resolve(__dirname, 'contact/index.html'),
         drivewise: resolve(__dirname, 'drivewise/index.html'),
+        gifty: resolve(__dirname, 'gifty/index.html'),
         notfound: resolve(__dirname, '404.html'),
       },
     },
