@@ -10,8 +10,10 @@ This is the official website for AC World, an indie game development studio. It 
 - `terms/index.html`: The terms of service page.
 - `flappy-vertical/index.html`: Dedicated page for the "Flappy Vertical" game.
 - `slice-and-trap/index.html`: Dedicated page for the "Slice and Trap" game.
+- `robot-defense/index.html`: Dedicated page for the "Robot Defense" tower defense.
+- `drivewise/`, `gifty/`: Hidden app pages (not linked from the site, `noindex`).
 - `404.html`: Custom 404 error page.
-- `assets/`: Contains images and other static assets.
+- `assets/`: Images, fonts and logos, organised by game (see `assets/README.md`).
 - `i18n/`: Contains translation files for multiple languages (English, French, Dutch).
 - `src/`: Contains modularized JavaScript code for various functionalities (theme, i18n, forms, UI).
 - `style.css`: Main stylesheet using Tailwind CSS.
