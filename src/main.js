@@ -1,4 +1,3 @@
-import '../style.css';
 import { initTheme } from './theme.js';
 import { initLanguage } from './i18n.js';
 import { showCookieBanner } from './cookies.js';

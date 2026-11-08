@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="game_new_title">Slice and Trap - AC World</title>
-    <link rel="icon" type="image/png" href="/assets/images/icon/icon.png">
+    <link rel="icon" type="image/png" href="/assets/brand/icon-512.png">
     <meta name="description" content="A modernized take on JezzBall with boosters and a shop. Releasing in 2026 on Android.">
     <meta property="og:title" content="Slice and Trap - AC World">
     <meta property="og:description" content="Strategic puzzles, boosters, and an in-game shop. Coming 2026.">
-    <meta property="og:image" content="https://ac-games365.github.io/assets/images/background/sliceAndTrap.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/social/slice-and-trap.jpg">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>(function(){ emailjs.init("l1LEmdWyMMnjJl5nZ"); })();</script>
     <!-- Google Analytics 4 -->
@@ -22,203 +19,78 @@
         gtag('js', new Date());
         gtag('config', 'G-H1DC620LTF');
     </script>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --green: #3DDC84; --green-dim: #2bb86d;
-            --amber: #fac775; --amber-text: #633806;
-            --bg: #f6f7f5; --bg-card: #ffffff; --text: #111310; --text-2: #4a4e4a; --text-3: #8a8e8a;
-            --border: rgba(0,0,0,0.08); --border-hover: rgba(0,0,0,0.18);
-            --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px; --radius-pill: 999px;
-            --font-display: 'Syne', sans-serif; --font-body: 'Inter', sans-serif;
-            --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .dark { --bg: #0e100f; --bg-card: #161918; --text: #edefec; --text-2: #9a9e9a; --text-3: #5a5e5a; --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.18); }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; transition: background var(--transition), color var(--transition); }
-
-        nav { position: sticky; top: 0; z-index: 100; background: rgba(246,247,245,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: background var(--transition); }
-        .dark nav { background: rgba(14,16,15,0.85); }
-        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-        .nav-logo { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--green); text-decoration: none; letter-spacing: -0.5px; }
-        .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: var(--radius-pill); transition: color var(--transition), background var(--transition); }
-        .nav-links a:hover { color: var(--text); background: var(--border); }
-        .nav-controls { display: flex; align-items: center; gap: 8px; }
-        .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 10px; font-size: 13px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
-        .nav-select:hover { background: var(--border-hover); }
-        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--transition); }
-        .icon-btn:hover { background: var(--border-hover); color: var(--text); }
-        .icon-btn svg { width: 16px; height: 16px; }
-        .mobile-menu-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 36px; height: 36px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); }
-        .mobile-menu-btn svg { width: 18px; height: 18px; }
-        #mobile-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 16px; gap: 4px; }
-        #mobile-menu.open { display: flex; }
-        #mobile-menu a { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; padding: 10px 12px; border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); }
-        #mobile-menu a:hover { background: var(--border); color: var(--text); }
-        .mobile-controls { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border); margin-top: 4px; }
-
-        /* HERO */
-        .game-hero { position: relative; overflow: hidden; min-height: 480px; display: flex; align-items: center; }
-        .game-hero-bg { position: absolute; inset: 0; z-index: 0; }
-        .game-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
-        .game-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(14,16,15,0.93) 40%, rgba(14,16,15,0.55) 100%); }
-        .game-hero-content { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 80px 24px; width: 100%; }
-        .badge-soon { display: inline-flex; align-items: center; gap: 6px; background: var(--amber); color: var(--amber-text); font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 14px; border-radius: var(--radius-pill); margin-bottom: 16px; }
-        .game-title { font-family: var(--font-display); font-size: clamp(40px, 6.5vw, 76px); font-weight: 800; letter-spacing: -2px; color: #ffffff; line-height: 0.95; margin-bottom: 16px; }
-        .game-subtitle { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 440px; line-height: 1.6; margin-bottom: 36px; }
-
-        /* NOTIFY FORM */
-        .notify-form { display: flex; gap: 8px; flex-wrap: wrap; }
-        .notify-input { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-pill); padding: 11px 18px; font-size: 14px; color: #fff; font-family: var(--font-body); outline: none; width: 260px; transition: border-color var(--transition), background var(--transition); }
-        .notify-input::placeholder { color: rgba(255,255,255,0.4); }
-        .notify-input:focus { border-color: var(--green); background: rgba(255,255,255,0.14); }
-        .btn-notify { display: inline-flex; align-items: center; gap: 8px; background: var(--amber); color: var(--amber-text); font-size: 14px; font-weight: 600; padding: 11px 22px; border-radius: var(--radius-pill); border: none; cursor: pointer; font-family: var(--font-body); transition: opacity var(--transition), transform var(--transition); }
-        .btn-notify:hover { opacity: 0.9; transform: translateY(-1px); }
-        .notify-label { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 10px; }
-
-        /* FEATURES */
-        .features-section { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
-        .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
-        .section-title { font-family: var(--font-display); font-size: clamp(28px, 3.5vw, 40px); font-weight: 800; letter-spacing: -1px; color: var(--text); margin-bottom: 40px; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 28px; transition: border-color var(--transition), transform var(--transition); }
-        .feature-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
-        .feature-icon { font-size: 32px; margin-bottom: 16px; }
-        .feature-title { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
-        .feature-desc { font-size: 14px; color: var(--text-2); line-height: 1.6; }
-
-        footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; margin-top: auto; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; }
-        .footer-links { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-        .footer-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color var(--transition); }
-        .footer-links a:hover { color: var(--green); }
-        .footer-links span { color: var(--border-hover); }
-        .footer-copy { font-size: 12px; color: var(--text-3); }
-
-        [data-animate] { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
-        [data-animate].visible { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 768px) {
-            .nav-links, .nav-controls { display: none; }
-            .mobile-menu-btn { display: flex; }
-            .features-grid { grid-template-columns: 1fr; }
-            .game-hero { min-height: 420px; }
-            .game-hero-bg::after { background: linear-gradient(to bottom, rgba(14,16,15,0.75) 0%, rgba(14,16,15,0.97) 100%); }
-            .notify-input { width: 100%; }
-            .notify-form { flex-direction: column; }
-        }
-    </style>
-    <script>
-        const root = document.documentElement;
-        const saved = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-    </script>
+    <link rel="stylesheet" href="/style.css">
+    <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark');</script>
 </head>
-<body>
-<nav>
+<body data-game="slice">
+<nav class="site-nav">
     <div class="nav-inner">
-        <a href="/" class="nav-logo">AC World</a>
-        <ul class="nav-links">
-            <li><a href="/#home" data-i18n="nav_home">Home</a></li>
-            <li><a href="/#about" data-i18n="nav_about">About</a></li>
-            <li><a href="/#games" data-i18n="nav_games">Games</a></li>
-            <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
-            <li><a href="/contact/" data-i18n="nav_contact">Contact</a></li>
-        </ul>
+        <a href="/" class="nav-logo"><img src="/assets/brand/icon-512.png" alt="" width="36" height="36">AC World</a>
+        <ul class="nav-links"><li><a href="/#home" data-i18n="nav_home">Home</a></li><li><a href="/#about" data-i18n="nav_about">About</a></li><li><a href="/#games" data-i18n="nav_games">Games</a></li><li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li><li><a href="/contact/?game=slice" data-i18n="nav_contact">Contact</a></li></ul>
         <div class="nav-controls">
-            <select id="lang-selector" class="nav-select" aria-label="Language">
-                <option value="en">🇺🇸 EN</option>
-                <option value="fr">🇫🇷 FR</option>
-                <option value="nl">🇳🇱 NL</option>
-            </select>
-            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
-                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-            </button>
+            <select id="lang-selector" class="nav-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
         </div>
-        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
-    <div id="mobile-menu">
-        <a href="/#home" data-i18n="nav_home">Home</a>
-        <a href="/#about" data-i18n="nav_about">About</a>
-        <a href="/#games" data-i18n="nav_games">Games</a>
-        <a href="/#tech" data-i18n="nav_tech">Technologies</a>
-        <a href="/contact/" data-i18n="nav_contact">Contact</a>
+    <div id="mobile-menu"><a href="/#home" data-i18n="nav_home">Home</a><a href="/#about" data-i18n="nav_about">About</a><a href="/#games" data-i18n="nav_games">Games</a><a href="/#tech" data-i18n="nav_tech">Technologies</a><a href="/contact/?game=slice" data-i18n="nav_contact">Contact</a>
         <div class="mobile-controls">
-            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language">
-                <option value="en">🇺🇸 EN</option>
-                <option value="fr">🇫🇷 FR</option>
-                <option value="nl">🇳🇱 NL</option>
-            </select>
-            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode">
-                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-            </button>
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
         </div>
     </div>
 </nav>
 
-<main style="flex:1">
-    <div class="game-hero">
-        <div class="game-hero-bg">
-            <img src="/assets/images/background/sliceAndTrap.png" alt="Slice and Trap">
-        </div>
-        <div class="game-hero-content">
-            <div class="badge-soon" data-i18n="game_new_platform">Coming Soon — 2026</div>
-            <h1 class="game-title" data-i18n="game_new_title">Slice<br>and Trap</h1>
-            <p class="game-subtitle" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</p>
-            <form class="notify-form" id="waitlist-form">
-                <input type="email" class="notify-input" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" id="notify-email" required>
-                <button type="submit" class="btn-notify" id="notify-btn" data-i18n="waitlist_button">Notify me at launch</button>
+<main>
+    <section class="gh">
+        <img class="gh-bg" src="/assets/games/slice-and-trap/background.webp" alt="" fetchpriority="high">
+        <div class="wrap gh-in">
+            <img class="gh-icon" src="/assets/games/slice-and-trap/icon.webp" alt="" width="104" height="104">
+            <div class="gh-status"><span class="pill-status pill-soon" data-i18n="coming_soon">Coming Soon</span></div>
+            <h1 data-i18n="game_new_title">Slice<br>and Trap</h1>
+            <p class="gh-sub" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</p>
+            <form class="notify-form" id="waitlist-form" data-game="slice">
+                <input type="email" class="notify-input" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" id="notify-email" aria-label="Email" required>
+                <button type="submit" class="btn btn-coin" id="notify-btn" data-i18n="waitlist_button">Notify me at launch</button>
             </form>
             <p class="notify-label" data-i18n="waitlist_label">No spam. One email when it drops.</p>
         </div>
-    </div>
+    </section>
 
-    <div class="features-section">
-        <p class="section-label" data-i18n="features_label">Features</p>
-        <h2 class="section-title" data-i18n="features_title">Features</h2>
-        <div class="features-grid">
-            <div class="feature-card" data-animate>
-                <div class="feature-icon">🧩</div>
-                <div class="feature-title" data-i18n="s1_title">Strategic Puzzles</div>
-                <p class="feature-desc" data-i18n="s1_desc">Trap the bouncing balls by slicing the arena. Plan your cuts carefully!</p>
+    <div class="sw"><div class="gallery"><div class="phone"><img src="/assets/games/slice-and-trap/screens/home.webp" alt="Slice and Trap home screen" loading="lazy" width="520" height="1130"></div><div class="phone"><img src="/assets/games/slice-and-trap/screens/gameplay.webp" alt="Slice and Trap level in progress" loading="lazy" width="520" height="1130"></div><div class="phone"><img src="/assets/games/slice-and-trap/screens/settings.webp" alt="Slice and Trap settings screen" loading="lazy" width="520" height="1130"></div></div></div>
+    <div class="alt"><div class="sw">
+        <h2 class="sec-title" data-i18n="features_title">Features</h2>
+        <div class="grid4 grid3">
+            <div class="card">
+                <div class="card-icon">🧩</div>
+                <div class="card-title" data-i18n="s1_title">Strategic Puzzles</div>
+                <p class="card-desc" data-i18n="s1_desc">Trap the bouncing balls by slicing the arena. Plan your cuts carefully!</p>
             </div>
-            <div class="feature-card" data-animate>
-                <div class="feature-icon">🚀</div>
-                <div class="feature-title" data-i18n="s2_title">Boosters</div>
-                <p class="feature-desc" data-i18n="s2_desc">Use special power-ups to freeze time, extend your lines, and more.</p>
+            <div class="card">
+                <div class="card-icon">🚀</div>
+                <div class="card-title" data-i18n="s2_title">Boosters</div>
+                <p class="card-desc" data-i18n="s2_desc">Use special power-ups to freeze time, extend your lines, and more.</p>
             </div>
-            <div class="feature-card" data-animate>
-                <div class="feature-icon">🛍️</div>
-                <div class="feature-title" data-i18n="s3_title">In-Game Shop</div>
-                <p class="feature-desc" data-i18n="s3_desc">Unlock custom ball skins, new slice animations, and colorful arenas.</p>
+            <div class="card">
+                <div class="card-icon">🛍️</div>
+                <div class="card-title" data-i18n="s3_title">In-Game Shop</div>
+                <p class="card-desc" data-i18n="s3_desc">Unlock custom ball skins, new slice animations, and colorful arenas.</p>
             </div>
         </div>
     </div>
+</div>
 </main>
 
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
-            <span>·</span>
-            <a href="/terms/" data-i18n="terms">Terms of Service</a>
-            <span>·</span>
-            <a href="/contact/" data-i18n="contact">Contact Support</a>
-            <span>·</span>
-            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
-            <span>·</span>
-            <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
-            <span>·</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
-        </div>
-        <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
+        <a href="/terms/" data-i18n="terms">Terms of Service</a>
+        <a href="/contact/?game=slice" data-i18n="contact">Contact Support</a>
+        <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
     </div>
+    <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
 </footer>
 
 <script type="module" src="/src/main.js"></script>
