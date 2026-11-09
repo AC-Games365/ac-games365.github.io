@@ -2,15 +2,16 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="game_new_title">Slice and Trap - AC World</title>
-    <link rel="icon" type="image/png" href="/assets/brand/icon-512.png">
-    <meta name="description" content="A modernized take on JezzBall with boosters and a shop. Releasing in 2026 on Android.">
-    <meta property="og:title" content="Slice and Trap - AC World">
-    <meta property="og:description" content="Strategic puzzles, boosters, and an in-game shop. Coming 2026.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#10143a">
+    <title data-i18n="st_meta_title">Slice and Trap: Free Neon Arcade Game for Android | AC World</title>
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <meta name="description" data-i18n="st_meta_desc" content="Slice the arena, trap the orbs and conquer 2,000 sectors. Free on Android and playable offline. Download it now!">
+    <link rel="canonical" href="https://ac-games365.github.io/slice-and-trap/">
+    <meta property="og:title" data-i18n="st_meta_title" content="Slice and Trap: Free Neon Arcade Game for Android | AC World">
+    <meta property="og:description" data-i18n="st_meta_desc" content="Slice the arena, trap the orbs and conquer 2,000 sectors. Free on Android and playable offline. Download it now!">
     <meta property="og:image" content="https://ac-games365.github.io/assets/social/slice-and-trap.jpg">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>(function(){ emailjs.init("l1LEmdWyMMnjJl5nZ"); })();</script>
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1DC620LTF"></script>
     <script>
@@ -18,6 +19,9 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-H1DC620LTF');
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Slice and Trap","operatingSystem":"ANDROID","applicationCategory":"GameApplication","applicationSubCategory":"Arcade","installUrl":"https://play.google.com/store/apps/details?id=com.acgames.slice_and_trap","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"author":{"@type":"Organization","name":"AC World"}}
     </script>
     <link rel="stylesheet" href="/style.css">
     <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark');</script>
@@ -45,42 +49,67 @@
     <section class="gh">
         <img class="gh-bg" src="/assets/games/slice-and-trap/background.webp" alt="" fetchpriority="high">
         <div class="wrap gh-in">
-            <img class="gh-icon" src="/assets/games/slice-and-trap/icon.webp" alt="" width="104" height="104">
-            <div class="gh-status"><span class="pill-status pill-soon" data-i18n="coming_soon">Coming Soon</span></div>
+            <img class="gh-icon" src="/assets/games/slice-and-trap/icon.webp" alt="Slice and Trap icon" width="104" height="104">
+            <div class="gh-status"><span class="pill-status pill-live" data-i18n="live_badge">Live on Android</span></div>
             <h1 data-i18n="game_new_title">Slice<br>and Trap</h1>
-            <p class="gh-sub" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</p>
-            <form class="notify-form" id="waitlist-form" data-game="slice">
-                <input type="email" class="notify-input" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" id="notify-email" aria-label="Email" required>
-                <button type="submit" class="btn btn-coin" id="notify-btn" data-i18n="waitlist_button">Notify me at launch</button>
-            </form>
-            <p class="notify-label" data-i18n="waitlist_label">No spam. One email when it drops.</p>
+            <p class="gh-sub" data-i18n="game_new_desc">Slice the neon arena and trap the bouncing orbs. 2,000 sectors, playable offline.</p>
+            <div class="ctas">
+                <a href="https://play.google.com/store/apps/details?id=com.acgames.slice_and_trap" target="_blank" rel="noopener" class="btn btn-play"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M3.18 23.75c.34.19.72.25 1.09.19L15.34 12 4.27.06C3.9 0 3.52.06 3.18.25 2.5.63 2.08 1.36 2.08 2.2v19.6c0 .84.42 1.57 1.1 1.95z"/></svg><span data-i18n="download">Download on Google Play</span></a>
+                <button type="button" onclick="shareGame('Slice and Trap')" class="btn btn-soft"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg><span data-i18n="share_game">Share this game</span></button>
+            </div>
         </div>
     </section>
 
-    <div class="sw"><div class="gallery"><div class="phone"><img src="/assets/games/slice-and-trap/screens/home.webp" alt="Slice and Trap home screen" loading="lazy" width="520" height="1130"></div><div class="phone"><img src="/assets/games/slice-and-trap/screens/gameplay.webp" alt="Slice and Trap level in progress" loading="lazy" width="520" height="1130"></div><div class="phone"><img src="/assets/games/slice-and-trap/screens/settings.webp" alt="Slice and Trap settings screen" loading="lazy" width="520" height="1130"></div></div></div>
-    <div class="alt"><div class="sw">
-        <h2 class="sec-title" data-i18n="features_title">Features</h2>
-        <div class="grid4 grid3">
-            <div class="card">
-                <div class="card-icon">🧩</div>
-                <div class="card-title" data-i18n="s1_title">Strategic Puzzles</div>
-                <p class="card-desc" data-i18n="s1_desc">Trap the bouncing balls by slicing the arena. Plan your cuts carefully!</p>
+    <div class="strip"><div class="strip-inner">
+        <div class="strip-item"><div class="strip-num">2000</div><div class="strip-lbl" data-i18n="st_stat1">sectors</div></div>
+        <div class="strip-item"><div class="strip-num">3</div><div class="strip-lbl" data-i18n="st_stat2">tiers: Bronze, Silver, Gold</div></div>
+        <div class="strip-item"><div class="strip-num">100%</div><div class="strip-lbl" data-i18n="st_stat3">playable offline</div></div>
+        <div class="strip-item"><div class="strip-num">0 €</div><div class="strip-lbl" data-i18n="st_stat4">Free</div></div>
+    </div></div>
+
+    <div class="sw">
+        <div class="frow">
+            <div class="fv"><div class="phone"><img src="/assets/games/slice-and-trap/screens/mega-trap.webp" alt="Slice and Trap diamond arena during a Mega Trap capture" loading="lazy" width="520" height="1131"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="st_arena_e">Gameplay</div>
+                <h2 class="ftitle" data-i18n="st_arena_t">Slice, trap, capture</h2>
+                <p class="fdesc" data-i18n="st_arena_d">Swipe to launch a wall. If it closes without hitting an orb, that area is yours. If an orb touches it while it's being built, you lose a life.</p>
             </div>
-            <div class="card">
-                <div class="card-icon">🚀</div>
-                <div class="card-title" data-i18n="s2_title">Boosters</div>
-                <p class="card-desc" data-i18n="s2_desc">Use special power-ups to freeze time, extend your lines, and more.</p>
+        </div>
+        <div class="frow rev">
+            <div class="fv"><div class="phone"><img src="/assets/games/slice-and-trap/screens/sectors.webp" alt="Slice and Trap sector selection with Bronze and Silver tiers" loading="lazy" width="520" height="1131"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="st_sectors_e">2,000 sectors</div>
+                <h2 class="ftitle" data-i18n="st_sectors_t">A new challenge on every board</h2>
+                <p class="fdesc" data-i18n="st_sectors_d">Boards in varied shapes and three difficulty tiers to earn: Bronze, Silver and Gold.</p>
             </div>
-            <div class="card">
-                <div class="card-icon">🛍️</div>
-                <div class="card-title" data-i18n="s3_title">In-Game Shop</div>
-                <p class="card-desc" data-i18n="s3_desc">Unlock custom ball skins, new slice animations, and colorful arenas.</p>
+        </div>
+        <div class="frow">
+            <div class="fv"><div class="phone"><img src="/assets/games/slice-and-trap/screens/market.webp" alt="Slice and Trap market with upgrades" loading="lazy" width="520" height="1131"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="st_market_e">Shop</div>
+                <h2 class="ftitle" data-i18n="st_market_t">Upgrade your gear</h2>
+                <p class="fdesc" data-i18n="st_market_d">Spend credits on boosters, upgrades, skins and colors. Shield, slow motion or bonus magnet: your call.</p>
+            </div>
+        </div>
+        <div class="frow rev">
+            <div class="fv"><div class="phone"><img src="/assets/games/slice-and-trap/screens/vault.webp" alt="Slice and Trap daily rewards calendar" loading="lazy" width="520" height="1131"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="st_vault_e">Rewards</div>
+                <h2 class="ftitle" data-i18n="st_vault_t">A reason to come back every day</h2>
+                <p class="fdesc" data-i18n="st_vault_d">Daily challenges, missions, login bonuses and achievements to unlock.</p>
             </div>
         </div>
     </div>
-</div>
+
+    <div class="cta-sec">
+        <div class="sec-title" data-i18n="st_cta_title">Ready to trap the orbs?</div>
+        <p class="cta-sub" data-i18n="st_cta_sub">Free on Android. No account needed.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.acgames.slice_and_trap" target="_blank" rel="noopener" class="btn btn-play"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M3.18 23.75c.34.19.72.25 1.09.19L15.34 12 4.27.06C3.9 0 3.52.06 3.18.25 2.5.63 2.08 1.36 2.08 2.2v19.6c0 .84.42 1.57 1.1 1.95z"/></svg><span data-i18n="download">Download on Google Play</span></a>
+    </div>
 </main>
 
+<a href="https://play.google.com/store/apps/details?id=com.acgames.slice_and_trap" target="_blank" rel="noopener" class="btn btn-play sticky-cta" aria-hidden="true" tabindex="-1"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M3.18 23.75c.34.19.72.25 1.09.19L15.34 12 4.27.06C3.9 0 3.52.06 3.18.25 2.5.63 2.08 1.36 2.08 2.2v19.6c0 .84.42 1.57 1.1 1.95z"/></svg><span data-i18n="download">Download on Google Play</span></a>
 <footer class="site-footer">
     <div class="footer-links">
         <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
@@ -88,7 +117,7 @@
         <a href="/contact/?game=slice" data-i18n="contact">Contact Support</a>
         <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
         <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
+        <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
     </div>
     <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
 </footer>

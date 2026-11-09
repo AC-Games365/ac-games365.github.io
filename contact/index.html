@@ -2,9 +2,11 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#10143a">
     <title data-i18n="nav_contact">Contact - AC World</title>
-    <link rel="icon" type="image/png" href="/assets/brand/icon-512.png">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
     <meta name="description" content="Get in touch with AC World for support or inquiries.">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -58,7 +60,7 @@
                 <div class="contact-item-icon">🔒</div>
                 <div>
                     <div class="contact-item-title" data-i18n="delete_account">Account Deletion</div>
-                    <div class="contact-item-body" data-i18n="contact_deletion_desc">Use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
+                    <div class="contact-item-body" data-i18n="contact_deletion_desc">Use the <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
                 </div>
             </div>
             <div class="contact-item">
@@ -76,11 +78,11 @@
             <form id="contact-form">
                 <div class="form-group">
                     <label class="form-label" for="name" data-i18n="contact_name">Name</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Your name">
+                    <input type="text" id="name" name="name" class="form-input" data-i18n-placeholder="contact_ph_name" placeholder="Your name">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="email"><span data-i18n="contact_email">Email</span> <span class="req">*</span></label>
-                    <input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com">
+                    <input type="email" id="email" name="email" required class="form-input" data-i18n-placeholder="contact_ph_email" placeholder="your@email.com">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="game" data-i18n="contact_game">Game</label>
@@ -103,7 +105,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="message"><span data-i18n="contact_message">Message</span> <span class="req">*</span></label>
-                    <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="What's on your mind?"></textarea>
+                    <textarea id="message" name="message" rows="5" required class="form-textarea" data-i18n-placeholder="contact_ph_message" placeholder="What's on your mind?"></textarea>
                 </div>
                 <div class="recaptcha-wrap">
                     <div class="g-recaptcha" data-sitekey="6LfccKgsAAAAALgd7zGmIuDUmts3LLXM5M0f98M1"></div>
@@ -126,7 +128,7 @@
         <a href="/contact/" data-i18n="contact">Contact Support</a>
         <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
         <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
+        <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
     </div>
     <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
 </footer>
