@@ -3,8 +3,10 @@ export function setupMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     
     if (btn && menu) {
+        btn.setAttribute('aria-expanded', 'false');
         btn.addEventListener('click', () => {
-            menu.classList.toggle('open');
+            const open = menu.classList.toggle('open');
+            btn.setAttribute('aria-expanded', String(open));
         });
         
         // Fermer le menu mobile quand on clique sur un lien
@@ -12,6 +14,7 @@ export function setupMobileMenu() {
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -79,4 +82,31 @@ export function setupSharing() {
             console.log('Error sharing:', err);
         }
     };
+}
+
+// Mobile download button: only shown once the page's own download buttons are off screen.
+export function setupStickyDownload() {
+    const sticky = document.querySelector('.sticky-cta');
+    if (!sticky || !('IntersectionObserver' in window)) return;
+
+    const watched = document.querySelectorAll('.gh, .cta-sec, .site-footer');
+    const inView = new Set();
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => entry.isIntersecting ? inView.add(entry.target) : inView.delete(entry.target));
+        const show = inView.size === 0 && !document.getElementById('cookie-banner');
+        sticky.classList.toggle('visible', show);
+        sticky.setAttribute('aria-hidden', String(!show));
+        sticky.tabIndex = show ? 0 : -1;
+    });
+    watched.forEach(el => observer.observe(el));
+}
+
+// Reports store clicks to Google Analytics, so the site's real effect can be measured.
+export function setupStoreClickTracking() {
+    document.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href*="play.google.com/store/apps/details"]');
+        if (!link || typeof window.gtag !== 'function') return;
+        const game = new URL(link.href).searchParams.get('id');
+        window.gtag('event', 'store_click', { game, page: location.pathname });
+    });
 }

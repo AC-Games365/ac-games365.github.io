@@ -2,25 +2,18 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="home_title">AC World - Fun & Addictive Mobile Games</title>
-    <link rel="icon" type="image/png" href="/assets/brand/icon-512.png">
-    <link rel="apple-touch-icon" href="/assets/brand/icon-512.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#10143a">
+    <title data-i18n="home_title">AC World: Mobile Arcade, Puzzle &amp; Tower Defense Games</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="canonical" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="nl" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="es" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="id" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="ar" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="hi" href="https://ac-games365.github.io/">
-    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/">
 
     <!-- Primary Meta Tags -->
     <meta name="title" content="AC World - Fun & Addictive Mobile Games">
-    <meta name="description" data-i18n="meta_description" content="AC World is an indie mobile game studio: Flappy Vertical, Block Drift, Slice and Trap and the tower defense Robot Defense.">
-    <meta property="og:description" data-i18n="meta_description" content="AC World is an indie mobile game studio: Flappy Vertical, Block Drift, Slice and Trap and the tower defense Robot Defense.">
+    <meta name="description" data-i18n="meta_description" content="Play free Android games by AC World: Flappy Vertical, Block Drift and Slice and Trap. Tower defense Robot Defense is coming soon. Download now!">
+    <meta property="og:description" data-i18n="meta_description" content="Play free Android games by AC World: Flappy Vertical, Block Drift and Slice and Trap. Tower defense Robot Defense is coming soon. Download now!">
     <meta property="og:image" content="https://ac-games365.github.io/assets/social/home.jpg">
 
     <!-- Twitter -->
@@ -66,11 +59,6 @@
         "name": "Flappy Vertical",
         "operatingSystem": "ANDROID",
         "applicationCategory": "GameApplication",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "150"
-        },
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -83,16 +71,20 @@
         "name": "Block Drift",
         "operatingSystem": "ANDROID",
         "applicationCategory": "GameApplication",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "ratingCount": "85"
-        },
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Slice and Trap",
+        "operatingSystem": "ANDROID",
+        "applicationCategory": "GameApplication",
+        "installUrl": "https://play.google.com/store/apps/details?id=com.acgames.slice_and_trap",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
       },
       {
         "@context": "https://schema.org",
@@ -159,8 +151,8 @@
             <div class="world-body">
                 <img class="world-icon" src="/assets/games/slice-and-trap/icon.webp" alt="" width="76" height="76">
                 <div class="world-name" data-i18n="game_new_title">Slice and Trap</div>
-                <div class="world-desc" data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</div>
-                <span class="pill-status pill-soon" data-i18n="coming_soon">Coming Soon</span>
+                <div class="world-desc" data-i18n="game_new_desc">Slice the neon arena and trap the bouncing orbs. 2,000 sectors, playable offline.</div>
+                <span class="pill-status pill-live" data-i18n="live_badge">Live on Android</span>
             </div>
         </a>
         <a class="world" href="/robot-defense/" style="--focus:68% 40%">
@@ -198,7 +190,7 @@
                 <h2 class="sec-head" data-i18n="about_title">About</h2>
                 <div class="about-text" data-i18n="about_desc"><p>I'm <strong>Clément</strong>, a developer and a gamer at heart. I make mobile games that are ridiculously simple to start and impossible to put down.</p><p>It started solo with <strong>Flappy Vertical</strong>. <strong>Block Drift</strong> followed, with more than 2,000 levels built end to end, from the code to the last pixel.</p><p>Today some projects are still solo adventures and others are built together. <strong>Robot Defense</strong>, built in Unity, is co-developed with a friend. And I'm nowhere near done.</p></div>
             </div>
-            <ol class="path"><li><img src="/assets/games/flappy-vertical/icon.webp" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_flappy_title">Flappy Vertical</span><span class="mode" data-i18n="about_solo">Solo</span></h3><p data-i18n="tl_flappy">The first game, the one that started it all.</p></div></li><li><img src="/assets/games/block-drift/icon.png" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_block_drift_title">Block Drift</span><span class="mode" data-i18n="about_solo">Solo</span></h3><p data-i18n="tl_block">A gravity puzzle with more than 2,000 levels.</p></div></li><li><img src="/assets/games/slice-and-trap/icon.webp" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_new_title">Slice and Trap</span></h3><p data-i18n="game_new_desc">A modernized take on JezzBall with boosters and a shop.</p></div></li><li><img src="/assets/games/robot-defense/icon.png" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_robot_title">Robot Defense</span><span class="mode mode-duo" data-i18n="about_duo">With a friend</span></h3><p data-i18n="tl_robot">A tower defense in Unity, co-developed with a friend.</p></div></li></ol>
+            <ol class="path"><li><img src="/assets/games/flappy-vertical/icon.webp" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_flappy_title">Flappy Vertical</span><span class="mode" data-i18n="about_leaderboard">Solo + leaderboard</span></h3><p data-i18n="tl_flappy">The first game, the one that started it all.</p></div></li><li><img src="/assets/games/block-drift/icon.png" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_block_drift_title">Block Drift</span><span class="mode" data-i18n="about_solo">Solo</span></h3><p data-i18n="tl_block">A gravity puzzle with more than 2,000 levels.</p></div></li><li><img src="/assets/games/slice-and-trap/icon.webp" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_new_title">Slice and Trap</span><span class="mode" data-i18n="about_solo">Solo</span></h3><p data-i18n="game_new_desc">Slice the neon arena and trap the bouncing orbs. 2,000 sectors, playable offline.</p></div></li><li><img src="/assets/games/robot-defense/icon.png" alt="" width="66" height="66" loading="lazy"><div><h3><span data-i18n="game_robot_title">Robot Defense</span><span class="mode" data-i18n="about_solo">Solo</span></h3><p data-i18n="tl_robot">A tower defense in Unity, co-developed with a friend.</p></div></li></ol>
         </div>
     </section>
 
@@ -216,7 +208,7 @@
         <a href="/contact/" data-i18n="contact">Contact Support</a>
         <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
         <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
+        <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
     </div>
     <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
 </footer>
