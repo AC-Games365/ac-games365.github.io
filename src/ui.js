@@ -43,11 +43,9 @@ export function setupBackToTopButton() {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
-            backToTopButton.classList.remove('opacity-0');
-            backToTopButton.classList.remove('pointer-events-none');
+            backToTopButton.classList.add('visible');
         } else {
-            backToTopButton.classList.add('opacity-0');
-            backToTopButton.classList.add('pointer-events-none');
+            backToTopButton.classList.remove('visible');
         }
     });
 

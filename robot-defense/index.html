@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="rd_meta_title">Robot Defense: mobile tower defense | AC World</title>
+    <link rel="icon" type="image/png" href="../assets/brand/icon-512.png">
+    <link rel="apple-touch-icon" href="../assets/brand/icon-512.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ac-games365.github.io/robot-defense/">
+    <meta property="og:title" data-i18n="rd_meta_title" content="Robot Defense: mobile tower defense">
+    <meta property="og:description" data-i18n="rd_meta_desc" content="Build a neon maze of towers and stop the robot invasion: 5 towers, 10 worlds, 35 levels. Coming soon on mobile.">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/social/robot-defense.jpg">
+
+    <link rel="canonical" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="en" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="fr" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="nl" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="es" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="id" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="ar" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="hi" href="https://ac-games365.github.io/robot-defense/">
+    <link rel="alternate" hreflang="x-default" href="https://ac-games365.github.io/robot-defense/">
+    <meta name="description" data-i18n="rd_meta_desc" content="Build a neon maze of towers and stop the robot invasion: 5 towers, 10 worlds, 35 levels. Coming soon on mobile.">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>(function(){ emailjs.init("l1LEmdWyMMnjJl5nZ"); })();</script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H1DC620LTF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-H1DC620LTF');
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Robot Defense","applicationCategory":"GameApplication","applicationSubCategory":"Tower defense","operatingSystem":"ANDROID, IOS","author":{"@type":"Organization","name":"AC World"}}
+    </script>
+    <link rel="stylesheet" href="/style.css">
+    <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark');</script></head>
+<body data-game="robot">
+<nav class="site-nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo"><img src="/assets/brand/icon-512.png" alt="" width="36" height="36">AC World</a>
+        <ul class="nav-links"><li><a href="/#home" data-i18n="nav_home">Home</a></li><li><a href="/#about" data-i18n="nav_about">About</a></li><li><a href="/#games" data-i18n="nav_games">Games</a></li><li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li><li><a href="/contact/?game=robot" data-i18n="nav_contact">Contact</a></li></ul>
+        <div class="nav-controls">
+            <select id="lang-selector" class="nav-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu"><a href="/#home" data-i18n="nav_home">Home</a><a href="/#about" data-i18n="nav_about">About</a><a href="/#games" data-i18n="nav_games">Games</a><a href="/#tech" data-i18n="nav_tech">Technologies</a><a href="/contact/?game=robot" data-i18n="nav_contact">Contact</a>
+        <div class="mobile-controls">
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
+        </div>
+    </div>
+</nav>
+<main>
+    <section class="gh">
+        <img class="gh-bg" src="/assets/games/robot-defense/background.webp" alt="" fetchpriority="high">
+        <div class="wrap gh-in">
+            <img class="gh-icon" src="/assets/games/robot-defense/icon.png" alt="Robot Defense icon" width="104" height="104">
+            <div class="gh-status"><span class="pill-status pill-soon" data-i18n="coming_soon">Coming Soon</span><span class="gh-genre" data-i18n="game_robot_genre">Tower defense</span></div>
+            <h1 data-i18n="game_robot_title">Robot<br>Defense</h1>
+            <p class="gh-sub" data-i18n="rd_subtitle">Build a neon maze of towers and stop the robot invasion, one wave at a time.</p>
+            <div id="notify"><form class="notify-form" id="waitlist-form" data-game="robot">
+                <input type="email" class="notify-input" data-i18n-placeholder="waitlist_placeholder" placeholder="your@email.com" id="notify-email" aria-label="Email" required>
+                <button type="submit" class="btn btn-coin" id="notify-btn" data-i18n="waitlist_button">Notify me at launch</button>
+            </form>
+            <p class="notify-label" data-i18n="waitlist_label">No spam. One email when it drops.</p></div>
+        </div>
+    </section>
+
+    <div class="strip"><div class="strip-inner"><div class="strip-item"><div class="strip-num">5</div><div class="strip-lbl" data-i18n="rd_stat1">towers to evolve</div></div><div class="strip-item"><div class="strip-num">10</div><div class="strip-lbl" data-i18n="rd_stat2">worlds</div></div><div class="strip-item"><div class="strip-num">35</div><div class="strip-lbl" data-i18n="rd_stat3">levels</div></div><div class="strip-item"><div class="strip-num">∞</div><div class="strip-lbl" data-i18n="rd_stat4">waves in Endless mode</div></div></div></div>
+
+    <div class="sw">
+        <div class="frow">
+            <div class="fv"><div class="phone"><img src="/assets/games/robot-defense/screens/board-boss.webp" alt="Robots following a path between towers" loading="lazy" width="520" height="1130"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="rd_maze_eyebrow">Free placement</div>
+                <h2 class="ftitle" data-i18n="rd_maze_title">You draw the path</h2>
+                <p class="fdesc" data-i18n="rd_maze_desc">Place your towers anywhere and they become walls. Robots always take the shortest route, so stretch it, force detours and trap them in your maze.</p>
+            </div>
+        </div>
+        <div class="frow rev">
+            <div class="fv"><div class="phone"><img src="/assets/games/robot-defense/screens/evolution-tree.webp" alt="Tower evolution tree" loading="lazy" width="520" height="1130"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="rd_towers_eyebrow">Evolution trees</div>
+                <h2 class="ftitle" data-i18n="rd_towers_title">5 towers, 5 roles</h2>
+                <p class="fdesc" data-i18n="rd_towers_desc">Turret, Slower, Sniper, Missile Launcher and Crusher. Each tower has two branches and seven versions to unlock.</p>
+            </div>
+        </div>
+        <div class="frow">
+            <div class="fv"><div class="phone"><img src="/assets/games/robot-defense/screens/bonus-in-game.webp" alt="In-game bonus and trap menu during a wave" loading="lazy" width="520" height="1130"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="rd_waves_eyebrow">Waves and bosses</div>
+                <h2 class="ftitle" data-i18n="rd_waves_title">A boss waits at the end</h2>
+                <p class="fdesc" data-i18n="rd_waves_desc">Fast Scouts, slow Tanks and giant bosses at the end of every chapter. Each wave is stronger than the last, from the neon factory to the heart of the machine.</p>
+            </div>
+        </div>
+        <div class="frow rev">
+            <div class="fv"><div class="phone"><img src="/assets/games/robot-defense/screens/bonus-shop.webp" alt="Bonus shop with orbital strike and EMP pulse" loading="lazy" width="520" height="1130"></div></div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="rd_bonus_eyebrow">Bonuses and traps</div>
+                <h2 class="ftitle" data-i18n="rd_bonus_title">Tools to rescue a losing game</h2>
+                <p class="fdesc" data-i18n="rd_bonus_desc">Orbital strike, EMP pulse, overload, repair and backup drone. Add mines, spikes, oil slicks, magnets and barricades to divert the robots.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="alt"><div class="sw">
+        <div class="sec-title" data-i18n="rd_extra_title">And there's more</div>
+        <div class="grid4"><div class="card"><div class="card-icon">♾️</div><div class="card-title" data-i18n="rd_x1_t">Endless mode</div><p class="card-desc" data-i18n="rd_x1_d">Never-ending waves, a boss every 10 waves and modifiers to choose.</p></div><div class="card"><div class="card-icon">💀</div><div class="card-title" data-i18n="rd_x2_t">Hardcore mode</div><p class="card-desc" data-i18n="rd_x2_d">Got three stars on a level? Take it on again, harder.</p></div><div class="card"><div class="card-icon">🛠️</div><div class="card-title" data-i18n="rd_x3_t">The Arsenal</div><p class="card-desc" data-i18n="rd_x3_d">Equip 4 towers, study each robot and test your towers before battle.</p></div><div class="card"><div class="card-icon">📅</div><div class="card-title" data-i18n="rd_x4_t">Daily challenges</div><p class="card-desc" data-i18n="rd_x4_d">New goals every day, and achievements to earn.</p></div></div>
+    </div></div>
+
+    <div class="cta-sec">
+        <div class="sec-title" data-i18n="rd_cta_title">Hear about the launch</div>
+        <p class="cta-sub"><span data-i18n="rd_duo_note">Co-developed with a friend, in Unity</span>. <span data-i18n="rd_cta_sub">Robot Defense is in the works for Android and iOS. Leave your email at the top of the page to get the announcement.</span></p>
+        <a href="#notify" class="btn btn-coin" data-i18n="rd_cta_btn">Get the announcement</a>
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
+        <a href="/terms/" data-i18n="terms">Terms of Service</a>
+        <a href="/contact/?game=robot" data-i18n="contact">Contact Support</a>
+        <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
+    </div>
+    <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
+</footer>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

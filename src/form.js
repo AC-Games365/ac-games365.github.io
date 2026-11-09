@@ -100,6 +100,7 @@ export function setupWaitlistForm() {
             // On envoie les données attendues par votre template HTML
             await emailjs.send(serviceID, templateID, {
                 email: emailInput.value,
+                game: waitlistForm.dataset.game || '',
                 time: new Date().toLocaleString(lang === 'fr' ? 'fr-FR' : 'en-US')
             });
 

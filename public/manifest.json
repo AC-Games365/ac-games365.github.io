@@ -1,14 +1,14 @@
 {
   "name": "AC World",
   "short_name": "AC World",
-  "description": "Fun & Addictive Mobile Games by Clement",
+  "description": "Fun & Addictive Mobile Games",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0e100f",
   "theme_color": "#3DDC84",
   "icons": [
     {
-      "src": "/assets/images/icon/icon.png",
+      "src": "/assets/brand/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
