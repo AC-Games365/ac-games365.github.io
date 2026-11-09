@@ -12,5 +12,5 @@ assets/
 ```
 
 - Les icônes de Block Drift et Robot Defense sont les fichiers d'origine, inchangés.
-- Une capture de jeu : WebP, 520 px de large, dans `games/<jeu>/screens/`.
+- Une capture de jeu : format 1206×2622, convertie en WebP de 520 px de large, dans `games/<jeu>/screens/`.
 - Block Drift n'a pas encore de captures : sa page utilise des illustrations. Pour les remplacer, déposez les captures dans `games/block-drift/screens/` et utilisez le bloc `.phone`.
