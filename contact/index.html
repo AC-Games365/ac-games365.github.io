@@ -2,13 +2,12 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="nav_contact">Contact - AC Games</title>
-    <link rel="icon" type="image/png" href="/assets/icon-eb8c6399.png">
-    <meta name="description" content="Get in touch with AC Games for support or inquiries.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#10143a">
+    <title data-i18n="nav_contact">Contact - AC World</title>
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-ab2f6311.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48-517f8fbf.png">
+    <meta name="description" content="Get in touch with AC World for support or inquiries.">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>(function(){ emailjs.init("l1LEmdWyMMnjJl5nZ"); })();</script>
@@ -20,171 +19,50 @@
         gtag('js', new Date());
         gtag('config', 'G-H1DC620LTF');
     </script>
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --green: #3DDC84; --green-dim: #2bb86d; --green-pill-bg: rgba(61,220,132,0.12); --green-pill-text: #1a7a49;
-            --bg: #f6f7f5; --bg-card: #ffffff; --text: #111310; --text-2: #4a4e4a; --text-3: #8a8e8a;
-            --border: rgba(0,0,0,0.08); --border-hover: rgba(0,0,0,0.18);
-            --radius-sm: 8px; --radius-md: 14px; --radius-lg: 22px; --radius-pill: 999px;
-            --font-display: 'Syne', sans-serif; --font-body: 'Inter', sans-serif;
-            --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .dark { --bg: #0e100f; --bg-card: #161918; --text: #edefec; --text-2: #9a9e9a; --text-3: #5a5e5a; --border: rgba(255,255,255,0.08); --border-hover: rgba(255,255,255,0.18); --green-pill-bg: rgba(61,220,132,0.1); --green-pill-text: #3DDC84; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; -webkit-font-smoothing: antialiased; transition: background var(--transition), color var(--transition); }
-
-        nav { position: sticky; top: 0; z-index: 100; background: rgba(246,247,245,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--border); transition: background var(--transition); }
-        .dark nav { background: rgba(14,16,15,0.85); }
-        .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-        .nav-logo { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--green); text-decoration: none; letter-spacing: -0.5px; }
-        .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--text-2); font-size: 14px; font-weight: 500; padding: 6px 12px; border-radius: var(--radius-pill); transition: color var(--transition), background var(--transition); }
-        .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--border); }
-        .nav-controls { display: flex; align-items: center; gap: 8px; }
-        .nav-select { background: var(--border); border: none; border-radius: var(--radius-pill); padding: 5px 10px; font-size: 13px; color: var(--text-2); font-family: var(--font-body); cursor: pointer; outline: none; }
-        .nav-select:hover { background: var(--border-hover); }
-        .icon-btn { background: var(--border); border: none; border-radius: var(--radius-pill); width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); transition: background var(--transition); }
-        .icon-btn:hover { background: var(--border-hover); color: var(--text); }
-        .icon-btn svg { width: 16px; height: 16px; }
-        .mobile-menu-btn { display: none; background: var(--border); border: none; border-radius: var(--radius-sm); width: 36px; height: 36px; align-items: center; justify-content: center; cursor: pointer; color: var(--text-2); }
-        .mobile-menu-btn svg { width: 18px; height: 18px; }
-        #mobile-menu { display: none; flex-direction: column; border-top: 1px solid var(--border); padding: 12px 16px; gap: 4px; }
-        #mobile-menu.open { display: flex; }
-        #mobile-menu a { text-decoration: none; color: var(--text-2); font-size: 15px; font-weight: 500; padding: 10px 12px; border-radius: var(--radius-sm); transition: background var(--transition), color var(--transition); }
-        #mobile-menu a:hover { background: var(--border); color: var(--text); }
-        .mobile-controls { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-top: 1px solid var(--border); margin-top: 4px; }
-
-        /* CONTACT LAYOUT */
-        .contact-wrap { max-width: 1100px; margin: 0 auto; padding: 80px 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; flex: 1; }
-        .contact-left { padding-top: 8px; }
-        .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
-        .contact-title { font-family: var(--font-display); font-size: clamp(36px, 4.5vw, 56px); font-weight: 800; letter-spacing: -2px; color: var(--text); line-height: 1; margin-bottom: 20px; }
-        .contact-desc { font-size: 16px; color: var(--text-2); line-height: 1.7; margin-bottom: 40px; }
-        .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
-        .contact-item-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--green-pill-bg); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
-        .contact-item-title { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-        .contact-item-body { font-size: 13px; color: var(--text-2); }
-        .contact-item-body a { color: var(--green); text-decoration: none; }
-        .contact-item-body a:hover { text-decoration: underline; }
-
-        /* FORM */
-        .contact-form-wrap { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 36px; }
-        .form-group { margin-bottom: 20px; }
-        .form-label { display: block; font-size: 13px; font-weight: 500; color: var(--text-2); margin-bottom: 6px; }
-        .form-label .req { color: var(--green); }
-        .form-input, .form-textarea, .form-select { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 11px 16px; font-size: 14px; color: var(--text); font-family: var(--font-body); outline: none; transition: border-color var(--transition), box-shadow var(--transition); }
-        .form-input:focus, .form-textarea:focus, .form-select:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(61,220,132,0.1); }
-        .form-select { -webkit-appearance: auto; -moz-appearance: auto; appearance: auto; cursor: pointer; }
-        .form-textarea { resize: vertical; min-height: 120px; }
-        .recaptcha-wrap { display: flex; justify-content: center; margin: 20px 0; }
-        .btn-submit { width: 100%; background: var(--green); color: #0a2e17; font-size: 15px; font-weight: 600; padding: 13px; border-radius: var(--radius-pill); border: none; cursor: pointer; font-family: var(--font-body); position: relative; transition: background var(--transition), transform var(--transition), box-shadow var(--transition); }
-        .btn-submit:hover { background: var(--green-dim); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(61,220,132,0.25); }
-        .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-        .spinner { display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
-        .spinner svg { animation: spin 0.8s linear infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-        #form-status { border-radius: var(--radius-md); padding: 12px 16px; font-size: 14px; text-align: center; margin-bottom: 16px; display: none; }
-        #form-status.success { background: rgba(61,220,132,0.1); color: var(--green-pill-text); border: 1px solid rgba(61,220,132,0.2); }
-        .dark #form-status.success { color: var(--green); }
-        #form-status.error { background: rgba(220,61,61,0.08); color: #c0392b; border: 1px solid rgba(220,61,61,0.2); }
-
-        footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; }
-        .footer-links { display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
-        .footer-links a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color var(--transition); }
-        .footer-links a:hover { color: var(--green); }
-        .footer-links span { color: var(--border-hover); }
-        .footer-copy { font-size: 12px; color: var(--text-3); }
-
-        @media (max-width: 768px) {
-            .nav-links, .nav-controls { display: none; }
-            .mobile-menu-btn { display: flex; }
-            .contact-wrap { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px; }
-        }
-    </style>
-    <script>
-        const root = document.documentElement;
-        const saved = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (saved === 'dark' || (!saved && prefersDark)) root.classList.add('dark');
-    </script>
-  <script type="module" crossorigin src="/assets/main-d01b3f3c.js"></script>
-  <link rel="stylesheet" href="/assets/main-f3edc64e.css">
+    
+    <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark');</script>
+  <script type="module" crossorigin src="/assets/main-59f57919.js"></script>
+  <link rel="stylesheet" href="/assets/main-b0728e6b.css">
 </head>
 <body>
-<nav>
+<nav class="site-nav">
     <div class="nav-inner">
-        <a href="/" class="nav-logo">AC Games</a>
-        <ul class="nav-links">
-            <li><a href="/#home" data-i18n="nav_home">Home</a></li>
-            <li><a href="/#about" data-i18n="nav_about">About</a></li>
-            <li><a href="/#games" data-i18n="nav_games">Games</a></li>
-            <li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li>
-            <li><a href="/contact/" class="active" data-i18n="nav_contact">Contact</a></li>
-        </ul>
+        <a href="/" class="nav-logo"><img src="/assets/icon-512-33eb94ab.png" alt="" width="36" height="36">AC World</a>
+        <ul class="nav-links"><li><a href="/#home" data-i18n="nav_home">Home</a></li><li><a href="/#about" data-i18n="nav_about">About</a></li><li><a href="/#games" data-i18n="nav_games">Games</a></li><li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li><li><a href="/contact/" data-i18n="nav_contact" class="active">Contact</a></li></ul>
         <div class="nav-controls">
-            <select id="lang-selector" class="nav-select" aria-label="Language">
-                <option value="en">🇺🇸 EN</option>
-                <option value="fr">🇫🇷 FR</option>
-                <option value="nl">🇳🇱 NL</option>
-                <option value="es">🇪🇸 ES</option>
-                <option value="id">🇮🇩 ID</option>
-                <option value="ar">🇸🇦 AR</option>
-                <option value="hi">🇮🇳 HI</option>
-            </select>
-            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode">
-                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-            </button>
+            <select id="lang-selector" class="nav-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
         </div>
-        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
     </div>
-    <div id="mobile-menu">
-        <a href="/#home" data-i18n="nav_home">Home</a>
-        <a href="/#about" data-i18n="nav_about">About</a>
-        <a href="/#games" data-i18n="nav_games">Games</a>
-        <a href="/#tech" data-i18n="nav_tech">Technologies</a>
-        <a href="/contact/" data-i18n="nav_contact">Contact</a>
+    <div id="mobile-menu"><a href="/#home" data-i18n="nav_home">Home</a><a href="/#about" data-i18n="nav_about">About</a><a href="/#games" data-i18n="nav_games">Games</a><a href="/#tech" data-i18n="nav_tech">Technologies</a><a href="/contact/" data-i18n="nav_contact">Contact</a>
         <div class="mobile-controls">
-            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language">
-                <option value="en">🇺🇸 EN</option>
-                <option value="fr">🇫🇷 FR</option>
-                <option value="nl">🇳🇱 NL</option>
-                <option value="es">🇪🇸 ES</option>
-                <option value="id">🇮🇩 ID</option>
-                <option value="ar">🇸🇦 AR</option>
-                <option value="hi">🇮🇳 HI</option>
-            </select>
-            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode">
-                <svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-                <svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-            </button>
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
         </div>
     </div>
 </nav>
 
-<main style="flex:1; display:flex; flex-direction:column;">
+<main>
+    <div class="ribbon" aria-hidden="true"><img src="/assets/background-5ed4d0f2.webp" alt=""><img src="/assets/background-16502384.webp" alt=""><img src="/assets/background-84fcdbc7.webp" alt=""><img src="/assets/background-12d8f4eb.webp" alt=""></div>
     <div class="contact-wrap">
         <!-- LEFT -->
         <div class="contact-left">
             <p class="section-label" data-i18n="contact_title">Contact</p>
             <h1 class="contact-title" data-i18n="contact_title">Get in touch</h1>
-            <p class="contact-desc" data-i18n="contact_desc">Got a bug to report, a question about one of the games, or just want to say hi? I'm a solo dev — I read every message.</p>
+            <p class="contact-desc" data-i18n="contact_desc">Got a bug to report, a question about one of the games, or just want to say hi? Every message is read by the people who make the games.</p>
             <div class="contact-item">
                 <div class="contact-item-icon">🎮</div>
                 <div>
                     <div class="contact-item-title" data-i18n="contact_game_support">Game Support</div>
-                    <div class="contact-item-body" data-i18n="contact_game_support_desc">Issues with Flappy Vertical or Block Drift? Describe the problem and your device.</div>
+                    <div class="contact-item-body" data-i18n="contact_game_support_desc">Having trouble with Flappy Vertical, Block Drift, Slice and Trap or Robot Defense? Describe the problem and your device.</div>
                 </div>
             </div>
             <div class="contact-item">
                 <div class="contact-item-icon">🔒</div>
                 <div>
                     <div class="contact-item-title" data-i18n="delete_account">Account Deletion</div>
-                    <div class="contact-item-body" data-i18n="contact_deletion_desc">Use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
+                    <div class="contact-item-body" data-i18n="contact_deletion_desc">Use the <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" data-i18n="delete_account">deletion form</a> for faster processing.</div>
                 </div>
             </div>
             <div class="contact-item">
@@ -202,11 +80,11 @@
             <form id="contact-form">
                 <div class="form-group">
                     <label class="form-label" for="name" data-i18n="contact_name">Name</label>
-                    <input type="text" id="name" name="name" class="form-input" placeholder="Your name">
+                    <input type="text" id="name" name="name" class="form-input" data-i18n-placeholder="contact_ph_name" placeholder="Your name">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="email"><span data-i18n="contact_email">Email</span> <span class="req">*</span></label>
-                    <input type="email" id="email" name="email" required class="form-input" placeholder="your@email.com">
+                    <input type="email" id="email" name="email" required class="form-input" data-i18n-placeholder="contact_ph_email" placeholder="your@email.com">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="game" data-i18n="contact_game">Game</label>
@@ -215,7 +93,7 @@
                         <option value="flappy" data-i18n="game_flappy_title">Flappy Vertical</option>
                         <option value="block" data-i18n="game_block_drift_title">Block Drift</option>
                         <option value="slice" data-i18n="game_new_title">Slice and Trap</option>
-                        <option value="drivewise" data-i18n="game_dw_title">DriveWise</option>
+                        <option value="robot" data-i18n="game_robot_title">Robot Defense</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -229,7 +107,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="message"><span data-i18n="contact_message">Message</span> <span class="req">*</span></label>
-                    <textarea id="message" name="message" rows="5" required class="form-textarea" placeholder="What's on your mind?"></textarea>
+                    <textarea id="message" name="message" rows="5" required class="form-textarea" data-i18n-placeholder="contact_ph_message" placeholder="What's on your mind?"></textarea>
                 </div>
                 <div class="recaptcha-wrap">
                     <div class="g-recaptcha" data-sitekey="6LfccKgsAAAAALgd7zGmIuDUmts3LLXM5M0f98M1"></div>
@@ -245,23 +123,16 @@
     </div>
 </main>
 
-<footer>
-    <div class="footer-inner">
-        <div class="footer-links">
-            <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
-            <span>·</span>
-            <a href="/terms/" data-i18n="terms">Terms of Service</a>
-            <span>·</span>
-            <a href="/contact/" data-i18n="contact">Contact Support</a>
-            <span>·</span>
-            <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
-            <span>·</span>
-            <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
-            <span>·</span>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZzHMHshPBBY7BNYXii3B9XnnJP37MFufVLUTgq1Bfntp4zA/viewform?usp=preview" target="_blank" data-i18n="delete_account">Account Deletion Request</a>
-        </div>
-        <p class="footer-copy" data-i18n="copyright">© 2026 AC Games. All rights reserved.</p>
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
+        <a href="/terms/" data-i18n="terms">Terms of Service</a>
+        <a href="/contact/" data-i18n="contact">Contact Support</a>
+        <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
     </div>
+    <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
 </footer>
 
 

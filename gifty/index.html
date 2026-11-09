@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#10143a">
+    <title data-i18n="gifty_meta_title">Gifty - Simple Secret Santa Organizer | AC World</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48-517f8fbf.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-ab2f6311.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ac-games365.github.io/gifty/">
+    <meta property="og:title" data-i18n="gifty_meta_title" content="Gifty - Simple Secret Santa Organizer">
+    <meta property="og:description" data-i18n="gifty_meta_desc" content="Organize your Secret Santa easily. Set rules, avoid duplicates, and share wishlists. The simplest way to manage holiday gifts.">
+    <meta property="og:image" content="https://ac-games365.github.io/assets/brand/icon-512.png">
+
+    <link rel="canonical" href="https://ac-games365.github.io/gifty/">
+    <meta name="description" data-i18n="gifty_meta_desc" content="Organize your Secret Santa easily. Set rules, avoid duplicates, and share wishlists. The simplest way to manage holiday gifts.">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Gifty",
+      "operatingSystem": "WEB, ANDROID, IOS",
+      "applicationCategory": "UtilitiesApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <script>if (localStorage.getItem('theme') !== 'light') document.documentElement.classList.add('dark');</script>  <script type="module" crossorigin src="/assets/main-59f57919.js"></script>
+  <link rel="stylesheet" href="/assets/main-b0728e6b.css">
+</head>
+<body data-game="block">
+
+<nav class="site-nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo"><img src="/assets/icon-512-33eb94ab.png" alt="" width="36" height="36">AC World</a>
+        <ul class="nav-links"><li><a href="/#home" data-i18n="nav_home">Home</a></li><li><a href="/#about" data-i18n="nav_about">About</a></li><li><a href="/#games" data-i18n="nav_games">Games</a></li><li><a href="/#tech" data-i18n="nav_tech">Technologies</a></li><li><a href="/contact/" data-i18n="nav_contact">Contact</a></li></ul>
+        <div class="nav-controls">
+            <select id="lang-selector" class="nav-select" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-btn" aria-label="Open menu"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu"><a href="/#home" data-i18n="nav_home">Home</a><a href="/#about" data-i18n="nav_about">About</a><a href="/#games" data-i18n="nav_games">Games</a><a href="/#tech" data-i18n="nav_tech">Technologies</a><a href="/contact/" data-i18n="nav_contact">Contact</a>
+        <div class="mobile-controls">
+            <select id="lang-selector-mobile" class="nav-select" style="flex:1" aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="nl">NL</option><option value="es">ES</option><option value="id">ID</option><option value="ar">AR</option><option value="hi">HI</option></select>
+            <button id="theme-toggler-mobile" class="icon-btn" aria-label="Toggle dark mode"><svg class="sun-icon" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h1a1 1 0 100 2h-1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg><svg class="moon-icon" style="display:none" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg></button>
+        </div>
+    </div>
+</nav>
+
+<main>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-bg" style="background: radial-gradient(circle at center, var(--primary) 0%, transparent 70%);"></div>
+        <div class="hero-body">
+            <div class="badge-santa">Secret Santa Made Simple</div>
+            <h1 >Gifty</h1>
+            <p class="gh-sub" data-i18n="gifty_subtitle">Organize your Secret Santa in seconds. Simple, free, and fun for everyone.</p>
+            <div class="ctas">
+                <a href="/gifty/app/" class="btn-p">
+                    <span data-i18n="gifty_cta_btn">Launch Gifty Web</span>
+                </a>
+                <button onclick="shareGame('Gifty')" class="btn btn-soft">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                    <span data-i18n="share_game">Share this app</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STATS -->
+    <div class="strip">
+        <div class="strip-inner">
+            <div class="strip-item"><div class="strip-num" data-i18n="gifty_stat1_num">100%</div><div class="strip-lbl" data-i18n="gifty_stat1_lbl">Free</div></div>
+            <div class="strip-item"><div class="strip-num" data-i18n="gifty_stat2_num">Fast</div><div class="strip-lbl" data-i18n="gifty_stat2_lbl">Setup</div></div>
+            <div class="strip-item"><div class="strip-num" data-i18n="gifty_stat3_num">Fair</div><div class="strip-lbl" data-i18n="gifty_stat3_lbl">Drawing</div></div>
+            <div class="strip-item"><div class="strip-num">🔒</div><div class="strip-lbl" data-i18n="gifty_stat4_lbl">No account needed</div></div>
+        </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="sw">
+
+        <!-- Zero Friction -->
+        <div class="frow">
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">⚡</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="gifty_feature1_eyebrow">Simplicity</div>
+                <h2 class="ftitle" data-i18n="gifty_feature1_title">Zero Friction</h2>
+                <p class="fdesc" data-i18n="gifty_feature1_desc">No long forms. No mandatory accounts. Just enter the names, set the rules, and send the invitations. Gifty handles the rest.</p>
+                <div class="pills">
+                    <span class="pill">✨ <span data-i18n="gifty_feature1_pill1">No sign-up</span></span>
+                    <span class="pill">🚀 <span data-i18n="gifty_feature1_pill2">Fast entry</span></span>
+                    <span class="pill">🔗 <span data-i18n="gifty_feature1_pill3">One-click invite</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Exclusions -->
+        <div class="frow rev">
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">🤝</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="gifty_feature2_eyebrow">Drawing Rules</div>
+                <h2 class="ftitle" data-i18n="gifty_feature2_title">Smart Exclusions</h2>
+                <p class="fdesc" data-i18n="gifty_feature2_desc">Avoid awkward situations. Set exclusion rules so partners or specific people don't draw each other. Our algorithm ensures a valid draw every time.</p>
+                <div class="pills">
+                    <span class="pill">🚫 <span data-i18n="gifty_feature2_pill1">Pair exclusions</span></span>
+                    <span class="pill">📅 <span data-i18n="gifty_feature2_pill2">Previous year rules</span></span>
+                    <span class="pill">🎲 <span data-i18n="gifty_feature2_pill3">Fair randomizing</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wishlists -->
+        <div class="frow">
+            <div class="fv">
+                <div class="phone-ph"><div class="ph-icon">📝</div></div>
+            </div>
+            <div class="fc">
+                <div class="feyebrow" data-i18n="gifty_feature3_eyebrow">Lists</div>
+                <h2 class="ftitle" data-i18n="gifty_feature3_title">Wishlists & Hints</h2>
+                <p class="fdesc" data-i18n="gifty_feature3_desc">Make sure everyone gets something they love. Participants can add hints or links to their wishlist so their Secret Santa knows exactly what to look for.</p>
+                <div class="pills">
+                    <span class="pill">🛒 <span data-i18n="gifty_feature3_pill1">Direct links</span></span>
+                    <span class="pill">🤫 <span data-i18n="gifty_feature3_pill2">Anonymous hints</span></span>
+                    <span class="pill">💡 <span data-i18n="gifty_feature3_pill3">Gift ideas</span></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SMALL CARDS -->
+    <div class="alt">
+        <div class="sw">
+            <div class="sec-lbl" data-i18n="gifty_extra_label">Features</div>
+            <div class="sec-title" data-i18n="gifty_extra_title">Everything you need</div>
+            <div class="grid4">
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <div class="card-title" data-i18n="gifty_extra1_title">Multi-platform</div>
+                    <p class="card-desc" data-i18n="gifty_extra1_desc">Works perfectly on web and mobile. Send links via WhatsApp, Messenger, or Email.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <div class="card-title" data-i18n="gifty_extra2_title">Budget control</div>
+                    <p class="card-desc" data-i18n="gifty_extra2_desc">Set a clear budget limit so everyone stays on the same page.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔔</div>
+                    <div class="card-title" data-i18n="gifty_extra3_title">Auto-notify</div>
+                    <p class="card-desc" data-i18n="gifty_extra3_desc">Remind participants who haven't opened their draw yet with a single tap.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <div class="card-title" data-i18n="gifty_extra4_title">Privacy First</div>
+                    <p class="card-desc" data-i18n="gifty_extra4_desc">We don't sell your data. Group info is deleted automatically after the event.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div id="cta" class="cta-sec">
+        <div class="sec-lbl" data-i18n="gifty_cta_label">Ready to gift?</div>
+        <div class="sec-title" data-i18n="gifty_cta_title">Start your group today</div>
+        <p style="font-size:16px;color:var(--text-2);margin:10px auto 36px;max-width:440px;line-height:1.6" data-i18n="gifty_cta_sub">Gifty is the easiest way to manage your holiday exchange. Free forever.</p>
+        <a href="/gifty/app/" class="btn-p" style="font-size:16px;padding:15px 40px">
+            <span data-i18n="gifty_cta_btn">Launch Gifty Web</span>
+        </a>
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="/privacy/" data-i18n="privacy">Privacy Policy</a>
+        <a href="/terms/" data-i18n="terms">Terms of Service</a>
+        <a href="/contact/" data-i18n="contact">Contact Support</a>
+        <a href="https://www.tiktok.com/@acgames365" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://acgames365.itch.io/" target="_blank" rel="noopener">itch.io</a>
+        <a href="https://forms.gle/btFpt7CrsTSgi5w9A" target="_blank" rel="noopener" data-i18n="delete_account">Account Deletion Request</a>
+    </div>
+    <p class="footer-copy" data-i18n="copyright">© 2026 AC World. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
